@@ -43,7 +43,7 @@ async def _run(work, what: str):
 @app.post("/api/ask", response_model=AskResponse)
 async def ask(req: AskRequest) -> AskResponse:
     """Ask the Librarian a question about the shelf."""
-    return await _run(agents.ask_shelf(req.question), "ask")
+    return await _run(agents.ask_shelf(req.question, req.lean), "ask")
 
 
 @app.post("/api/decode", response_model=DecodeResponse)
@@ -51,7 +51,7 @@ async def decode(req: DecodeRequest) -> DecodeResponse:
     """The Librarian's read of one prompt: what it's really asking, common mistakes, what to read."""
     if req.prompt_id not in Shelf.get().prompts:
         raise HTTPException(404, f"No prompt {req.prompt_id!r} on the shelf.")
-    return await _run(agents.decode_prompt(req.prompt_id), "decode")
+    return await _run(agents.decode_prompt(req.prompt_id, req.lean), "decode")
 
 
 @app.post("/api/story-map", response_model=StoryMapResponse)

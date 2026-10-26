@@ -13,6 +13,7 @@ from pathlib import Path
 from pydantic_ai import RunContext, UsageLimits
 
 from app import config
+from app.usage import counts, current_calls
 from app.models import (
     CoachDeps, Example, ExamplesResult, LibrarianDeps, PromptBrief, PromptFull, PromptList,
     SchoolPrompts, SchoolsResult, SearchResult,
@@ -178,9 +179,12 @@ async def search_shelf(
     max_words: int | None = None,
     min_words: int | None = None,
     required_only: bool = False,
-    limit: int = 30,
+    limit: int = 8,
 ) -> SearchResult:
     """Find prompts on the shelf by type, school, word limit and keywords. All filters are optional.
+
+    Returns only the matching prompts, best first, capped at a few results (total_matches says how
+    many matched in all).
 
     Args:
         keywords: words to look for in the prompt text, e.g. "joy" or "community roommate".
@@ -191,6 +195,7 @@ async def search_shelf(
         required_only: keep only required prompts.
         limit: maximum number of matches to return.
     """
+    limit = max(1, min(limit, ctx.deps.cap))
     shelf = ctx.deps.shelf
     pool = list(shelf.prompts.values())
     note = []
@@ -219,7 +224,7 @@ async def search_shelf(
         if terms:
             scored = [(sum(t in (p["prompt"] + " " + (p.get("notes") or "")).lower() for t in terms), p) for p in pool]
             pool = [p for score, p in sorted(scored, key=lambda x: -x[0]) if score > 0]
-    matches = [shelf.brief(p, max_chars=260) for p in pool[:limit]]
+    matches = [shelf.brief(p, max_chars=160 if ctx.deps.lean else 260) for p in pool[:limit]]
     _note(ctx, "search_shelf", prompts=matches)
     return SearchResult(matches=matches, total_matches=len(pool), not_on_shelf=not_on_shelf, note=" ".join(note) or None)
 
@@ -238,24 +243,42 @@ async def get_prompt(ctx: RunContext[LibrarianDeps], prompt_id: str) -> PromptFu
     return found
 
 
-async def prompts_for_schools(ctx: RunContext[LibrarianDeps], schools: list[str]) -> SchoolsResult:
-    """Get every 2026-27 prompt for the named schools, with each school's application notes.
+async def prompts_for_schools(
+    ctx: RunContext[LibrarianDeps],
+    schools: list[str],
+    include_text: bool = True,
+    include_notes: bool = False,
+) -> SchoolsResult:
+    """Get the 2026-27 prompts for the named schools.
 
     Args:
         schools: school names as the student wrote them, e.g. ["Yale", "UChicago", "Rice"].
+        include_text: false returns ids, types and limits with only a short preview of each prompt.
+        include_notes: true adds each school's application notes (deadlines, tests, interviews).
     """
     shelf = ctx.deps.shelf
     keys, missing = shelf.resolve_schools(schools)
     ctx.deps.not_on_shelf.update(missing)
     ctx.deps.schools_looked_up.update(keys)
-    out = [
-        SchoolPrompts(school=k, school_name=shelf.schools[k]["name"],
-                      prompts=[shelf.brief(p) for p in shelf.prompts.values() if p["school"] == k],
-                      school_notes=shelf.schools[k].get("notes", []))
-        for k in keys
-    ]
+    # A handoff needs every prompt; answers to students show a few at most.
+    cap = None if ctx.deps.job == "handoff" else ctx.deps.cap
+    chars = None if include_text else 70
+    out, total = [], 0
+    for k in keys:
+        mine = [p for p in shelf.prompts.values() if p["school"] == k]
+        total += len(mine)
+        out.append(SchoolPrompts(school=k, school_name=shelf.schools[k]["name"],
+                                 prompts=[shelf.brief(p, max_chars=chars) for p in mine],
+                                 school_notes=shelf.schools[k].get("notes", []) if include_notes else []))
+    note = None
+    if cap is not None and total > cap:
+        kept = 0
+        for s in out:
+            s.prompts = s.prompts[:max(0, cap - kept)]
+            kept += len(s.prompts)
+        note = f"Showing {cap} of {total} prompts; use search_shelf to narrow them down."
     _note(ctx, "prompts_for_schools", prompts=[p for s in out for p in s.prompts])
-    return SchoolsResult(schools=out, not_on_shelf=missing)
+    return SchoolsResult(schools=out, not_on_shelf=missing, note=note)
 
 
 async def list_examples(
@@ -273,6 +296,7 @@ async def list_examples(
         kind: "sample", "essay", or "both".
         limit: maximum number of examples.
     """
+    limit = max(1, min(limit, ctx.deps.cap))
     shelf = ctx.deps.shelf
     ids: list[str] = []
     note = None
@@ -314,26 +338,33 @@ async def ask_librarian(ctx: RunContext[CoachDeps], schools: list[str]) -> Schoo
     Args:
         schools: the student's schools, as they wrote them.
     """
-    lib_deps = LibrarianDeps(shelf=ctx.deps.shelf, job="handoff")
-    request = ("Handoff from the Essay Coach. List every 2026-27 prompt for these schools so the coach can map "
-               f"a student's stories to them: {', '.join(schools)}.")
+    lib_deps = LibrarianDeps(shelf=ctx.deps.shelf, job="handoff", lean=ctx.deps.lean)
+    # The job note lives in the request, so the Librarian's system prompt stays fixed and cacheable.
+    request = ("Job 3, a handoff from the Essay Coach: return a PromptList. Call prompts_for_schools with "
+               f"include_text=false and list every prompt id for these schools: {', '.join(schools)}.")
+    before, first_call = counts(ctx.usage), len(current_calls())
     result = await ctx.deps.librarian.run(
-        request, deps=lib_deps, instructions="This run is job 3, a handoff from the Essay Coach: return a PromptList.",
-        model=ctx.model, model_settings=ctx.model_settings, usage=ctx.usage, usage_limits=HANDOFF_LIMITS,
+        request, deps=lib_deps, model=ctx.model, model_settings=ctx.model_settings,
+        usage=ctx.usage, usage_limits=HANDOFF_LIMITS,
     )
+    after = counts(ctx.usage)
+    ctx.deps.handoff_usage = {k: after[k] - before[k] for k in after}
+    ctx.deps.handoff_calls = current_calls()[first_call:]
     handoff: PromptList = result.output
     shelf = ctx.deps.shelf
     ctx.deps.handoff_ids.update(handoff.prompt_ids)
     ctx.deps.not_on_shelf = sorted(set(handoff.not_on_shelf) | lib_deps.not_on_shelf)
-    log.info("handoff: librarian returned %d prompts; not on shelf: %s", len(handoff.prompt_ids), ctx.deps.not_on_shelf)
+    log.info("handoff: librarian returned %d prompts; not on shelf: %s; tokens %s",
+             len(handoff.prompt_ids), ctx.deps.not_on_shelf, ctx.deps.handoff_usage)
 
-    # The prompt details come straight from the data, not from the Librarian's wording.
+    # The coach gets the prompt details straight from the data (only the matching prompts, no
+    # school notes). Lean mode trims long prompts.
     by_school: dict[str, list[PromptBrief]] = {}
     for pid in handoff.prompt_ids:
         p = shelf.prompts[pid]
-        by_school.setdefault(p["school"], []).append(shelf.brief(p))
+        by_school.setdefault(p["school"], []).append(shelf.brief(p, max_chars=220 if ctx.deps.lean else None))
     return SchoolsResult(
-        schools=[SchoolPrompts(school=k, school_name=shelf.schools[k]["name"], prompts=v,
-                               school_notes=shelf.schools[k].get("notes", [])) for k, v in by_school.items()],
+        schools=[SchoolPrompts(school=k, school_name=shelf.schools[k]["name"], prompts=v, school_notes=[])
+                 for k, v in by_school.items()],
         not_on_shelf=ctx.deps.not_on_shelf,
     )

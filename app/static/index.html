@@ -27,7 +27,14 @@
 
     <!-- Ask the shelf: the Librarian agent answers from the shelf data and lights up books. -->
     <form class="ask" id="ask-form" autocomplete="off">
-      <label class="ask-label" for="ask-input">Ask the shelf</label>
+      <div class="ask-head">
+        <label class="ask-label" for="ask-input">Ask the shelf</label>
+        <label class="lean-switch" title="Lean mode: top 3 results and shorter tool results, to compare quality and cost">
+          <input type="checkbox" id="lean">
+          <span class="switch" aria-hidden="true"></span>
+          Lean mode <small>top 3 results</small>
+        </label>
+      </div>
       <div class="ask-row">
         <input id="ask-input" type="text" maxlength="300" required
                placeholder="e.g. show me why-us prompts under 250 words">
@@ -83,6 +90,7 @@
 
       <div class="map-submit">
         <button class="surprise" id="map-btn" type="submit">Build my Story Map</button>
+        <span class="lean-note" id="map-lean-note"></span>
         <p class="map-error" id="map-error" role="alert"></p>
       </div>
     </form>

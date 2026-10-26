@@ -471,9 +471,10 @@
       `<div class="actions">` +
       (src ? `<a class="btn primary" href="${esc(src)}" target="_blank" rel="noopener noreferrer">Source · ${esc(domain(src))} ↗</a>` : "") +
       `<button class="btn" type="button" data-act="copy">Copy link</button>` +
-      (decoded.has(it.id) ? "" : `<button class="btn decode-btn" type="button" data-act="decode">Decode this prompt</button>`) +
+      (decoded.has(decodeKey(it.id)) ? "" : `<button class="btn decode-btn" type="button" data-act="decode">Decode this prompt</button>`) +
       `</div>` +
-      `<section class="decode"${decoded.has(it.id) ? "" : " hidden"}>${decoded.has(it.id) ? decodeSection(decoded.get(it.id)) : ""}</section>` +
+      `<section class="decode"${decoded.has(decodeKey(it.id)) ? "" : " hidden"}>` +
+      `${decoded.has(decodeKey(it.id)) ? decodeSection(decoded.get(decodeKey(it.id))) : ""}</section>` +
       sampleSection(it) +
       `<section class="related"><h3 class="label">Essays that worked</h3>` +
       (essays.length
@@ -512,9 +513,44 @@
       `${nav}</div>`;
   }
 
+  // ---------- Lean mode and the token meter ----------
+
+  // Lean mode asks the agents for the top 3 results with shorter tool results. Remembered per browser.
+  const leanBox = $("lean");
+  try { leanBox.checked = localStorage.getItem("shelf-lean") === "1"; } catch { /* storage blocked */ }
+  leanBox.addEventListener("change", () => {
+    try { localStorage.setItem("shelf-lean", leanBox.checked ? "1" : "0"); } catch { /* storage blocked */ }
+    document.dispatchEvent(new CustomEvent("shelf:lean", { detail: { lean: leanBox.checked } }));
+  });
+  const isLean = () => leanBox.checked;
+
+  // A small meter after every agent run: input, cached input, output, requests, cost.
+  function meter(u) {
+    if (!u) return "";
+    const n = (x) => Number(x || 0).toLocaleString();
+    const who = `${u.agent.startsWith("coach") ? "Coach" : "Librarian"}${u.lean ? " · lean" : ""}`;
+    if (u.from_cache) {
+      return `<div class="meter" aria-label="Token usage"><span class="meter-who">${esc(who)}</span>` +
+        `<span>Reused an earlier answer: 0 tokens, $0</span></div>`;
+    }
+    const hits = (h) => h ? ` <em>(${h} from Portkey's cache)</em>` : "";
+    const cost = u.cost_usd == null
+      ? `<span class="meter-cost" title="Fill in the gpt-6-luna prices in app/config.py">cost: set prices in app/config.py</span>`
+      : `<span class="meter-cost"><b>$${u.cost_usd < 0.01 ? u.cost_usd.toFixed(4) : u.cost_usd.toFixed(3)}</b></span>`;
+    const h = u.handoff;
+    return `<div class="meter" aria-label="Token usage"><span class="meter-who">${esc(who)}</span>` +
+      `<span><b>${n(u.input_tokens)}</b> input</span><span><b>${n(u.cached_input_tokens)}</b> cached</span>` +
+      `<span><b>${n(u.output_tokens)}</b> output</span>` +
+      `<span><b>${n(u.requests)}</b> request${u.requests === 1 ? "" : "s"}${hits(u.portkey_cache_hits)}</span>${cost}` +
+      (h ? `<span class="meter-sub">Includes the Librarian handoff: ${n(h.input_tokens)} input · ${n(h.cached_input_tokens)} cached · ` +
+        `${n(h.output_tokens)} output · ${n(h.requests)} request${h.requests === 1 ? "" : "s"}${hits(h.portkey_cache_hits)}</span>` : "") +
+      `</div>`;
+  }
+
   // ---------- Decode this prompt (the Librarian) ----------
 
-  const decoded = new Map();  // prompt id -> the Librarian's decode, kept for this visit
+  const decoded = new Map();  // "prompt id|lean" -> the Librarian's decode, kept for this visit
+  const decodeKey = (id) => `${id}|${isLean() ? 1 : 0}`;
 
   function decodeSection(d) {
     const src = safeUrl(d.source_url);
@@ -532,7 +568,8 @@
       `<h4>Common mistakes</h4><ul class="mistakes">${d.common_mistakes.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` +
       (reads ? `<h4>Read these</h4><div class="related-list">${reads}</div>` : "") +
       (src ? `<p class="decode-source">Based only on the shelf's data. Prompt source: ` +
-        `<a href="${esc(src)}" target="_blank" rel="noopener noreferrer">${esc(domain(src))} ↗</a></p>` : "");
+        `<a href="${esc(src)}" target="_blank" rel="noopener noreferrer">${esc(domain(src))} ↗</a></p>` : "") +
+      meter(d.usage);
   }
 
   async function decode(btn) {
@@ -545,11 +582,12 @@
     box.innerHTML = `<p class="agent-wait">The Librarian is reading this prompt and its examples…</p>`;
     try {
       const res = await fetch("/api/decode", {
-        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ prompt_id: it.id }),
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt_id: it.id, lean: isLean() }),
       });
       const body = await res.json();
       if (!res.ok) throw new Error(body.detail || `Something went wrong (${res.status}).`);
-      decoded.set(it.id, body);
+      decoded.set(decodeKey(it.id), body);
       if (current === it) { box.innerHTML = decodeSection(body); btn.remove(); }
     } catch (err) {
       if (current === it) {
@@ -768,7 +806,7 @@
         first?.el.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
       },
       schools: () => data.schools.map((s) => ({ key: s.key, name: s.name, short: SCHOOL[s.key][0] })),
-      TYPE, inkFor, esc, safeUrl, domain, limitText,
+      TYPE, inkFor, esc, safeUrl, domain, limitText, meter, isLean,
     };
     document.dispatchEvent(new Event("shelf:ready"));
   }

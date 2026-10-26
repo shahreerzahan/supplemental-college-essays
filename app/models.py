@@ -50,6 +50,7 @@ class SchoolPrompts(BaseModel):
 class SchoolsResult(BaseModel):
     schools: list[SchoolPrompts]
     not_on_shelf: list[str]
+    note: str | None = None
 
 
 class Example(BaseModel):
@@ -128,6 +129,8 @@ class LibrarianDeps:
     shelf: "Shelf"
     job: Literal["ask", "decode", "handoff"] = "ask"
     focus: str | None = None  # the prompt being decoded, if any
+    lean: bool = False
+    cap: int = 8              # most books/examples a tool returns (3 in lean mode)
     tool_calls: list[str] = field(default_factory=list)
     schools_looked_up: set[str] = field(default_factory=set)
     seen_prompt_ids: set[str] = field(default_factory=set)
@@ -141,14 +144,35 @@ class CoachDeps:
     librarian: Any  # the Librarian agent; passed in so tools.py needn't import agents.py
     stories: list[str]
     applying_to: str | None = None
+    lean: bool = False
     handoff_ids: set[str] = field(default_factory=set)
     not_on_shelf: list[str] = field(default_factory=list)
+    handoff_usage: dict[str, int] = field(default_factory=dict)  # the Librarian's share of the tokens
+    handoff_calls: list[dict] = field(default_factory=list)      # its model responses (for Portkey cache hits)
 
 
 # ---------- API requests and responses ----------
 
+class UsageOut(BaseModel):
+    """The token meter shown after every agent run."""
+
+    agent: str
+    input_tokens: int = Field(description="All billed input tokens, cached ones included.")
+    cached_input_tokens: int = Field(description="Input tokens read from the prompt cache.")
+    cache_write_tokens: int
+    output_tokens: int
+    requests: int = Field(description="Model requests in the run.")
+    portkey_cache_hits: int = Field(default=0, description="Requests Portkey answered from its cache (no new tokens).")
+    tool_calls: int
+    cost_usd: float | None = Field(description="None until the prices in app/config.py are filled in.")
+    lean: bool
+    from_cache: bool = Field(default=False, description="True when an earlier answer was reused with no model call.")
+    handoff: "UsageOut | None" = Field(default=None, description="The Librarian's share of a Story Map run.")
+
+
 class AskRequest(BaseModel):
     question: str = Field(min_length=3, max_length=300)
+    lean: bool = False
 
 
 class Source(BaseModel):
@@ -161,10 +185,12 @@ class AskResponse(BaseModel):
     prompt_ids: list[str]
     not_on_shelf: list[str]
     sources: list[Source]
+    usage: UsageOut
 
 
 class DecodeRequest(BaseModel):
     prompt_id: str
+    lean: bool = False
 
 
 class ReadThisOut(BaseModel):
@@ -182,12 +208,14 @@ class DecodeResponse(BaseModel):
     common_mistakes: list[str]
     read_these: list[ReadThisOut]
     source_url: str
+    usage: UsageOut
 
 
 class StoryMapRequest(BaseModel):
     schools: list[str] = Field(min_length=1, max_length=10)
     stories: list[str] = Field(min_length=3, max_length=5)
     applying_to: str | None = Field(default=None, max_length=120)
+    lean: bool = False
 
     @field_validator("stories")
     @classmethod
@@ -234,3 +262,4 @@ class StoryMapResponse(BaseModel):
     total_words: int
     total_note: str
     advice: list[str]
+    usage: UsageOut

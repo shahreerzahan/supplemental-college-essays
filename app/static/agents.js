@@ -53,7 +53,7 @@
             `${S.esc(it.short)} · ${S.esc(it.t.label)} · ${S.esc(S.limitText(it.p))}</button>`).join("")}</div>` +
           `<button class="inline-link see-lit" type="button" data-act="show-lit">See ${books.length === 1 ? "it" : `all ${books.length}`} on the shelf ↓</button>`
         : "") +
-      sources(a.sources);
+      sources(a.sources) + S.meter(a.usage);
     panel.hidden = false;
   }
 
@@ -68,7 +68,7 @@
       panel.hidden = false;
       panel.innerHTML = `<p class="agent-wait">The Librarian is searching the shelf…</p>`;
       try {
-        const a = await post("/api/ask", { question });
+        const a = await post("/api/ask", { question, lean: S.isLean() });
         S.light(a.prompt_ids);
         renderAnswer(a);
       } catch (err) {
@@ -161,7 +161,7 @@
       `<div class="map-head"><h3 class="map-title">Your Story Map</h3>` +
       `<button class="btn primary" type="button" data-act="light-map">Light these up on the shelf</button></div>` +
       `<div class="map-stats">${stats.map(([n, l]) => `<div><b>${S.esc(String(n))}</b><span>${S.esc(l)}</span></div>`).join("")}</div>` +
-      `<p class="map-note">${S.esc(m.total_note)}</p>` + missing(m.not_on_shelf) +
+      `<p class="map-note">${S.esc(m.total_note)}</p>` + S.meter(m.usage) + missing(m.not_on_shelf) +
       `<h4 class="label">Your stories</h4><ol class="map-legend">${m.stories.map((s, i) =>
         `<li>${storyChip(i + 1)}<span>${S.esc(s)}</span><small>${uses(i + 1) ? `${uses(i + 1)} prompt${uses(i + 1) > 1 ? "s" : ""}` : "not used yet"}</small></li>`).join("")}</ol>` +
       [...bySchool].map(([school, rows]) => `<h4 class="map-school">${S.esc(school)}</h4>${rows.map(mapRow).join("")}`).join("") +
@@ -207,7 +207,9 @@
         if (w) w.textContent = WAIT_LINES[++line % WAIT_LINES.length];
       }, 3500);
       try {
-        const m = await post("/api/story-map", { schools, stories, applying_to: $("map-applying").value.trim() || null });
+        const m = await post("/api/story-map", {
+          schools, stories, applying_to: $("map-applying").value.trim() || null, lean: S.isLean(),
+        });
         renderMap(m);
         out.scrollIntoView({ behavior: "smooth", block: "start" });
       } catch (error) {
@@ -229,10 +231,16 @@
     });
   }
 
+  function showLean() {
+    $("map-lean-note").textContent = S.isLean() ? "Lean mode is on (switch at the top of the page)." : "";
+  }
+
   function start() {
     S = window.Shelf;
     bindAsk();
     bindMap();
+    showLean();
+    document.addEventListener("shelf:lean", showLean);
   }
 
   if (window.Shelf) start();

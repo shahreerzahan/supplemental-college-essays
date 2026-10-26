@@ -18,6 +18,7 @@ for env_file in ENV_FILES:
         load_dotenv(env_file)
 
 STATIC_DIR = ROOT / "app" / "static"
+TOKEN_LOG = ROOT / "output" / "token_log.json"
 PROMPTS_DIR = ROOT / "app" / "prompts"
 DATA_DIR = ROOT / "data"
 SHELF_FILE = DATA_DIR / "shelf.json"
@@ -27,6 +28,22 @@ OUTPUT_DIR = ROOT / "output"
 MODEL_NAME = "gpt-6-luna"
 if os.getenv("MODEL_NAME", MODEL_NAME) != MODEL_NAME:
     raise RuntimeError(f"MODEL_NAME must be {MODEL_NAME!r}; this project only uses gpt-6-luna.")
+
+
+# ---------------------------------------------------------------------------------------------
+# TODO(shahreer): fill in gpt-6-luna's prices, in US dollars per 1 million tokens.
+# Take them from Portkey's or the model provider's price sheet. Until the three required prices
+# are set, the app shows token counts but says the cost isn't set.
+PRICE_PER_MILLION_INPUT: float | None = None         # TODO: input tokens not served from the cache
+PRICE_PER_MILLION_CACHED_INPUT: float | None = None  # TODO: input tokens read from the prompt cache
+PRICE_PER_MILLION_OUTPUT: float | None = None        # TODO: output tokens (reasoning tokens count as output)
+# Optional: only if gpt-6-luna bills cache writes at their own rate. None bills them as input.
+PRICE_PER_MILLION_CACHE_WRITE: float | None = None
+# ---------------------------------------------------------------------------------------------
+
+# How many books an answer may light up, normally and in lean mode.
+MAX_RESULTS = 8
+LEAN_RESULTS = 3
 
 
 class MissingKey(RuntimeError):

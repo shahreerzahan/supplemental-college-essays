@@ -13,6 +13,13 @@ Checks in `app/agents.py` send an agent back to fix its answer if it cites an id
 
 API: `POST /api/ask`, `POST /api/decode`, `POST /api/story-map`.
 
+## Token use
+
+- After every agent run the page shows a meter: input tokens, cached input tokens, output tokens, model requests, and cost. Cost stays blank until you fill in gpt-6-luna's prices (the TODO in `app/config.py`).
+- Every run is appended to `output/token_log.json`: time, agent, what was asked, tokens, cost. The file is git-ignored because it holds what students typed.
+- Portkey's response cache can answer a repeated request without calling the model. Those requests are counted as Portkey cache hits, with no billed tokens.
+- To keep cost down, each agent's system prompt is fixed (so it stays cached) and per-run details go in the request. Tools send only the matching prompts, and answers light up at most 8 books. **Lean mode** (switch by the Ask box) drops that to 3 and trims tool results, so you can compare quality and cost.
+
 ## Run it
 
 ```bash

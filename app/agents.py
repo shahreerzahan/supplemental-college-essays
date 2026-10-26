@@ -14,6 +14,7 @@ import re
 from functools import lru_cache
 from urllib.parse import urlparse
 
+import httpx
 from openai import AsyncOpenAI
 from portkey_ai import PORTKEY_GATEWAY_URL
 from pydantic_ai import Agent, ModelRetry, RunContext, UsageLimits
@@ -26,6 +27,7 @@ from app.models import (
     SharedStory, ShelfAnswer, Source, StoryMapPlan, StoryMapRequest, StoryMapResponse,
 )
 from app.tools import Shelf, ask_librarian, get_prompt, list_examples, prompts_for_schools, search_shelf
+from app.usage import billed, counts, log_run, meter, record_response, reused, track, untrack
 
 log = logging.getLogger("shelf.agents")
 
@@ -42,7 +44,10 @@ SHORT_TAKE_WORDS = 60         # rows this short don't need a story, so they aren
 @lru_cache
 def model() -> OpenAIResponsesModel:
     key = config.portkey_api_key()
-    client = AsyncOpenAI(api_key=key, base_url=PORTKEY_GATEWAY_URL, default_headers={"x-portkey-api-key": key})
+    # The response hook notes which answers Portkey served from its cache (see app/usage.py).
+    http = httpx.AsyncClient(event_hooks={"response": [record_response]}, timeout=httpx.Timeout(120.0, connect=10.0))
+    client = AsyncOpenAI(api_key=key, base_url=PORTKEY_GATEWAY_URL, default_headers={"x-portkey-api-key": key},
+                         http_client=http)
     return OpenAIResponsesModel(config.MODEL_NAME, provider=OpenAIProvider(openai_client=client))
 
 
@@ -202,14 +207,40 @@ def _source(label: str, url: str) -> Source:
     return Source(label=f"{label} · {urlparse(url).netloc.removeprefix('www.')}", url=url)
 
 
-async def ask_shelf(question: str) -> AskResponse:
+def _cap(lean: bool) -> int:
+    return config.LEAN_RESULTS if lean else config.MAX_RESULTS
+
+
+async def _run(agent: Agent, request: str, *, deps, name: str, job: str, asked, lean: bool, limits: UsageLimits):
+    """Run an agent. Returns (result, billed token counts, Portkey cache hits).
+
+    Per-run details go in the request, after the fixed system prompt, so every run shares the
+    same cacheable prefix. Failed runs are logged too.
+    """
+    token = track()
+    try:
+        async with RUNS:
+            result = await agent.run(request, deps=deps, model=model(), model_settings=SETTINGS, usage_limits=limits)
+    except Exception as err:
+        log_run(name, job, asked, lean, None, error=f"{type(err).__name__}: {err}")
+        raise
+    finally:
+        calls = untrack(token)
+    c, hits = billed(counts(result.usage), calls)
+    return result, c, hits
+
+
+async def ask_shelf(question: str, lean: bool = False) -> AskResponse:
     shelf = Shelf.get()
-    deps = LibrarianDeps(shelf=shelf, job="ask")
-    async with RUNS:
-        result = await librarian.run(question, deps=deps, instructions=JOB_NOTE["ask"], model=model(),
-                                     model_settings=SETTINGS, usage_limits=LIBRARIAN_LIMITS)
+    cap = _cap(lean)
+    deps = LibrarianDeps(shelf=shelf, job="ask", lean=lean, cap=cap)
+    request = f"{JOB_NOTE['ask']} Light up at most {cap} books.\n\nThe student asks: {question}"
+    result, c, hits = await _run(librarian, request, deps=deps, name="librarian", job="ask", asked=question,
+                                 lean=lean, limits=LIBRARIAN_LIMITS)
     out: ShelfAnswer = result.output
-    log.info("ask: %r -> %d prompts, tools %s, %s", question, len(out.prompt_ids), deps.tool_calls, result.usage)
+    out.prompt_ids = out.prompt_ids[:cap]
+    log_run("librarian", "ask", question, lean, c, portkey_hits=hits)
+    log.info("ask: %r -> %d prompts, tools %s, %s", question, len(out.prompt_ids), deps.tool_calls, c)
 
     sources: dict[str, Source] = {}
     for pid in out.prompt_ids:
@@ -219,46 +250,55 @@ async def ask_shelf(question: str) -> AskResponse:
         if ex := shelf.example(ex_id):
             sources.setdefault(ex.source_url, _source(ex.title, ex.source_url))
     return AskResponse(answer=out.answer, prompt_ids=out.prompt_ids, not_on_shelf=out.not_on_shelf,
-                       sources=list(sources.values()))
+                       sources=list(sources.values()), usage=meter("librarian", c, lean, portkey_hits=hits))
 
 
-_decoded: dict[tuple[str, float], DecodeResponse] = {}
+_decoded: dict[tuple[str, float, bool], DecodeResponse] = {}
 
 
-async def decode_prompt(prompt_id: str) -> DecodeResponse:
+async def decode_prompt(prompt_id: str, lean: bool = False) -> DecodeResponse:
     shelf = Shelf.get()
-    if (prompt_id, shelf.mtime) in _decoded:
-        return _decoded[(prompt_id, shelf.mtime)]
-    deps = LibrarianDeps(shelf=shelf, job="decode", focus=prompt_id)
-    async with RUNS:
-        result = await librarian.run(f"Decode this prompt: {prompt_id}", deps=deps, instructions=JOB_NOTE["decode"],
-                                     model=model(), model_settings=SETTINGS, usage_limits=LIBRARIAN_LIMITS)
+    key = (prompt_id, shelf.mtime, lean)
+    if key in _decoded:  # same prompt decoded earlier: no model call, no tokens
+        return _decoded[key].model_copy(update={"usage": reused("librarian", lean)})
+    reads = 1 if lean else 3
+    deps = LibrarianDeps(shelf=shelf, job="decode", focus=prompt_id, lean=lean, cap=_cap(lean))
+    request = f"{JOB_NOTE['decode']} Recommend at most {reads} example{'s' if reads > 1 else ''}.\n\nDecode this prompt: {prompt_id}"
+    result, c, hits = await _run(librarian, request, deps=deps, name="librarian", job="decode", asked=prompt_id,
+                                 lean=lean, limits=LIBRARIAN_LIMITS)
     out: PromptDecode = result.output
-    log.info("decode %s: tools %s, %s", prompt_id, deps.tool_calls, result.usage)
+    log_run("librarian", "decode", prompt_id, lean, c, portkey_hits=hits)
+    log.info("decode %s: tools %s, %s", prompt_id, deps.tool_calls, c)
 
     read = []
-    for r in out.read_these:
+    for r in out.read_these[:reads]:
         ex = shelf.example(r.example_id)
         read.append(ReadThisOut(id=ex.id, kind=ex.kind, title=ex.title, why=r.why, source_url=ex.source_url,
                                 open_id=ex.for_prompts[0] if ex.kind == "sample" else ex.id))
     decoded = DecodeResponse(prompt_id=prompt_id, really_asking=out.really_asking,
                              common_mistakes=out.common_mistakes, read_these=read,
-                             source_url=shelf.prompts[prompt_id]["source_url"])
-    _decoded[(prompt_id, shelf.mtime)] = decoded
+                             source_url=shelf.prompts[prompt_id]["source_url"],
+                             usage=meter("librarian", c, lean, portkey_hits=hits))
+    _decoded[key] = decoded
     return decoded
 
 
 async def build_story_map(req: StoryMapRequest) -> StoryMapResponse:
     shelf = Shelf.get()
-    deps = CoachDeps(shelf=shelf, librarian=librarian, stories=req.stories, applying_to=req.applying_to)
+    deps = CoachDeps(shelf=shelf, librarian=librarian, stories=req.stories, applying_to=req.applying_to, lean=req.lean)
     stories = "\n".join(f"{i}. {s}" for i, s in enumerate(req.stories, 1))
     request = (f"My schools: {', '.join(req.schools)}\n"
                f"Applying to (college, school or major): {req.applying_to or 'not sure yet'}\n"
                f"My stories:\n{stories}")
-    async with RUNS:
-        result = await coach.run(request, deps=deps, model=model(), model_settings=SETTINGS, usage_limits=COACH_LIMITS)
+    if req.lean:
+        request += "\n\nLean mode: keep each why and coaching under 20 words, and give at most 1 piece of advice."
+    asked = {"schools": req.schools, "stories": req.stories, "applying_to": req.applying_to}
+    result, c, hits = await _run(coach, request, deps=deps, name="coach", job="story-map", asked=asked,
+                                 lean=req.lean, limits=COACH_LIMITS)
     plan: StoryMapPlan = result.output
-    log.info("story map: %d rows, not on shelf %s, %s", len(plan.rows), deps.not_on_shelf, result.usage)
+    hand, hand_hits = billed(deps.handoff_usage, deps.handoff_calls) if deps.handoff_usage else (None, 0)
+    log_run("coach", "story-map", asked, req.lean, c, handoff=hand, portkey_hits=hits, handoff_hits=hand_hits)
+    log.info("story map: %d rows, not on shelf %s, %s (handoff %s)", len(plan.rows), deps.not_on_shelf, c, hand)
 
     order = {pid: i for i, pid in enumerate(shelf.prompts)}
     rows = []
@@ -305,4 +345,5 @@ async def build_story_map(req: StoryMapRequest) -> StoryMapResponse:
                                                               if i in deps.handoff_ids)]
     return StoryMapResponse(stories=req.stories, schools=found, not_on_shelf=deps.not_on_shelf, rows=rows,
                             shared=shared, gaps=gaps, total_words=total, total_note=" ".join(note),
-                            advice=plan.advice)
+                            advice=plan.advice,
+                            usage=meter("coach", c, req.lean, hand, portkey_hits=hits, handoff_hits=hand_hits))
