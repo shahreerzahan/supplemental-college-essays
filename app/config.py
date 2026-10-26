@@ -17,6 +17,7 @@ for env_file in ENV_FILES:
 STATIC_DIR = ROOT / "app" / "static"
 PROMPTS_DIR = ROOT / "app" / "prompts"
 DATA_DIR = ROOT / "data"
+SHELF_FILE = DATA_DIR / "shelf.json"
 OUTPUT_DIR = ROOT / "output"
 
 # Every agent uses gpt-6-luna through Portkey, and nothing else.
