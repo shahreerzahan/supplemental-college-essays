@@ -136,12 +136,16 @@
   function buildItems() {
     const schoolByKey = new Map(data.schools.map((s) => [s.key, s]));
     const keyByName = new Map(data.schools.map((s) => [s.name, s.key]));
+    const samplesFor = new Map();
+    for (const s of data.sample_essays || []) {
+      for (const id of s.prompt_ids) samplesFor.set(id, [...(samplesFor.get(id) || []), s]);
+    }
 
     const prompts = data.prompts.map((p) => {
       const t = TYPE[p.type];
       const s = schoolByKey.get(p.school);
       return {
-        kind: "prompt", id: p.id, p, t, school: p.school, schoolName: s.name,
+        kind: "prompt", id: p.id, p, t, school: p.school, schoolName: s.name, samples: samplesFor.get(p.id) || [],
         short: SCHOOL[p.school][0], initials: SCHOOL[p.school][1],
         title: spineTitle(p.prompt), h: heightFor(p.limit), w: widthFor(p.prompt.length),
         hay: [p.prompt, s.name, SCHOOL[p.school][0], p.type, p.notes].join(" ").toLowerCase(),
@@ -174,11 +178,11 @@
     b.style.setProperty("--w", it.w.toFixed(1));
     b.style.setProperty("--spine-ink", inkFor(it.t.color));
 
-    const fs = it.h < 175 ? 13 : 15;
+    const fs = it.h < 175 ? 12 : 13.5;
     b.style.setProperty("--fs", fs);
     const mark = it.h >= 190 ? MARKS[hash(it.id + "m") % MARKS.length] : "none";
     const titleSpace = it.h - 26 - 24 - 8 - (mark === "none" ? 0 : 20);
-    const capacity = Math.max(4, Math.floor(titleSpace / (fs * 0.42)));
+    const capacity = Math.max(4, Math.floor(titleSpace / (fs * 0.5)));  // Outfit averages ~0.5em per character
     const lines = spineLines(it.title, capacity, it.w >= 46 ? 2 : 1);
 
     b.innerHTML =
@@ -321,7 +325,7 @@
       tip.innerHTML =
         `<div class="tip-head"><span class="tip-school">${esc(it.short)}</span><span class="tip-type">${dot}${esc(it.t.label)}</span></div>` +
         `<p class="tip-text">${esc(it.p.prompt)}</p>` +
-        `<div class="tip-meta">${esc(limitText(it.p))} · ${req}</div>`;
+        `<div class="tip-meta">${esc(limitText(it.p))} · ${req}${it.samples.length ? " · Sample essay" : ""}</div>`;
     } else {
       const e = it.e;
       tip.innerHTML =
@@ -364,14 +368,67 @@
   const typePill = (it) =>
     `<span class="type-pill t-${it.t.slug}" style="--c:${it.t.color};--spine-ink:${inkFor(it.t.color)}">${esc(it.t.label)}</span>`;
 
-  function relatedItem(it) {
+  function relatedItem(it, withSchool = false) {
     if (it.kind === "essay") {
       const e = it.e;
       return `<button class="related-item" type="button" data-open="${esc(it.id)}"><i class="mini-spine" style="--c:${it.t.color}"></i>` +
         `<span><strong>${esc(it.title)}</strong><small>${esc([e.author, e.year, it.schoolName].filter(Boolean).join(" · "))}</small></span></button>`;
     }
     return `<button class="related-item" type="button" data-open="${esc(it.id)}"><i class="mini-spine" style="--c:${it.t.color}"></i>` +
-      `<span><strong>${esc(it.t.label)} · ${esc(limitText(it.p))}</strong><small>${esc(it.p.prompt)}</small></span></button>`;
+      `<span><strong>${withSchool ? `${esc(it.short)} · ` : ""}${esc(it.t.label)} · ${esc(limitText(it.p))}</strong><small>${esc(it.p.prompt)}</small></span></button>`;
+  }
+
+  // A prompt with no sample of its own points to a sample for the same type of prompt,
+  // preferring the same school.
+  function similarWithSample(it) {
+    const pool = items.filter((x) => x.kind === "prompt" && x !== it && x.samples.length && x.t === it.t);
+    const same = pool.filter((x) => x.school === it.school);
+    const from = same.length ? same : pool;
+    return from.length ? from[hash(it.id) % from.length] : null;
+  }
+
+  function sampleSection(it) {
+    if (!it.samples.length) {
+      const alt = similarWithSample(it);
+      return `<section class="related"><h3 class="label">Sample essay</h3>` +
+        `<p class="empty-related">College Essay Guy doesn't have a sample for this prompt.` +
+        (alt ? ` Here's one for a similar ${esc(it.t.label.toLowerCase())} prompt:</p><div class="related-list">${relatedItem(alt, true)}</div>` : "</p>") +
+        `</section>`;
+    }
+    const tabs = it.samples.length > 1
+      ? `<div class="sample-tabs" role="tablist">${it.samples.map((_, i) =>
+          `<button class="sample-tab" type="button" role="tab" aria-selected="${i === 0}" data-sample="${i}">Sample ${i + 1}</button>`).join("")}</div>`
+      : "";
+    return `<section class="samples" style="--c:${it.t.color};--spine-ink:${inkFor(it.t.color)}">` +
+      `<div class="samples-head"><h3 class="label">Sample essay · College Essay Guy</h3>${tabs}</div>` +
+      it.samples.map((s, i) => sampleBody(s, i, it)).join("") + `</section>`;
+  }
+
+  function sampleBody(s, i, it) {
+    const src = safeUrl(s.source_url);
+    const forWhom = !s.written_for ? `Written for ${it.short}`
+      : s.written_for === "another school" ? "Written for another school's similar prompt"
+      : s.written_for === "several schools" ? "Adapted for several schools' similar prompts"
+      : `Written for ${s.written_for}'s similar prompt`;
+    const lim = it.p.limit;
+    const maxWords = lim ? (lim.unit === "words" ? lim.max : Math.round(lim.max / 6)) : null;
+    const over = maxWords && s.approx_words > maxWords * 1.1;
+    const length = s.approx_words ? `About ${s.approx_words} words` : "";
+    // prompt_answered holds real prompt wording only; match_note explains looser matches.
+    const notes = [
+      s.prompt_answered ? `Answers: “${esc(s.prompt_answered)}”` : "",
+      s.match_note ? esc(s.match_note) : s.prompt_match === "earlier version" ? "Written for an earlier version of this prompt." : "",
+    ].filter(Boolean);
+    const answered = notes.map((n) => `<p class="sample-earlier">${n}</p>`).join("");
+    return `<article class="sample" role="tabpanel" data-panel="${i}"${i ? " hidden" : ""}>` +
+      `<div class="sample-meta"><strong>${esc(forWhom)}</strong>${length ? `<span>${length}</span>` : ""}</div>` +
+      (over ? `<p class="sample-earlier">Longer than this prompt's ${maxWords}-word limit: borrow the approach, not the length.</p>` : "") +
+      answered +
+      `<h4>What the writer did</h4><p>${esc(s.what_the_writer_did)}</p>` +
+      `<h4>How it's built</h4><ol class="steps">${s.structure.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>` +
+      `<h4>Why it works</h4><ul class="works">${s.why_it_works.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` +
+      (src ? `<a class="btn" href="${esc(src)}" target="_blank" rel="noopener noreferrer">Read the full essay · ${esc(domain(src))} ↗</a>` : "") +
+      `</article>`;
   }
 
   const nav =
@@ -395,7 +452,7 @@
       `<button class="close" type="button" aria-label="Close" data-act="close">×</button>` +
       `<div class="eyebrow">${typePill(it)}<span>Prompt ${n} of ${atSchool.length}</span></div>` +
       `<h2 class="card-title" id="card-title">${esc(it.schoolName)}</h2>` +
-      `<p class="card-prompt ${p.prompt.length > 220 ? "long" : "serif"}">${esc(p.prompt)}</p>` +
+      `<p class="card-prompt ${p.prompt.length > 220 ? "long" : "big"}">${esc(p.prompt)}</p>` +
       `<dl class="facts">` +
       `<div><dt>Limit</dt><dd>${esc(limitText(p))}</dd></div>` +
       `<div><dt>Required</dt><dd>${p.required === "required" ? "Required" : "Optional"}</dd></div>${choice}` +
@@ -404,6 +461,7 @@
       `<div class="actions">` +
       (src ? `<a class="btn primary" href="${esc(src)}" target="_blank" rel="noopener noreferrer">Source · ${esc(domain(src))} ↗</a>` : "") +
       `<button class="btn" type="button" data-act="copy">Copy link</button></div>` +
+      sampleSection(it) +
       `<section class="related"><h3 class="label">Essays that worked</h3>` +
       (essays.length
         ? `<div class="related-list">${essays.map(relatedItem).join("")}</div>`
@@ -561,6 +619,12 @@
     card.addEventListener("click", (e) => {
       const open = e.target.closest("[data-open]");
       if (open) { releasePulled(); return openCard(byId.get(open.dataset.open)); }
+      const tab = e.target.closest("[data-sample]");
+      if (tab) {
+        for (const t of card.querySelectorAll("[data-sample]")) t.setAttribute("aria-selected", String(t === tab));
+        for (const p of card.querySelectorAll("[data-panel]")) p.hidden = p.dataset.panel !== tab.dataset.sample;
+        return;
+      }
       const act = e.target.closest("[data-act]")?.dataset.act;
       if (act === "close") closeCard();
       else if (act === "prev") step(-1);

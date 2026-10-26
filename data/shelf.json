@@ -16,7 +16,78 @@
       "verified": "Exact wording confirmed for 2026-27 on the school's official page (source_type 'official') or on College Essay Guy's 2026-27 list (source_type 'backup').",
       "unverified": "Prompt found but its 2026-27 wording could not be confirmed; see notes."
     },
-    "essays_note": "Essay text is not stored here: the essays are their authors' copyrighted work. Each entry links to where the essay is published."
+    "essays_note": "Essay text is not stored here: the essays are their authors' copyrighted work. Each entry links to where the essay is published.",
+    "samples_note": "Sample essays are breakdowns written for this site: what the writer did, how the essay is built, and why it works. The essays themselves stay on College Essay Guy; each breakdown links to it.",
+    "sample_coverage": {
+      "yale": {
+        "guide_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+        "notes": "Guide has examples for yale-02 to yale-08 (none for the yale-01 subject list). Many are borrowed: the grow short answers and both opposing-view essays were written for Princeton, the enrich examples for Colgate and UVA. Recorded 9 samples for yale-02, 03, 05, 06, 07, 08. Skipped yale-04 because its only examples answer Princeton's new-skill prompt (two recorded under princeton-05). Skipped the UVA essay (CEG says it needs reworking) and extra community essays (2-per-prompt cap)."
+      },
+      "princeton": {
+        "guide_url": "https://www.collegeessayguy.com/blog/princeton-supplemental-essays",
+        "notes": "Guide has samples for princeton-01 to 04 only. princeton-03's two samples were written for MIT and Rice. princeton-04's sample was reused for several schools, Princeton included. princeton-05 samples come from the Yale guide (CEG says written for a short Princeton prompt; content matches the new-skill question). princeton-06 sample comes from the MIT guide (CEG says written for Princeton's joy prompt). No sample for princeton-07."
+      },
+      "harvard": {
+        "guide_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+        "notes": "Guide has 2 samples for each of the 5 prompts, but most were written elsewhere: Colgate (harvard-01), Brown and an older Princeton prompt (harvard-02), UT-Austin plus an unnamed school (harvard-04; CEG says no Harvard-written samples exist for this prompt yet), Stanford roommate letters (harvard-05, letters rather than a top-3 list). Several run past Harvard's 150-200 word limits."
+      },
+      "stanford": {
+        "guide_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+        "notes": "Guide has samples for all 8 prompts; recorded 2 each except stanford-05 (1). Its second list example was written for Princeton's joy prompt (per the MIT guide), so it is recorded as princeton-06. One stanford-07 sample comes from the Harvard guide (CEG says it was written for Stanford). stanford-08 samples were written for Fordham and an unnamed school. The guide's intro says 11 prompts but lists 8."
+      },
+      "mit": {
+        "guide_url": "https://www.collegeessayguy.com/blog/mit-supplemental-essay",
+        "notes": "Recorded mit-01, mit-03 (2) and mit-04 (written for the old 250-word limit). Skipped mit-02: its three examples are UC personal-insight essays answering a different question. The short-answer section only reuses other colleges' answers (Yale, Princeton, unnamed), none matching mit-05 to mit-08, so those have no samples."
+      },
+      "columbia": {
+        "guide_url": "https://www.collegeessayguy.com/blog/columbia-supplemental-essay",
+        "notes": "2026/2027 guide with 11 examples; 7 recorded from it (columbia-01, -02, -03 x2, -04, -05, -06). The columbia-03 samples were written for a Brown prompt and an old Princeton prompt, and the columbia-04 sample for an unnamed school. Skipped: a columbia-04 bonus essay of unstated origin about building a volunteer group (not clearly about adversity) and two unattributed columbia-06 bonus samples (2-per-prompt cap). Two more essays written for Columbia were found in other guides: one in the Brown guide (columbia-02) and one in the Cornell guide (columbia-06). Most samples run over today's 150-word limit (192 to 390 words where stated)."
+      },
+      "upenn": {
+        "guide_url": "https://www.collegeessayguy.com/blog/upenn-university-pennsylvania-supplemental-essay",
+        "notes": "2026/2027 guide. Samples recorded for upenn-01, -02 (2), -04, -05 and -06; none exists for Nursing (upenn-03). All school-specific samples were written for Penn's older, longer prompt (450 words), so they run well over today's 200 words. CEG shows the same language-and-economics essay under both the College and Wharton; it targets Wharton, so it is recorded only under upenn-05. A Huntsman dual-degree sample was skipped (not in our data). Word counts mostly not stated."
+      },
+      "brown": {
+        "guide_url": "https://www.collegeessayguy.com/blog/brown-supplemental-essays",
+        "notes": "2026/2027 guide; samples for all 4 prompts. brown-01 has 4 samples; 2 recorded (both written for an older Open Curriculum prompt, per CEG), 2 dropped by the 2-per-prompt cap. brown-02: recorded the essay written for Columbia (also recorded under columbia-02); skipped a bonus essay for a different, older Brown prompt that CEG says covers only half of today's question. brown-03 (2) and the pickleball brown-04 sample were written for unnamed other schools. The second brown-04 sample (written for Brown's longer joy prompt) comes from the Cornell guide. PLME and Brown|RISD prompts are not in our data."
+      },
+      "dartmouth": {
+        "guide_url": "https://www.collegeessayguy.com/blog/dartmouth-supplemental-essay",
+        "notes": "2026/2027 guide. Recorded dartmouth-01 (2), -02 (1, written for another school), -03 (2), -05 (1), -06 (1, written for another school), and one essay CEG says fits both -04 and -08 (printed twice in the guide). Skipped a joke-list essay of unstated origin that CEG says could possibly fit -04 or -08; it doesn't clearly answer either. No samples for -07 or -09. The dartmouth-02 essay is another version of the essay recorded under columbia-02 and brown-02."
+      },
+      "cornell": {
+        "guide_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+        "notes": "2026/2027 guide with samples only for Arts and Sciences, Business and Engineering. Recorded cornell-06 (2), -08, -10 (2), -11 (2), -12 and -13 (2). Most engineering samples were written for other schools (Columbia, Princeton, Brown, Colgate, Duke, or adapted for several schools). Skipped the cornell-09 sample: written for CMU and about math and data science, not engineering. No samples for CALS (-01, -02), AAP (-03 to -05), Brooks (-07), Human Ecology (-15), ILR (-16) or -14. CEG's engineering section also lists a three-words question not in our data, and calls the college Cornell Engineering rather than Duffield."
+      },
+      "duke": {
+        "guide_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+        "notes": "2026/2027 guide with samples for all 5 prompts; 8 recorded. Only the 2 Why Duke samples were written for Duke; the community, disagreement and excitement samples were written for Colgate, Princeton and Stanford (noted in titles). Skipped an unlabeled second disagreement sample (dorm eating-habits story) because it isn't a difference of opinion with one person the writer cares about. The Princeton (~350 words) and second Stanford (~300) samples likely run over Duke's 250-word limit. Word counts are estimates except the Colgate essay (196, stated)."
+      },
+      "jhu": {
+        "guide_url": "https://www.collegeessayguy.com/blog/johns-hopkins-supplemental-essay",
+        "notes": "2026/2027 guide; one sample for the single prompt (jhu-01), recorded. It was written for another school (the essay names Haverford), and CEG's analysis after it mentions NYU instead. Word count estimated."
+      },
+      "uchicago": {
+        "guide_url": "https://www.collegeessayguy.com/blog/university-chicago-supplemental-essays",
+        "notes": "2026/2027 guide. 3 Why UChicago samples (2 recorded for uchicago-01). 5 extended-essay samples, all for past prompts (2018-2020); CEG says it has no samples for this year's prompts, so uchicago-02 to -06 have none. Two past-prompt samples are recorded under uchicago-07 (choose your own adventure, which allows past prompts) as 'exact', with the past prompt they answer in prompt_answered. Skipped the 2019 Olive Garden (906 words), 2018 portals and 2020 mash-up samples to stay within 2 per prompt."
+      },
+      "northwestern": {
+        "guide_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+        "notes": "2026/2027 guide with 13 samples covering all 6 prompts; 10 recorded. Only 2 are labelled as written for Northwestern (northwestern-04 mixed-identity sample, northwestern-05 Cubs sample); the rest were written for Fordham, Williams, Boston College or Colgate, or carry no school label (some of those name Northwestern groups). Skipped: Reed syllabus-style course (northwestern-03, already 2), Columbia virtual-clubs sample (northwestern-04, already 2), and a 400-word 'Why NYU' essay CEG offers for northwestern-05 (answers a why-school prompt, not the location question). Several samples exceed the 200-word cap (Boston College ~340)."
+      },
+      "caltech": {
+        "guide_url": "https://www.collegeessayguy.com/blog/caltech-supplemental-essays",
+        "notes": "2026-2027 guide with 5 samples, all written for other schools; all 5 recorded. CEG says the new Scholarly Character prompts (caltech-02, caltech-03) have no samples yet, and the optional context question (caltech-08) has none; caltech-05 has none. CEG doesn't say which Prompt #3 option its two samples fit; I matched the CNC build to caltech-06 (making) and the gel electrophoresis one to caltech-04 (rabbit hole). Both caltech-07 samples (196 and ~250 words) exceed Caltech's 150-word cap."
+      },
+      "oxford": {
+        "guide_url": "https://www.collegeessayguy.com/blog/ucas-personal-statement-examples",
+        "notes": "No samples recorded: CEG has no example statements that answer the three UCAS questions. Its UCAS guide (updated 08/01/2026) explains the new three-question format, but its 6 examples (Chemistry, Veterinary Medicine, Aeronautical Engineering, Economics and Social Policy, History of Art and Philosophy, Liberal Arts) are all old single-essay statements written before the change, not split by question and not tied to Oxford. The supplemental-essays hub has no Oxford guide, and a site search found no other CEG UCAS pages."
+      },
+      "cambridge": {
+        "guide_url": "https://www.collegeessayguy.com/blog/ucas-personal-statement-examples",
+        "notes": "No samples recorded: CEG has no example statements that answer the three UCAS questions. Its UCAS guide (updated 08/01/2026) explains the new three-question format, but its 6 examples are all old single-essay statements written before the change, not split by question and not tied to Cambridge. The supplemental-essays hub has no Cambridge guide, and a site search found no other CEG UCAS pages."
+      }
+    }
   },
   "schools": [
     {
@@ -2788,6 +2859,3289 @@
       "about": "An injured baseball player describes moving from playing to helping run the team through data analysis and strategy advice during a playoff run.",
       "source_url": "https://www.collegeessayguy.com/blog/mit-supplemental-essay",
       "date_checked": "2026-10-25"
+    }
+  ],
+  "sample_essays": [
+    {
+      "id": "sample-01",
+      "publisher": "College Essay Guy",
+      "school": "yale",
+      "prompt_ids": [
+        "yale-02"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 99,
+      "what_the_writer_did": "The writer follows one thread, a love of stories, from books heard as a small child through audio and screen media to the comedic writing and audio shows they now produce. They then present studying film and media at Yale as a natural continuation of it.",
+      "structure": [
+        "Opens by naming the one interest that ties everything together",
+        "Moves quickly from childhood reading to audio and visual media",
+        "Lands on the creative projects the writer runs today",
+        "Frames the intended major as the next step, with possible directions"
+      ],
+      "why_it_works": [
+        "One clear theme lets a 100-word answer feel complete instead of rushed.",
+        "A quick timeline shows the interest grew over years, not overnight.",
+        "Finish by linking what you already make to what you want to study."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written when this Yale prompt had a shorter word limit."
+    },
+    {
+      "id": "sample-02",
+      "publisher": "College Essay Guy",
+      "school": "yale",
+      "prompt_ids": [
+        "yale-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 20,
+      "what_the_writer_did": "The writer answers with one invented course. A playful, attention-grabbing title comes first, then a subtitle that shows the class would be a serious history of misleading news in the U.S. and the damage it has done.",
+      "structure": [
+        "Leads with a funny, memorable course title",
+        "Uses a colon to pivot from the joke to the substance",
+        "Subtitle names the real topic and how broad the course is"
+      ],
+      "why_it_works": [
+        "A title that makes readers smile, then a subtitle that proves the class is rigorous.",
+        "The chosen topic hints at what the writer cares about without stating it.",
+        "With a tiny limit, one sharp line can do the work of a paragraph."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-03",
+      "publisher": "College Essay Guy",
+      "school": "yale",
+      "prompt_ids": [
+        "yale-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 49,
+      "what_the_writer_did": "The writer describes staying up late building a fan-made video game with an online team while covering several roles. They single out a small nightly ritual, posting progress before bed and waking up to teammates' replies, as the thing that keeps them going.",
+      "structure": [
+        "Opens with a quick run of the jobs they handle",
+        "Zooms into a specific late-night work routine",
+        "Highlights one small, rewarding moment with teammates",
+        "Ends on why they keep coming back to the project"
+      ],
+      "why_it_works": [
+        "A side project missing from the activities list reveals a new side of you.",
+        "One concrete ritual says more about drive than naming the trait.",
+        "Mentioning teammates hints at collaboration without spelling it out."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-04",
+      "publisher": "College Essay Guy",
+      "school": "yale",
+      "prompt_ids": [
+        "yale-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 50,
+      "what_the_writer_did": "The writer recounts a summer lab experiment tracking how polymer samples changed and how it was paired with a research partner's work on nanoscale filters. They close by pointing to how the combined work could improve water filtration and make clean water easier to reach.",
+      "structure": [
+        "Opens with a dated, action-first statement of the experiment",
+        "Briefly explains the method in plain terms",
+        "Links the work to a research partner's project",
+        "Widens to a real-world use: cleaner water"
+      ],
+      "why_it_works": [
+        "Explaining the method in a line proves you understand the science.",
+        "Ending on real-world use answers why the research matters.",
+        "Pick something the rest of your application can't show in detail."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-05",
+      "publisher": "College Essay Guy",
+      "school": "yale",
+      "prompt_ids": [
+        "yale-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Princeton",
+      "title": null,
+      "approx_words": 337,
+      "what_the_writer_did": "Troubled that their school's mascot carried a racist history, the writer posted publicly in favor of changing it. Amid hostile replies, they messaged one critic privately, and the two swapped sources for days. The writer reflects on what made that exchange work and how they would create more spaces for respectful disagreement.",
+      "structure": [
+        "Opens with the stakes: an honor tied to a contested mascot",
+        "Shows the public post and the backlash it drew",
+        "Shifts to a private, days-long exchange with one critic",
+        "Both sides dig into each other's sources and rethink",
+        "Closes with lessons and a plan for future dialogue"
+      ],
+      "why_it_works": [
+        "Moving from a public fight to a one-on-one talk shows maturity.",
+        "Treating the other side's evidence seriously makes your reflection believable.",
+        "End with what you will do differently, not only what you felt."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-06",
+      "publisher": "College Essay Guy",
+      "school": "yale",
+      "prompt_ids": [
+        "yale-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Princeton",
+      "title": null,
+      "approx_words": 282,
+      "what_the_writer_did": "A political cartoon in a language class sets off an argument that turns personal and leaves classmates avoiding one another. Looking back, the writer sees that people were pushing views instead of explaining them, admits to having quietly picked a side, and resolves to hear everyone out before judging.",
+      "structure": [
+        "Opens in the classroom as the cartoon sparks debate",
+        "Shows the argument sliding into insults",
+        "Describes the lasting rift among classmates",
+        "Reflects, admits personal bias, and commits to listening first"
+      ],
+      "why_it_works": [
+        "A group conflict works when you examine your own part in it.",
+        "Admitting your bias makes the lesson feel earned, not preachy.",
+        "Showing the aftermath proves the disagreement mattered beyond one class."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-07",
+      "publisher": "College Essay Guy",
+      "school": "yale",
+      "prompt_ids": [
+        "yale-07"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 250,
+      "what_the_writer_did": "The writer describes working at a community farm: digging crops, sorting crates and, starting on a rainy first day, taking charge of packing the delivery truck more efficiently. They explain they return for the people and the gratitude around the food, and reflect on what a group achieves that no one person could.",
+      "structure": [
+        "Opens by stating the role and listing hands-on tasks",
+        "Narrows to one job the writer owns: loading the truck",
+        "Shows a small fix that improved deliveries",
+        "Explains what keeps the writer coming back",
+        "Ends with a reflection on shared effort"
+      ],
+      "why_it_works": [
+        "Naming your specific job shows contribution, not just membership.",
+        "Physical, sensory details make an unusual community easy to picture.",
+        "Answer the why-it-matters part directly before you close."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-08",
+      "publisher": "College Essay Guy",
+      "school": "yale",
+      "prompt_ids": [
+        "yale-07"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 250,
+      "what_the_writer_did": "The writer opens with a parent's offhand reaction to a video they made for a local LGBT center about workplace discrimination against queer Chinese employees. Backing up to show how the video was made and the parent's earlier disapproval, they reflect on how the work made a community feel human and why diversity matters to them.",
+      "structure": [
+        "Opens with a parent's spoken reaction that signals a change",
+        "Backs up to explain how the video was made",
+        "Reveals the parent's earlier disapproval to raise the stakes",
+        "Reflects on what the moment showed about the work's impact",
+        "Closes with a brief statement of values"
+      ],
+      "why_it_works": [
+        "Starting with a reaction, then explaining it, builds curiosity.",
+        "One person's change of heart shows impact more vividly than view counts.",
+        "Specific production choices prove the writer did the work."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-09",
+      "publisher": "College Essay Guy",
+      "school": "yale",
+      "prompt_ids": [
+        "yale-08"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Colgate",
+      "title": null,
+      "approx_words": 196,
+      "what_the_writer_did": "The writer moves from a light opening about food to their Jewish heritage and relatives lost in the Holocaust. They describe joining a Holocaust center's student board, holding weekly discussions and helping build a website about one survivor, and close hoping to find peers who share their commitments as well as people unlike them.",
+      "structure": [
+        "Opens with a playful line before turning serious",
+        "Connects family history to a sense of responsibility",
+        "Shows concrete action: the board role and survivor website",
+        "Ends with hopes for community at college"
+      ],
+      "why_it_works": [
+        "A light opening can ease into a heavy topic without feeling abrupt.",
+        "Pair an identity with the actions you have taken because of it.",
+        "Say how you would keep the work going on campus; this sample only hints at it."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-10",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Colgate",
+      "title": null,
+      "approx_words": 196,
+      "what_the_writer_did": "After a lighthearted opening about food, the writer turns to their Jewish heritage and relatives lost in the Holocaust, then shows what they did about it: serving on a Holocaust center's student board, joining weekly talks on present-day oppression and helping build a website about a survivor. They end hoping to find both kindred and different peers.",
+      "structure": [
+        "Opens with a playful line, then turns serious",
+        "Links family history to a sense of duty",
+        "Shows specific action on a student board",
+        "Ends with what the writer seeks in a college community"
+      ],
+      "why_it_works": [
+        "Show what your background led you to do, not only who you are.",
+        "Keep to one identity and one project to fit Harvard's short limit.",
+        "Add a sentence on what you would bring to Harvard specifically."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-11",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 250,
+      "what_the_writer_did": "The writer challenges the assumption that an Asian American affinity group must be uniform, pointing to members of different grades, genders and home countries alongside shared moments like embarrassment over lunches from home. They reflect that people who look alike can differ while different people share a lot, and aim to learn from both.",
+      "structure": [
+        "Opens by questioning an assumption about the group",
+        "Shows variety within the group through specific details",
+        "Adds a shared, relatable experience members have in common",
+        "Reflects on what diversity means and states a goal"
+      ],
+      "why_it_works": [
+        "Challenging a common assumption gives a familiar topic a fresh angle.",
+        "Small shared details make a group feel real.",
+        "Turn your reflection into a goal for how you will contribute."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-12",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Brown",
+      "title": null,
+      "approx_words": 260,
+      "what_the_writer_did": "The writer describes a running disagreement with their father over pandemic mask rules, then faces a choice when invited on a family trip full of activities they both enjoy. They decide to go, but only on clear conditions, keeping the relationship while holding firm on public-health limits.",
+      "structure": [
+        "Opens by stating the disagreement and both positions",
+        "Introduces a tempting invitation that creates a dilemma",
+        "Explains the decision to go with set conditions",
+        "Ends on a light image tied to the writer's values"
+      ],
+      "why_it_works": [
+        "Lay out both positions in a sentence or two so the conflict is clear fast.",
+        "A real dilemma shows how you weigh competing values.",
+        "Show the action you took and its limits, not only your feelings."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-13",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Princeton",
+      "title": null,
+      "approx_words": 340,
+      "what_the_writer_did": "The writer explains they argue most with a grandfather raised in India, then zooms in on a running debate about headache remedies: store-bought pills versus balms and oils. Through it they learn to word objections gently, keep logic separate from hurt feelings, and see a good argument as an exchange instead of a contest.",
+      "structure": [
+        "Opens by naming the person and why their views differ",
+        "Uses one small, recurring debate as the example",
+        "Gives both sides' reasoning fairly",
+        "Shows a concrete change in how the writer phrases things",
+        "Ends with a broader view of what arguments are for"
+      ],
+      "why_it_works": [
+        "Giving the other person's reasoning fairly shows you actually listened.",
+        "A specific new habit of speech proves the lesson stuck.",
+        "Different backgrounds can explain a disagreement without blaming anyone."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-14",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 135,
+      "what_the_writer_did": "The writer opens with a comedy film's celebration of always agreeing, then shows how policy debate trained them to research both sides, question tidy answers and spot flawed reasoning, even in advertising. They close by explaining that they now hold off on agreeing until they have weighed other views, circling back to the film.",
+      "structure": [
+        "Opens with a film reference that sets up a contrast",
+        "Notes the risk of agreeing without questioning",
+        "Shows how debate built a habit of skepticism",
+        "Returns to the film to close the loop"
+      ],
+      "why_it_works": [
+        "Frame an activity by the habit of mind it built, not its awards.",
+        "A pop-culture hook works when it sets up your actual point.",
+        "One everyday example, like reading ads, shows the skill outside the activity."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-15",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 145,
+      "what_the_writer_did": "The writer opens mid-workout, running stairs and hearing their own breathing, then reveals it is a ballet school's conditioning class. They make the case that dancers are athletes by describing demanding moves and drills, and close by contrasting how hard their first class felt with how natural leaps and turns feel now.",
+      "structure": [
+        "Opens in a physical moment that hides the activity",
+        "Reveals ballet and pushes back on a stereotype",
+        "Lists demanding skills to prove the point",
+        "Ends by contrasting the first class with today"
+      ],
+      "why_it_works": [
+        "Delaying the reveal makes a familiar activity surprising.",
+        "Technical details show expertise without bragging.",
+        "A then-versus-now ending shows growth in one sentence."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-16",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "UT-Austin",
+      "title": null,
+      "approx_words": 293,
+      "what_the_writer_did": "The writer opens with a rapid list of political issues they follow, ties them to an immigrant family background and a chosen international relations focus, then describes favorite classes, independent research on parliamentary systems, a professor to learn from and study abroad. They finish by applying the degree to local issues and a career in global affairs.",
+      "structure": [
+        "Opens with a quick list of issues the writer cares about",
+        "Links those issues to family background and program choice",
+        "Shows academic groundwork: classes, research and a professor",
+        "Applies the degree to local community problems",
+        "Ends with a long-term career goal"
+      ],
+      "why_it_works": [
+        "Show what you would do with the degree at home, not just abroad.",
+        "Past research proves the future plan has roots.",
+        "Harvard allows far fewer words, so keep only the clearest one or two goals."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-17",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "another school",
+      "title": null,
+      "approx_words": 247,
+      "what_the_writer_did": "The writer opens with a striking image linking the brain to the stars, then recounts a months-long search for a diagnosis at age 14. Grateful their own condition is manageable, they show how classes, a neuroscience program and a lecture on health gaps abroad shaped a plan for pediatric neurology and humanitarian work.",
+      "structure": [
+        "Opens with a vivid image and a turn to personal illness",
+        "Shifts focus from personal luck to others' needs",
+        "Shows how classes and a lecture shaped goals",
+        "Lays out a specific career path",
+        "Ends by returning to the opening image"
+      ],
+      "why_it_works": [
+        "A personal experience explains why the future goal matters to you.",
+        "Naming concrete next steps makes the plan believable.",
+        "Returning to the opening image gives a short essay a finished shape."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-18",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Stanford",
+      "title": null,
+      "approx_words": 247,
+      "what_the_writer_did": "Written as a friendly letter, the essay shares the writer's sweet tooth with specific ice cream picks and a dislike of cold weather paired with an offer to knit a blanket. It then covers a wide mix of music tastes, dance and instruments, ending with an offer to play requests.",
+      "structure": [
+        "Opens with a casual greeting and a food obsession",
+        "Moves through habits, each paired with an offer to share",
+        "Covers music and performing interests",
+        "Signs off warmly, looking ahead to living together"
+      ],
+      "why_it_works": [
+        "Offers to do things for a roommate show generosity, not just traits.",
+        "Specific favorites beat general adjectives about yourself.",
+        "For Harvard's three-item format, pick the three strongest topics here."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-19",
+      "publisher": "College Essay Guy",
+      "school": "harvard",
+      "prompt_ids": [
+        "harvard-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Stanford",
+      "title": null,
+      "approx_words": 250,
+      "what_the_writer_did": "In a letter to a future roommate, the writer explains how to say their name and how learning its meaning changed their view of it, shares a love of hard math problems, and confesses deep loyalty to Bay Area sports teams, with comfort food after losses. It ends by asking about the roommate.",
+      "structure": [
+        "Opens with name pronunciation and its meaning",
+        "Shares an academic passion in a relaxed tone",
+        "Adds a sports fandom with highs, lows and snacks",
+        "Ends by turning the question back to the roommate"
+      ],
+      "why_it_works": [
+        "Starting with your name is a natural way to share identity.",
+        "Mix one academic interest with personal ones for balance.",
+        "Ending with a question makes the note feel like a real conversation."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-20",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-01"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 275,
+      "what_the_writer_did": "The writer opens with an eager attempt to explain an economics idea to an uninterested friend. They then lay out a Princeton plan: economics courses that build on a high school interest in trade, a computing certificate, research on how teenagers handle money, and interests beyond the major such as Latin.",
+      "structure": [
+        "Opens with a short, self-aware anecdote showing enthusiasm",
+        "Defines the field as a blend of math, politics and psychology",
+        "Maps courses, a certificate and a research idea to Princeton",
+        "Adds interests outside the major and campus community structures",
+        "Closes with a quick, playful callback"
+      ],
+      "why_it_works": [
+        "A funny moment of over-enthusiasm proves passion better than claiming it.",
+        "Tie each Princeton course or professor to an interest you already have.",
+        "A non-major interest shows you would actually use the liberal arts breadth."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/princeton-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": "Written when this prompt allowed slightly more words."
+    },
+    {
+      "id": "sample-21",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 265,
+      "what_the_writer_did": "After a stage production sparks their interest, the writer describes teaching themselves gender studies through books, films and an online course. They plan to pair it with economics at Princeton, naming courses, a professor's research, an activist group and a book club, so they can combine data with lived experience in advocacy.",
+      "structure": [
+        "Opens with the moment that sparked self-directed learning",
+        "States the advocacy goal and the planned major",
+        "Lists courses and groups that fit that goal",
+        "Explains why economics complements the main field",
+        "Sums up the two-field path"
+      ],
+      "why_it_works": [
+        "Learning on your own before college shows the interest is real.",
+        "Explaining why two fields belong together shows how you think.",
+        "Name campus resources that serve your stated goal, not random ones."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/princeton-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-22",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 249,
+      "what_the_writer_did": "The writer starts inside hands-on engineering workshops, from programming a robot to stress-testing materials. They then show how those experiences point to Princeton's research culture: a biomaterials focus with a named professor, a summer coding program, engineering and computing groups, and faculty whose careers they hope to follow.",
+      "structure": [
+        "Opens inside workshops with several quick hands-on activities",
+        "Transitions to wanting that kind of research at Princeton",
+        "Lays out a materials research plan with specific faculty",
+        "Connects coding experience to campus groups",
+        "Closes with faculty role models"
+      ],
+      "why_it_works": [
+        "Starting with things you built proves real exposure to engineering.",
+        "A concrete research plan shows you have studied the department.",
+        "Make every Princeton detail connect back to something you have done."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/princeton-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-23",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-02"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 287,
+      "what_the_writer_did": "The writer traces years of programming, from a toy robot to a long-running game project, then argues that computing matters in every field and that they want to be on the building side of whatever comes next. They name a graphics module and a computing history course, and end with a playful wish to meet a famous figure in computing.",
+      "structure": [
+        "Opens with a numbers-backed history of coding projects",
+        "Makes a broader case for computing across fields",
+        "States a personal mission in one short line",
+        "Names specific Princeton courses",
+        "Ends with a lighthearted, specific wish"
+      ],
+      "why_it_works": [
+        "Concrete numbers about time spent make a hobby read as serious.",
+        "A big-picture claim about the field shows thinking beyond code.",
+        "Trim to the current 250-word limit; this sample runs longer."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/princeton-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": "Written when this prompt's limit was 350 words."
+    },
+    {
+      "id": "sample-24",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "MIT",
+      "title": null,
+      "approx_words": 247,
+      "what_the_writer_did": "The writer recalls telling classmates as a young child about having two dads and being conceived through IVF, then explains how their family taught them that patient personal talks, not demonstrations, are how minds change. They plan to bring that openness and humor to campus to improve the climate for LGBTQ+ students.",
+      "structure": [
+        "Opens with a childhood moment that started family conversations",
+        "Explains the family's belief in change through personal talks",
+        "Shows how those talks chipped away at stereotypes over time",
+        "Looks ahead to how the writer will engage peers on campus"
+      ],
+      "why_it_works": [
+        "A childhood anecdote can introduce a lifelong value in a few lines.",
+        "Describe how you talk with people, since this prompt is about conversations.",
+        "Spend most words on your experience, then end with campus plans."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/princeton-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-25",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Rice",
+      "title": null,
+      "approx_words": 390,
+      "what_the_writer_did": "In three short sections, each led by a brief identity statement, the writer covers an often-mispronounced name and its cultural meaning, growing up with an early diagnosis that made socializing hard and how music and patience helped, and volunteer work where their suggestions were adopted. A short close says what they hope to share with classmates.",
+      "structure": [
+        "Opens with name mispronunciation and what the name means",
+        "Second section traces growth after an early diagnosis",
+        "Third section shows community volunteering and its results",
+        "Brief closing ties the threads to campus life"
+      ],
+      "why_it_works": [
+        "Separate headed sections let you cover several identities clearly.",
+        "Growth over years answers the question about lessons learned.",
+        "Expand the ending to say what classmates would learn from you."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/princeton-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-26",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 215,
+      "what_the_writer_did": "The writer starts with discolored water at a school fountain, explains how bottled water became a waste problem, and recounts how an environmental club pushed for filtration stations, was turned down by the school board, then rallied the school and crowdfunded until the district agreed. It ends with the stations' measurable impact.",
+      "structure": [
+        "Opens with a sensory moment at a fountain",
+        "Lays out the problem and the club's goal",
+        "Shows a setback with the school board",
+        "Describes the grassroots workaround and fundraising",
+        "Ends with concrete results on campus"
+      ],
+      "why_it_works": [
+        "A problem, setback and solution arc shows persistence in action.",
+        "Hard numbers make civic impact concrete.",
+        "Choose a local issue you actually changed, not a cause in the abstract."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/princeton-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-27",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 45,
+      "what_the_writer_did": "The writer mentions a weekly songwriting habit and admits they lack the technical production skills that turn songs into finished tracks. They name creative Princeton peers and an electronic music club as the way they would learn them.",
+      "structure": [
+        "Opens with an existing creative habit",
+        "Names the specific technical gap",
+        "Points to campus people and a club to fill it"
+      ],
+      "why_it_works": [
+        "A skill that builds on an existing passion feels purposeful.",
+        "Naming precise sub-skills shows you know the craft.",
+        "One campus detail makes a 50-word answer school-specific."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-28",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 35,
+      "what_the_writer_did": "The writer picks humor as the skill to sharpen, admitting that most laughs they get now come from poking fun at themselves. They want to learn to use it in a way that brings people closer together.",
+      "structure": [
+        "States the goal in a short opening fragment",
+        "Admits an honest limitation with self-deprecating humor",
+        "Ends on how the improved skill would help others"
+      ],
+      "why_it_works": [
+        "A people skill can be as strong an answer as a technical one.",
+        "A small, honest admission makes the goal believable.",
+        "Closing on the benefit to others gives the skill a purpose."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/yale-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-29",
+      "publisher": "College Essay Guy",
+      "school": "princeton",
+      "prompt_ids": [
+        "princeton-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 50,
+      "what_the_writer_did": "Instead of full sentences, the writer answers with a short list. It moves from reading and poetry, through quiet daily rituals and time with a parent, to a favorite view and a shared moment with a close friend that they would like to stretch out.",
+      "structure": [
+        "Opens with literary and intellectual pleasures",
+        "Moves to small daily rituals and comforts",
+        "Adds family and a favorite view",
+        "Ends on a single moment with a friend"
+      ],
+      "why_it_works": [
+        "A list lets you show many sides of yourself in 50 words.",
+        "Ordering items from ideas toward people builds to an emotional close.",
+        "Small, specific joys feel more personal than big abstract ones."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/mit-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-30",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 49,
+      "what_the_writer_did": "The writer names the loss of real dialogue as society's biggest challenge, pointing to peers stuck in rigid positions and arguing that conversations grounded in lived experience are fading. They warn that this feeds hostility and could push society toward sameness under heavy control.",
+      "structure": [
+        "Opens with an observation about peers' rigid debates",
+        "Names what is being lost and its effect",
+        "Ends with the larger danger if the trend continues"
+      ],
+      "why_it_works": [
+        "Grounding a big issue in what you see among peers adds credibility.",
+        "Escalating from personal to societal fits a lot into 50 words.",
+        "Pick a challenge that reveals what you value."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-31",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 50,
+      "what_the_writer_did": "The writer asks how anyone can define misuse of AI before trying to regulate it, and argues the answer belongs to sociology and ethics as much as computer science. Pointing to a Stanford program, they call for mixed-discipline committees whose standards center people's welfare, not profit.",
+      "structure": [
+        "Opens with a pointed question about defining AI misuse",
+        "Argues the problem crosses disciplines",
+        "Names a Stanford program as part of the answer",
+        "Ends with a values-based standard"
+      ],
+      "why_it_works": [
+        "Opening with a question frames a familiar topic in a fresh way.",
+        "A quick campus reference shows fit without wasting words.",
+        "Name the challenge outright; don't leave the reader to infer it."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-32",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 52,
+      "what_the_writer_did": "The writer gives each summer its own line instead of writing sentences. Compact fragments pack in a national competition and research, teaching coding, building a practical device for a grandparent's farm, making apps, an internship and tutoring math.",
+      "structure": [
+        "Uses one labeled line for each summer",
+        "Lists activities in compact fragments",
+        "Ends with a catch-all line covering both summers"
+      ],
+      "why_it_works": [
+        "Fragments and labels let you fit far more into 50 words.",
+        "Strong action words carry a list without extra explanation.",
+        "One homey detail, like a build for family, keeps it from reading as a resume."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-33",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 50,
+      "what_the_writer_did": "In three dense sentences, the writer covers research and app projects, fundraising websites for children abroad, business plans, guest talks at a university in Singapore and running a competition. The answer ends on something no resume would list: enjoying street food with family.",
+      "structure": [
+        "Opens with research and app-building work",
+        "Adds fundraising, business planning and public speaking",
+        "Ends on a relaxed family moment"
+      ],
+      "why_it_works": [
+        "Group related activities so a long list has a clear order.",
+        "A final non-academic detail reminds readers there is a person behind the projects.",
+        "Name places and audiences to make each item concrete."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-34",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 48,
+      "what_the_writer_did": "The writer jokingly picks watching George Washington shop for clothes and explains a love of presidential trivia. They then argue that small everyday choices can reveal how a leader thinks, ending with a playful question about what he would buy.",
+      "structure": [
+        "Opens with a surprising, funny choice of moment",
+        "Explains the personal interest behind it",
+        "Turns the joke into a point about leadership",
+        "Ends on a light question"
+      ],
+      "why_it_works": [
+        "An unexpected moment stands out among famous battles and speeches.",
+        "Humor works when it leads to a real idea.",
+        "Link the moment to a bigger theme you care about."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-35",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 50,
+      "what_the_writer_did": "The writer chooses a private moment over a famous one: their grandfather, a traditional Chinese medicine doctor who treated families unable to afford hospitals, skipping meals and risking his health to do it. They wish they could sit beside him as he wrote poetry before dawn and ask how he stayed so caring.",
+      "structure": [
+        "Introduces the grandfather and his work",
+        "Lists his sacrifices for patients",
+        "Notes what he taught the writer",
+        "Ends with the exact scene the writer would witness"
+      ],
+      "why_it_works": [
+        "A family moment can answer a history prompt in a personal way.",
+        "Concrete sacrifices show character without adjectives.",
+        "End with the specific scene and question you would bring."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-36",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 50,
+      "what_the_writer_did": "The writer opens with a burst of fragments describing what they see on a long Saturday train ride to a weekend science program. They then show two halves of their mind at work: one rethinking how transit routes are planned, the other noticing a small child pleading with a parent for sweets.",
+      "structure": [
+        "Opens with a string of vivid fragments",
+        "Reveals the context: a long trip to a science program",
+        "Contrasts the analytical and observant sides of the writer"
+      ],
+      "why_it_works": [
+        "Describing the commute, not the program, gives a fresh angle.",
+        "Showing two ways of thinking reveals personality in one sentence.",
+        "Let the activities list cover facts; use this space for texture."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-37",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 50,
+      "what_the_writer_did": "The writer describes producing a marketing film in rural China and discovering that background noise had ruined the interviews just when a sponsorship depended on it. After long hours of re-editing, they win the sponsorship along with later internships.",
+      "structure": [
+        "Sets the scene: the project and its location",
+        "Introduces the problem and what was at stake",
+        "Shows the effort to fix it",
+        "Ends with the result"
+      ],
+      "why_it_works": [
+        "A problem, action and result arc fits neatly into 50 words.",
+        "Stating the stakes makes the effort meaningful.",
+        "Precise numbers show effort better than adjectives."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-38",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 50,
+      "what_the_writer_did": "In one long sentence of short items, the writer starts with a wildlife sighting, moves through sports, coding and time with a sibling, and ends with a small act of kindness at a hospital. Each item hints at a value instead of naming it.",
+      "structure": [
+        "Opens with a vivid nature moment",
+        "Moves through sports, skills and family",
+        "Ends with an act of service"
+      ],
+      "why_it_works": [
+        "Concrete moments let values show without labels.",
+        "Ending on care for others leaves a strong final impression.",
+        "Mixing serious and playful items gives a fuller picture."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-39",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 235,
+      "what_the_writer_did": "The writer opens with a probability puzzle about sharks versus falling airplane parts and explains the psychology of why people misjudge risk. They show how that idea reshaped their debating, including undercutting an opponent's alarming statistics by revealing how harmless many of the counted incidents were.",
+      "structure": [
+        "Opens with a counterintuitive probability question",
+        "Explains the mental shortcut behind the wrong guess",
+        "Connects the idea to the writer's debate strategy",
+        "Shows it working in a real round",
+        "Ends on a light, satisfying payoff"
+      ],
+      "why_it_works": [
+        "Starting with a puzzle invites the reader to think along.",
+        "Show an idea changing what you do, not just what you know.",
+        "One concrete application proves the excitement is real."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-40",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 252,
+      "what_the_writer_did": "During lockdown, inspired by a friend's experiment, the writer races through an online AI course and grasps that models improve by repeatedly guessing and correcting. They apply it in a research internship on speeding up infant assessments, question how commercial AI priorities differ from social good, and plan further work at Stanford.",
+      "structure": [
+        "Opens with how the interest began during lockdown",
+        "Describes intense self-study and a key insight",
+        "Applies the skill in a research internship",
+        "Raises an ethical concern about where AI is heading",
+        "Ends with plans to keep exploring at Stanford"
+      ],
+      "why_it_works": [
+        "Name the specific insight that hooked you, not just the course you took.",
+        "Raising a critique shows thinking beyond technical skill.",
+        "Close with a concrete next project to show the interest is still growing."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-41",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-07"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 250,
+      "what_the_writer_did": "Written as a late-night email that apologizes for the hour, the note shares the writer's love of the outdoors with an invitation on a trip and a candid heads-up about one of their quirks. It adds a violin habit with an offer to take song requests, then what they will miss at home.",
+      "structure": [
+        "Opens with a casual, time-stamped greeting",
+        "Shares outdoor interests and an invitation",
+        "Gives a candid heads-up about a quirk",
+        "Adds music with an offer to play requests",
+        "Ends on home, family and a cheerful sign-off"
+      ],
+      "why_it_works": [
+        "A real format, like an email, makes the voice feel natural.",
+        "Invitations and offers show what kind of roommate you will be.",
+        "A note about what you will miss adds warmth and honesty."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-42",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-07"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 247,
+      "what_the_writer_did": "The writer's letter moves through a sweet tooth with specific ice cream picks and a dislike of cold weather paired with an offer to knit the roommate a blanket. It closes with a wide range of music, dance and instruments, plus an offer to play whatever the roommate wants to hear.",
+      "structure": [
+        "Opens with a casual greeting and a favorite food",
+        "Pairs each habit with something the writer will share",
+        "Covers music and performing interests",
+        "Signs off warmly"
+      ],
+      "why_it_works": [
+        "Concrete favorites, like named shops, make you easy to picture.",
+        "Offers to the roommate show generosity instead of claiming it.",
+        "Several short topics give a rounded picture without a long story."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/harvard-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-43",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-08"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Fordham",
+      "title": null,
+      "approx_words": 148,
+      "what_the_writer_did": "The writer introduces their Muslim identity and commitment to civil liberties, tracing it to seeing migrant workers in the Middle East. They name specific courses, a student union and a dance group they would join, and end with a goal of becoming a U.S. ambassador to the UN.",
+      "structure": [
+        "Opens with identity and the values it shapes",
+        "Ties those values to a formative observation",
+        "Names specific campus courses and groups",
+        "Ends with an ambitious long-term goal"
+      ],
+      "why_it_works": [
+        "Link your identity to concrete things you will join on campus.",
+        "A bold, specific goal makes your contribution easy to picture.",
+        "Show impact you have already had; this sample says little about it."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-44",
+      "publisher": "College Essay Guy",
+      "school": "stanford",
+      "prompt_ids": [
+        "stanford-08"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "another school",
+      "title": null,
+      "approx_words": 196,
+      "what_the_writer_did": "The writer opens at family dinners where a grandfather asks the writer's brothers about school and sports but never asks them, while a grandmother treasures the writer's education. That gap fuels their drive and an idea for a children's book about women in STEM, followed by plans for campus groups, panels and wellness work.",
+      "structure": [
+        "Opens with a family dinner scene showing unequal attention",
+        "Contrasts it with a grandmother's support",
+        "Explains the drive and a project idea",
+        "Lists specific ways to contribute on campus"
+      ],
+      "why_it_works": [
+        "A small scene can reveal a big motivation without explaining it.",
+        "Turning a frustration into a project shows initiative.",
+        "Specific campus plans show how you will contribute, not just what you value."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/stanford-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-45",
+      "publisher": "College Essay Guy",
+      "school": "mit",
+      "prompt_ids": [
+        "mit-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Why Electrical Engineering?",
+      "approx_words": 89,
+      "what_the_writer_did": "The writer leads with a goal of making places safer through engineering, then explains that repeated break-ins at a family restaurant exposed a failing system. Crediting a cousin in autonomous systems with sparking the interest, they look ahead from fixing the family's setup to security work at much larger scales.",
+      "structure": [
+        "Opens with a one-line thesis naming the goal",
+        "Gives the personal problem behind it",
+        "Credits a person who sparked the field interest",
+        "Scales the goal from family to nation"
+      ],
+      "why_it_works": [
+        "A thesis up front makes a 100-word answer easy to follow.",
+        "A real-life problem explains why the field matters to you.",
+        "Widening the goal step by step shows ambition with a plan."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/mit-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-46",
+      "publisher": "College Essay Guy",
+      "school": "mit",
+      "prompt_ids": [
+        "mit-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 247,
+      "what_the_writer_did": "The writer pairs an image of the brain and the stars with a months-long search for their own diagnosis at 14. Lucky to have a manageable condition, they turn to children who are not, describing how classes, a neuroscience program and a lecture on care gaps abroad led to a plan for pediatric neurology and humanitarian work.",
+      "structure": [
+        "Opens with a vivid image, then a personal diagnosis",
+        "Turns from personal luck to others without access to care",
+        "Shows the classes and lecture that defined the problem",
+        "Lays out the career path and organizations involved",
+        "Ends by returning to the opening image"
+      ],
+      "why_it_works": [
+        "Name the exact problem you want to solve, not just a field.",
+        "Personal experience shows why that problem matters to you.",
+        "Cut to fit MIT's 225-word limit; this sample runs a bit longer."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/mit-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-47",
+      "publisher": "College Essay Guy",
+      "school": "mit",
+      "prompt_ids": [
+        "mit-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "UT-Austin",
+      "title": null,
+      "approx_words": 293,
+      "what_the_writer_did": "The writer opens with a run of global issues they follow, links them to an immigrant family background and an international studies focus, then describes classes, self-directed research, a professor to learn from and study abroad. They end by applying the work to local problems like immigration and climate, and to a global career.",
+      "structure": [
+        "Opens with a quick list of issues the writer cares about",
+        "Ties the issues to family heritage and school involvement",
+        "Shows academic groundwork: classes, research and a professor",
+        "Applies the field to local community problems",
+        "Ends with long-term career goals"
+      ],
+      "why_it_works": [
+        "Connect the problems you name to your own background.",
+        "Show impact on your local community, which this prompt asks for.",
+        "Shorten heavily for MIT; this sample is well over 225 words."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/mit-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-48",
+      "publisher": "College Essay Guy",
+      "school": "mit",
+      "prompt_ids": [
+        "mit-04"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "The writer opens with an injury during a season built around a championship goal and the frustration of watching from the dugout. They then ask to help manage the team, tracking pitch counts and using data to shift the defense and protect the top pitcher. The team falls just short, and the writer reflects on their new role.",
+      "structure": [
+        "Opens with a quick, vivid injury moment",
+        "Raises the stakes with the season's goal",
+        "Shows the low point of watching from the sidelines",
+        "Pivots to a new role with concrete actions",
+        "Ends with the result and a clear lesson"
+      ],
+      "why_it_works": [
+        "Show what you were working toward so the setback costs something.",
+        "List the specific things you did to adapt.",
+        "Reflect on what you gained, even if the outcome was not a win."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/mit-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written when MIT allowed up to 250 words."
+    },
+    {
+      "id": "sample-49",
+      "publisher": "College Essay Guy",
+      "school": "columbia",
+      "prompt_ids": [
+        "columbia-01"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Example",
+      "approx_words": null,
+      "what_the_writer_did": "The writer sorted their influences under category labels: books and plays, lectures, a memorial site visit, museum and gallery trips, TV, live shows and films. Weighty nonfiction sits beside novels, comedy and thrillers, and no item comes with any explanation.",
+      "structure": [
+        "Groups entries under category labels instead of one long run of titles",
+        "Leads with reading that spans politics, economics, social science and fiction",
+        "Adds talks, a site visit and exhibits seen in person",
+        "Finishes with screen and stage picks across several genres"
+      ],
+      "why_it_works": [
+        "Labels by type let a reader scan the whole list in seconds.",
+        "Mixing serious and fun picks reads as an honest snapshot, not a curated image.",
+        "Titles alone are enough; save explanations for prompts that ask for them."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/columbia-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older version of this prompt that asked for several separate lists (books, publications, films and so on)."
+    },
+    {
+      "id": "sample-50",
+      "publisher": "College Essay Guy",
+      "school": "columbia",
+      "prompt_ids": [
+        "columbia-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Example",
+      "approx_words": 192,
+      "what_the_writer_did": "When the pandemic canceled most summer plans, the writer started two online clubs, one built on talks and reading and one on debate, so classmates stayed in touch. They then explain how that lesson in building connection would shape efforts to support LGBTQ+ students and others at Columbia, naming a specific campus initiative.",
+      "structure": [
+        "Sets up the problem: peers cut off when activities were canceled",
+        "Describes the two clubs the writer launched and how each ran",
+        "Notes results: weekly highlights, with one club lasting into the school year",
+        "Turns to concrete plans for building community at Columbia"
+      ],
+      "why_it_works": [
+        "Choose a small project you actually ran over a broad statement about identity.",
+        "Results, like a club outlasting the summer, prove initiative better than adjectives.",
+        "Name the campus program where your skill would carry over, so the plan feels real."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/columbia-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-51",
+      "publisher": "College Essay Guy",
+      "school": "columbia",
+      "prompt_ids": [
+        "columbia-02"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Example 3",
+      "approx_words": null,
+      "what_the_writer_did": "The writer recalls family meals where their schooling got less attention than their siblings', and a relative who prized education they never had. That pushed the writer to write a book for young readers about women scientists. They then list the groups, panels and support spaces they would start or join at Columbia.",
+      "structure": [
+        "Opens on a recurring family meal that reveals an imbalance",
+        "Contrasts it with a relative who valued the writer's education",
+        "Shows the response: a book for young readers about women scientists",
+        "Shifts to specific clubs, events and support spaces planned for Columbia"
+      ],
+      "why_it_works": [
+        "An everyday household moment can carry as much weight as a dramatic event.",
+        "Turning a frustration into a project shows agency rather than complaint.",
+        "Offering to found a group signals a builder of community, not just a member."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/brown-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for Columbia; College Essay Guy doesn't say which prompt, but it answers the same question as this one."
+    },
+    {
+      "id": "sample-52",
+      "publisher": "College Essay Guy",
+      "school": "columbia",
+      "prompt_ids": [
+        "columbia-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Brown",
+      "title": "Example essay",
+      "approx_words": null,
+      "what_the_writer_did": "The writer and a parent living in another state disagree about pandemic rules: the parent rejects mask requirements and relies on supplements, while the writer supports public health measures. Invited on their usual yearly trip, the writer goes, but sets clear conditions and personal boundaries that protect both the relationship and their own beliefs.",
+      "structure": [
+        "States the disagreement and both positions plainly",
+        "Raises the stakes with an invitation to a family tradition",
+        "Shows the writer's choice: go, but on clear conditions",
+        "Ends on the boundaries that keep the writer true to their values"
+      ],
+      "why_it_works": [
+        "Stating your own view plainly makes the way you engaged more meaningful.",
+        "Pick a conflict where two things you value pull against each other.",
+        "Show the action you took, not just the opinion you hold."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/columbia-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-53",
+      "publisher": "College Essay Guy",
+      "school": "columbia",
+      "prompt_ids": [
+        "columbia-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Princeton",
+      "title": "Example Essay",
+      "approx_words": null,
+      "what_the_writer_did": "The writer describes friendly, recurring debates with a grandparent who has always lived in India, rooted in their very different upbringings, especially over store-bought pain relievers versus traditional remedies. From these talks the writer learned to argue to understand rather than to win, to word disagreement respectfully, and to keep facts apart from hurt feelings.",
+      "structure": [
+        "Introduces the relationship and why their views differ",
+        "Zooms in on one recurring argument about medicine",
+        "Draws a first lesson about tone and respect",
+        "Draws a second about separating logic from emotion",
+        "Closes by applying both lessons to future debates"
+      ],
+      "why_it_works": [
+        "An everyday disagreement can reveal as much as a headline issue.",
+        "Give each lesson its own short paragraph so the takeaways are clear.",
+        "Show how the conflict brought you closer, not just how it ended."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/columbia-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-54",
+      "publisher": "College Essay Guy",
+      "school": "columbia",
+      "prompt_ids": [
+        "columbia-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "another school",
+      "title": null,
+      "approx_words": 390,
+      "what_the_writer_did": "Volunteering at an exercise camp for students with special needs, the writer finds that one high-energy style fails to reach everyone. Through three students, one who lashes out, one whose goals the writer misread, and one who needs a gentle push, they adjust their approach and conclude that good teaching means recognizing your own limits.",
+      "structure": [
+        "Opens mid-scene with a teaching approach that backfires",
+        "Shows the writer adapting for that first student",
+        "Repeats the pattern with two more students and new lessons",
+        "Ends with a broader lesson about teaching and self-awareness"
+      ],
+      "why_it_works": [
+        "The obstacle can be your own limits, not an outside disaster.",
+        "Pair each moment with what you changed and what you learned.",
+        "For 150 words, keep one student's story rather than three."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/columbia-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-55",
+      "publisher": "College Essay Guy",
+      "school": "columbia",
+      "prompt_ids": [
+        "columbia-05"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": "Why are you interested in attending Columbia University?",
+      "written_for": null,
+      "title": "Example",
+      "approx_words": 291,
+      "what_the_writer_did": "The writer carries questions from a summer seminar on ethics and philosophy into Columbia's Core, names two unusual courses that link chemistry research to wider social questions, points to a summer research program and a sustainability-focused lab, and ends with student dance groups and campus traditions they want to join.",
+      "structure": [
+        "Opens with a one-line thesis naming what draws the writer",
+        "Links past seminar questions to the Core and two specific courses",
+        "Moves to research: a summer program and one faculty lab",
+        "Closes on dance groups and campus traditions"
+      ],
+      "why_it_works": [
+        "Pair every school detail with something you have already done or asked.",
+        "Cover classes, research and student life so the fit feels complete.",
+        "Skip location and prestige; pick offerings few other schools have."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/columbia-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written when Columbia allowed more words."
+    },
+    {
+      "id": "sample-56",
+      "publisher": "College Essay Guy",
+      "school": "columbia",
+      "prompt_ids": [
+        "columbia-06"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Example",
+      "approx_words": 277,
+      "what_the_writer_did": "The writer sets warm memories of trips to a family hometown abroad against the heavy air pollution seen on later visits. They describe summer lab research on a better catalyst for turning a harmful gas byproduct into fuel, then explain why chemistry is how they want to make a difference.",
+      "structure": [
+        "Opens with a quick string of fond travel memories",
+        "Turns to the pollution that darkens later visits",
+        "Describes summer research aimed at a cleaner chemical process",
+        "Ends with a values exercise that confirms the pull toward chemistry"
+      ],
+      "why_it_works": [
+        "A personal stake explains why a subject matters to you, not just that it interests you.",
+        "Use technical terms sparingly so depth shows without losing a general reader.",
+        "Close on the goal the field lets you pursue."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/columbia-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older, longer version of Columbia's areas-of-study prompt."
+    },
+    {
+      "id": "sample-57",
+      "publisher": "College Essay Guy",
+      "school": "columbia",
+      "prompt_ids": [
+        "columbia-06"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 193,
+      "what_the_writer_did": "The writer traces an interest in physics and space to a goal of building propulsion systems for spacecraft. They map that onto Columbia Engineering: an applied physics major with a mechanical engineering minor, two plasma and nuclear science courses, and research at a campus lab or a partner lab.",
+      "structure": [
+        "Opens with an ambitious career goal tied to space",
+        "States the planned major and minor and how they serve the goal",
+        "Names two courses and the labs where research could happen",
+        "Closes by casting Columbia as the starting point"
+      ],
+      "why_it_works": [
+        "Under 200 words, lead with the goal and make every detail serve it.",
+        "Course numbers and lab names show research in very little space.",
+        "Say how each resource moves you toward the goal instead of just listing it."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older Columbia Engineering \"why us\" prompt that asks the same thing."
+    },
+    {
+      "id": "sample-58",
+      "publisher": "College Essay Guy",
+      "school": "upenn",
+      "prompt_ids": [
+        "upenn-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 197,
+      "what_the_writer_did": "Written as a letter to a coding teacher, the note recalls feeling dismissed and out of place in early coding classes, then credits the teacher with making the field feel welcoming. It names the projects they finished together and the confidence the writer built.",
+      "structure": [
+        "Addresses the teacher directly from the first line",
+        "Describes the doubt and isolation of early classes",
+        "Marks the turning point when the teacher became an ally",
+        "Lists concrete projects finished with the teacher's help",
+        "Signs off warmly, as a real note would"
+      ],
+      "why_it_works": [
+        "Show the before and after so the reader feels what the help changed.",
+        "Name shared projects so the thanks is specific, not generic.",
+        "A thank-you note can reveal your values without ever stating them."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/upenn-university-pennsylvania-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-59",
+      "publisher": "College Essay Guy",
+      "school": "upenn",
+      "prompt_ids": [
+        "upenn-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "The writer opens with tending a flock at a historical site, where climate change first felt real, and recounts environmental clubs, a regional conference and local cleanups they led. Wanting longer-lasting change, they name the Penn environmental group, campus festival and student climate plan they would join.",
+      "structure": [
+        "Opens with an unexpected outdoor image tied to climate awareness",
+        "Summarizes a record of environmental leadership and service",
+        "Pivots briefly: one-off events are not enough",
+        "Names specific Penn groups and projects to join"
+      ],
+      "why_it_works": [
+        "An unusual opening image earns attention before any list of activities.",
+        "A track record makes promises about future involvement believable.",
+        "Name real campus groups so your contribution plan sounds concrete."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/upenn-university-pennsylvania-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-60",
+      "publisher": "College Essay Guy",
+      "school": "upenn",
+      "prompt_ids": [
+        "upenn-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "Taking a cue from friends at Penn who mostly praise how different their classmates are, the writer imagines learning from people unlike themselves: coding with engineers, exploring city restaurants with a food writer, bringing a family-business view to a consulting club, and sharing music at campus events.",
+      "structure": [
+        "Opens with what current students say they value most",
+        "Sets up one idea: growing through people unlike yourself",
+        "Imagines several specific exchanges across schools and clubs",
+        "Ends by casting the writer as someone others could learn from"
+      ],
+      "why_it_works": [
+        "One clear organizing idea can hold many campus details together.",
+        "Show both what you would gain from others and what you would give.",
+        "Imagined scenes with named groups feel more real than general excitement."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/upenn-university-pennsylvania-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-61",
+      "publisher": "College Essay Guy",
+      "school": "upenn",
+      "prompt_ids": [
+        "upenn-04"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "The writer frames choosing a college as a science experiment: childhood questions as background, a hypothesis that Penn fits, a clinical internship that sparked an interest in healthcare, then Penn courses, a faculty lab and a related minor as the test, ending with the hypothesis confirmed.",
+      "structure": [
+        "Sets up a scientific-method frame with playful early questions",
+        "States the hypothesis that the writer and Penn match",
+        "Gives background: a clinical internship tied to a family memory",
+        "Tests it with courses, a faculty lab and a minor",
+        "Declares the evidence supports the hypothesis"
+      ],
+      "why_it_works": [
+        "A frame borrowed from your field lets the form itself show your interest.",
+        "Make a creative structure organize real content, not just decorate it.",
+        "Pair each past experience with the Penn resource that would extend it."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/upenn-university-pennsylvania-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older Penn prompt that allowed up to 450 words."
+    },
+    {
+      "id": "sample-62",
+      "publisher": "College Essay Guy",
+      "school": "upenn",
+      "prompt_ids": [
+        "upenn-05"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "The writer links a love of patterns in math and language to how language can carry history and inequality, describes a summer internship in a language research lab, then turns to applying language skills to economic policy in Latin America through a Wharton concentration, named courses, a regional studies minor and a model diplomacy course.",
+      "structure": [
+        "Opens with a fascination with patterns in math and language",
+        "Widens to language as a social barrier, with global examples",
+        "Grounds the interest in a summer research internship",
+        "Shifts to economic policy and names Wharton's concentration and courses",
+        "Adds cross-school plans and closes with a playful self-description"
+      ],
+      "why_it_works": [
+        "Root a policy issue in an interest you already pursue seriously.",
+        "Show what tools the business school adds that your current skills lack.",
+        "Reaching into other Penn schools shows you would use the whole university."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/upenn-university-pennsylvania-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older Penn school-specific prompt that allowed up to 450 words; it targets Wharton."
+    },
+    {
+      "id": "sample-63",
+      "publisher": "College Essay Guy",
+      "school": "upenn",
+      "prompt_ids": [
+        "upenn-06"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 649,
+      "what_the_writer_did": "The writer opens with dead sea lion pups seen while surfing, describes caring about the planet and about building fixes in equal measure, and plans a materials engineering major with an energy and sustainability minor. Past lab research on corrosion and carbon capture is linked to named Penn faculty, courses and an engineering service group.",
+      "structure": [
+        "Opens with a striking scene of environmental harm near home",
+        "Shows two drives at once: protecting nature and building solutions",
+        "States major and minor, then links past research to faculty",
+        "Names courses and a humanitarian engineering group to join",
+        "Returns to the opening image to close"
+      ],
+      "why_it_works": [
+        "A vivid local scene makes a big issue like climate feel personal.",
+        "Connect each lab or course you name to work you have already done.",
+        "Include clubs and community, not just academics."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/upenn-university-pennsylvania-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older Penn prompt with a much longer limit."
+    },
+    {
+      "id": "sample-64",
+      "publisher": "College Essay Guy",
+      "school": "brown",
+      "prompt_ids": [
+        "brown-01"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Example",
+      "approx_words": 250,
+      "what_the_writer_did": "Drawn to diplomacy and the politics of the Middle East, the writer explains how the Open Curriculum lets them pair an international affairs concentration with courses on decision-making, film and the region's history, plus workshops and research through a Brown policy institute. They argue that breadth will make them a better diplomat.",
+      "structure": [
+        "States the core interest and long-term goal up front",
+        "Shows the Open Curriculum mixing a concentration with unrelated courses",
+        "Narrows to a regional track with specific courses",
+        "Adds research centers, then closes on breadth over narrowness"
+      ],
+      "why_it_works": [
+        "Pair your main interest with surprising side courses to show real exploration.",
+        "Name courses and centers so the plan could only be about Brown.",
+        "Explain why breadth serves your goal, not just that you like variety."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/brown-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older version of Brown's Open Curriculum prompt with the same focus."
+    },
+    {
+      "id": "sample-65",
+      "publisher": "College Essay Guy",
+      "school": "brown",
+      "prompt_ids": [
+        "brown-01"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "Building on a research paper about a 1970s movement that opposed feminism, the writer explains how the Open Curriculum and a gender studies program would let them study the topic through anthropology, history and business. They name specific seminars and courses, and end by admitting uncertainty about the future of the issue.",
+      "structure": [
+        "Opens with an independent research project that sparked the interest",
+        "Explains how the Open Curriculum combines several disciplines",
+        "Names seminars and courses tied to current issues",
+        "Adds an entrepreneurship program for building coalitions",
+        "Ends by admitting uncertainty about where the issue is heading"
+      ],
+      "why_it_works": [
+        "Start from work you have already done to prove the interest is real.",
+        "Show one question explored through several disciplines at once.",
+        "Admitting what you don't know yet can read as maturity."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/brown-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older version of Brown's Open Curriculum prompt."
+    },
+    {
+      "id": "sample-66",
+      "publisher": "College Essay Guy",
+      "school": "brown",
+      "prompt_ids": [
+        "brown-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Columbia",
+      "title": "Example 3",
+      "approx_words": null,
+      "what_the_writer_did": "The writer recalls family meals where their schooling got less attention than their siblings', and a relative who prized education they never had. That pushed the writer to write a book for young readers about women scientists. The essay then lays out groups and events the writer would start at Columbia, the school it was written for.",
+      "structure": [
+        "Opens on a recurring family meal that reveals an imbalance",
+        "Contrasts it with a relative who valued the writer's education",
+        "Shows the response: a book for young readers about women scientists",
+        "Shifts to specific clubs, events and support spaces on campus"
+      ],
+      "why_it_works": [
+        "Ordinary family moments can fully answer a question about how you grew up.",
+        "Show what you did in response, not only how it felt.",
+        "When adapting this approach, swap the Columbia plans for specific Brown groups."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/brown-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-67",
+      "publisher": "College Essay Guy",
+      "school": "brown",
+      "prompt_ids": [
+        "brown-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "another school",
+      "title": "Example",
+      "approx_words": null,
+      "what_the_writer_did": "The writer proposes a course on how modern artists use music in plays, cartoons and films to strengthen visual storytelling, with philosophical readings on music's emotional and physical effects and a final project in which students make their own film or mixed-media work.",
+      "structure": [
+        "Opens by asking where music's influence reaches beyond itself",
+        "Defines the course's focus: music in visual storytelling",
+        "Adds readings on how music affects people",
+        "Ends with a hands-on final project"
+      ],
+      "why_it_works": [
+        "Design the class concretely: topic, readings and a final assignment.",
+        "Pairing an art form with philosophy shows depth beyond being a fan.",
+        "A hands-on final project shows you think about how others learn."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/brown-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-68",
+      "publisher": "College Essay Guy",
+      "school": "brown",
+      "prompt_ids": [
+        "brown-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "another school",
+      "title": "Bonus example",
+      "approx_words": null,
+      "what_the_writer_did": "Starting from a family joke about a parent who banked birthday money, the writer explains how an economist's idea showed that saving, though wise for one person, can hurt the wider economy. Their proposed seminar would explore how people overlook the combined effects of everyday choices, from spending to small environmental habits.",
+      "structure": [
+        "Opens with a light family story about saving money",
+        "Introduces an economic idea that overturns the writer's assumption",
+        "Proposes a seminar on the hidden group effects of personal choices",
+        "Widens the idea to habits like environmental choices"
+      ],
+      "why_it_works": [
+        "A personal story makes an abstract idea easy to grasp.",
+        "Choose an idea that changed your own thinking, so you can teach that shift.",
+        "Show the idea's reach by applying it to more than one area of life."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/brown-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-69",
+      "publisher": "College Essay Guy",
+      "school": "brown",
+      "prompt_ids": [
+        "brown-04"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 220,
+      "what_the_writer_did": "The writer describes lying on playground equipment at night with close friends, then stargazing alone and thinking about how old starlight is compared with human history and the books and ideas they love. Only at the end do they name stargazing as their source of calm and joy.",
+      "structure": [
+        "Opens with an image-first scene among close friends at night",
+        "Shifts to stargazing alone and thoughts about time",
+        "Contrasts the stars' age with human history and ideas",
+        "Closes by naming the source of joy outright"
+      ],
+      "why_it_works": [
+        "Lead with a picture and save the explanation for later.",
+        "Let a small pleasure open onto bigger thoughts about what you value.",
+        "Holding back the main point keeps a short piece moving."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an earlier, longer version of Brown's joy prompt."
+    },
+    {
+      "id": "sample-70",
+      "publisher": "College Essay Guy",
+      "school": "brown",
+      "prompt_ids": [
+        "brown-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "another school",
+      "title": "Example",
+      "approx_words": 189,
+      "what_the_writer_did": "The writer admits to being hooked on pickleball after first writing it off, founds a school club when court time runs short, and watches it become one of the largest clubs, pulling in students from many social groups. The joy, they suggest, lies in the friendships the game sparks across those groups.",
+      "structure": [
+        "Opens with a short confession of the obsession",
+        "Admits early doubts, then growing skill and enthusiasm",
+        "Founds a club that quickly grows",
+        "Ends on the community the game creates across groups"
+      ],
+      "why_it_works": [
+        "Admitting you once dismissed the thing adds honesty and a little humor.",
+        "Show action: starting a club turns enjoyment into evidence of initiative.",
+        "Let the joy point to something bigger, like bringing different people together."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/brown-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-71",
+      "publisher": "College Essay Guy",
+      "school": "dartmouth",
+      "prompt_ids": [
+        "dartmouth-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "The writer names a goal in climate-focused economics, then links specific Dartmouth courses, a campus sustainability group and an energy institute to the campus's renewable energy plans. They round out the picture with a food-focused club and the student humor magazine.",
+      "structure": [
+        "States the career goal in the first line",
+        "Names courses and sustainability groups that serve the goal",
+        "Moves to life outside class with two student groups",
+        "Ends on a playful note about writing humor"
+      ],
+      "why_it_works": [
+        "In 100 words, state your goal first and build every detail from it.",
+        "Picturing yourself on campus in present tense makes fit feel concrete.",
+        "Mix academic and social details so the fit covers a whole life."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/dartmouth-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-72",
+      "publisher": "College Essay Guy",
+      "school": "dartmouth",
+      "prompt_ids": [
+        "dartmouth-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 100,
+      "what_the_writer_did": "The writer links campus trees to a nearby arboretum that first sparked an interest in science, then describes a modified biology major blending disease, environment and history, a course on unequal health outcomes, climate advocacy aimed at Congress, and volunteering with a food nonprofit.",
+      "structure": [
+        "Opens by linking the campus landscape to a childhood place",
+        "Traces the interest from science toward social questions",
+        "Names a modified major and specific courses",
+        "Adds advocacy and volunteering that shaped those interests"
+      ],
+      "why_it_works": [
+        "A quick sensory link between home and campus makes an efficient opener.",
+        "Show how your interests changed over time, not just where they are now.",
+        "Dense, specific nouns let 100 words carry a lot."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/dartmouth-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-73",
+      "publisher": "College Essay Guy",
+      "school": "dartmouth",
+      "prompt_ids": [
+        "dartmouth-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "another school",
+      "title": null,
+      "approx_words": 233,
+      "what_the_writer_did": "The writer describes family meals where a grandparent asks their older siblings about school but never them, and another grandparent who often speaks of missing out on schooling after immigrating. Spurred by both, the writer writes a book for young readers about women scientists, mentors younger relatives, and grows confident speaking up, closing back at the table where it began.",
+      "structure": [
+        "Opens on a family meal scene that reveals an imbalance",
+        "Adds a relative's story that gives the writer motivation",
+        "Shows the response: a book for kids and mentoring relatives",
+        "Returns to the opening meal scene to show change"
+      ],
+      "why_it_works": [
+        "Describe your environment through one repeated scene, not a general summary.",
+        "Show how others' limits became your motivation, then what you did about it.",
+        "Returning to the opening scene at the end makes your change easy to see."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/dartmouth-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-74",
+      "publisher": "College Essay Guy",
+      "school": "dartmouth",
+      "prompt_ids": [
+        "dartmouth-03"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": 300,
+      "what_the_writer_did": "Told as a dated timeline, the essay follows the writer from birth abroad and a family separation caused by immigration, through a new language and climate, a grandparent's death, a new home, a growing love of photography and a youth leadership role, ending with the view that the separation brought more good than hardship.",
+      "structure": [
+        "Uses short, dated entries instead of paragraphs",
+        "Opens with birth abroad and a family separation",
+        "Moves through adjustment: language, seasons, loss, a new home",
+        "Adds new passions and a leadership role",
+        "Ends by reframing the early hardship"
+      ],
+      "why_it_works": [
+        "A creative format can cover years of a life in few words.",
+        "Mention a hard event plainly, then let later entries show how you adapted.",
+        "Close by reinterpreting your past, not just summarizing it."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/dartmouth-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for a past Dartmouth prompt; it fits the \"introduce yourself\" option but needs trimming by about 50 words."
+    },
+    {
+      "id": "sample-75",
+      "publisher": "College Essay Guy",
+      "school": "dartmouth",
+      "prompt_ids": [
+        "dartmouth-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "The writer introduces themselves through small creative habits: inventing words with friends for feelings that lack names, photographing everyday details during lockdown, daily walks with a parent, mixing music and reciting literature, and finally sunrise and sunset photo outings that keep them focused on the moment.",
+      "structure": [
+        "Opens with a quirky habit that shows how the writer thinks",
+        "Moves to a lockdown photography project and noticing small things",
+        "Adds other passions: music and literature with friends",
+        "Ends on photo outings and what the camera teaches them"
+      ],
+      "why_it_works": [
+        "Introduce yourself through habits and choices rather than adjectives.",
+        "Several small, varied details can sketch a personality faster than one big story.",
+        "Ending on what a hobby teaches you turns a list into reflection."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/dartmouth-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-76",
+      "publisher": "College Essay Guy",
+      "school": "dartmouth",
+      "prompt_ids": [
+        "dartmouth-04",
+        "dartmouth-08"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Example",
+      "approx_words": 263,
+      "what_the_writer_did": "The writer describes a fascination with mushrooms: stopping on a city sidewalk to photograph a cluster, a forest trip full of oddly shaped fungi, and curiosity about their many uses. The writer ends by naming qualities of mushrooms they hope to share and saying they will look for them on campus.",
+      "structure": [
+        "Opens with an everyday moment of spotting and photographing mushrooms",
+        "Explains what the writer admires about how they grow",
+        "Describes a photo collection from a forest trip",
+        "Reflects on their uses and the curiosity they spark",
+        "Links the mushrooms' qualities to the writer and the campus"
+      ],
+      "why_it_works": [
+        "An offbeat subject can reveal personality quickly.",
+        "Tie the fascination back to qualities you hope to have yourself.",
+        "Scenes of noticing show curiosity better than calling yourself curious."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/dartmouth-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older Dartmouth prompt with a slightly longer limit; it fits both \"What excites you?\" and \"Celebrate your nerdy side.\""
+    },
+    {
+      "id": "sample-77",
+      "publisher": "College Essay Guy",
+      "school": "dartmouth",
+      "prompt_ids": [
+        "dartmouth-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "After repeated break-ins at a family restaurant abroad expose unreliable security devices, the writer sets a goal of building a mobile device that detects and reports intruders. They explain how a combined engineering and psychology path, a course on human behavior, faculty research and a Latinx student group at Dartmouth would help.",
+      "structure": [
+        "Opens with a concrete family problem before naming the topic",
+        "States an ambitious invention as the impact goal",
+        "Maps the goal to a program, a course and faculty research",
+        "Adds community through a student group",
+        "Closes by linking the family's hard work to future impact"
+      ],
+      "why_it_works": [
+        "Root a big impact goal in a problem you have seen up close.",
+        "Admit what you still need to learn; it makes an ambitious goal credible.",
+        "Show how a second field, like psychology, strengthens your solution."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/dartmouth-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-78",
+      "publisher": "College Essay Guy",
+      "school": "dartmouth",
+      "prompt_ids": [
+        "dartmouth-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "another school",
+      "title": "Example 1",
+      "approx_words": null,
+      "what_the_writer_did": "The writer contrasts the unified picture of the civil rights movement taught in school with a 1963 book about the author's own family conflicts during that era. That reading helps the writer handle their own disagreements with a parent over choosing political candidates, holding a view while respecting the other side.",
+      "structure": [
+        "Opens by questioning a simplified classroom version of history",
+        "Summarizes the family conflicts the book describes",
+        "Names the insight: resisting injustice can strain close relationships",
+        "Connects it to the writer's disagreements with a parent",
+        "Closes on a changed assumption about shared experience"
+      ],
+      "why_it_works": [
+        "Pick a reading that complicates something you were taught, then explain how.",
+        "Link the reading to a specific relationship of yours, not a general lesson.",
+        "Keep plot summary brief; the reader wants your thinking, not the story."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/dartmouth-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-79",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "After a scene of eagerly explaining an economics idea to an unimpressed friend, the writer explains why economics appeals, ties it to Cornell courses, a possible computer science pairing and an interdisciplinary program, adds language, philosophy, the student paper and club sports, and closes with family ties and campus traditions.",
+      "structure": [
+        "Opens with a lighthearted scene that shows enthusiasm for economics",
+        "Explains the appeal and the past research behind the choice",
+        "Names courses, a computer science pairing and an interdisciplinary program",
+        "Branches into humanities, campus media and sports",
+        "Closes with family connections and a playful sign-off"
+      ],
+      "why_it_works": [
+        "A funny, self-aware opening shows passion without bragging.",
+        "Describe past work first so the major reads as a next step.",
+        "Spread details across classes and life outside class to show range."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-80",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-06"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Bonus example",
+      "approx_words": null,
+      "what_the_writer_did": "Written as a letter to the university, the essay says how the writer first came across Cornell, links their lab experience to a faculty member's stem cell work, and plans minors in economics and linguistics plus Spanish, an a cappella group, and a family-rooted goal of a career joining medicine and research.",
+      "structure": [
+        "Frames the whole essay as a letter to the school",
+        "Connects prior lab work to a specific faculty lab",
+        "Adds minors and language study beyond science",
+        "Brings in music and a cappella plans",
+        "Ties the threads to a medical goal and a warm sign-off"
+      ],
+      "why_it_works": [
+        "A playful format can carry humor while still delivering real specifics.",
+        "Combine unexpected interests and show the school supports each one.",
+        "End by tying varied threads to a single goal."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "Written for an older Arts and Sciences prompt that focused more on why Cornell."
+    },
+    {
+      "id": "sample-81",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-08"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Example",
+      "approx_words": null,
+      "what_the_writer_did": "Moved by a news story about worldwide poverty, the writer describes local service and a goal of social entrepreneurship. They lay out an applied economics major with a finance focus at Dyson, a food systems elective, leadership and competition plans, service abroad and an inclusion-focused program, and close on overall fit.",
+      "structure": [
+        "Opens with a global problem that sparked the writer's goal",
+        "Links a summer finance program to the planned major and courses",
+        "Adds an elective that fits the poverty and hunger interest",
+        "Covers leadership, competitions, service abroad and community",
+        "Concludes by restating fit with the school"
+      ],
+      "why_it_works": [
+        "Open with a problem so later details read as steps toward a solution.",
+        "Being honest about what you don't know yet makes ambition believable.",
+        "At 650 words, a thesis and clear sections keep a long essay organized."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-82",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-10"
+      ],
+      "prompt_match": "earlier version",
+      "prompt_answered": null,
+      "written_for": null,
+      "title": "Example",
+      "approx_words": 620,
+      "what_the_writer_did": "The writer ties an interest in swarm robotics to two named research labs, then picks student engineering teams to join with a design idea for one, reflects on a shared campus workshop, plans teaching and outreach, and connects campus farm work with energy projects, closing with a joke about founding a missing club.",
+      "structure": [
+        "Matches a research interest to specific labs and faculty",
+        "Picks student engineering teams and pitches an idea for one",
+        "Reflects on a shared workshop and how their view of it changed",
+        "Adds mentoring, outreach and farm work that merge two interests",
+        "Ends with a light plan to start a club"
+      ],
+      "why_it_works": [
+        "Connect a professor's research to work you have already done.",
+        "Pitch an idea for a team to show you would contribute, not just join.",
+        "Today's limit is 200 words, so keep only the two or three strongest links."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": "At about 620 words, it was written for an older, longer Cornell Engineering prompt."
+    },
+    {
+      "id": "sample-83",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-10"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Columbia",
+      "title": null,
+      "approx_words": 193,
+      "what_the_writer_did": "The writer traces an interest in physics and space to a goal of building propulsion systems for spacecraft, then maps it onto Columbia Engineering: an applied physics major with a mechanical engineering minor, two plasma and nuclear science courses, and research at a campus lab or a partner lab.",
+      "structure": [
+        "Opens with an ambitious career goal tied to space",
+        "States the planned major and minor and how they serve the goal",
+        "Names two courses and the labs where research could happen",
+        "Closes by casting the school as the starting point"
+      ],
+      "why_it_works": [
+        "Lead with the goal, then make every named resource serve it.",
+        "Course numbers and lab names show research in very little space.",
+        "At 193 words, this shows what fits within Cornell's 200-word limit."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-84",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-11"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Princeton",
+      "title": null,
+      "approx_words": 49,
+      "what_the_writer_did": "In a few lines, the writer describes a yearly family ritual of building a large holiday display piece by piece, starting in early November with the newest set, adding older ones, and finishing the week before the holiday. They end by saying this ritual is what makes the season feel festive to them.",
+      "structure": [
+        "Opens with when the tradition begins each year",
+        "Walks through the build in order, newest pieces first",
+        "Ends by naming the feeling the ritual creates"
+      ],
+      "why_it_works": [
+        "A tiny family ritual is enough for a short joy prompt.",
+        "Ordered, concrete steps let the reader picture the scene.",
+        "Save the feeling for the last line so it lands."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-85",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-11"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Brown",
+      "title": null,
+      "approx_words": 220,
+      "what_the_writer_did": "The writer describes lying on playground equipment at night with close friends, then stargazing alone and thinking about how old starlight is compared with human history and the books and ideas they love. Only at the end do they name stargazing as their source of calm and joy.",
+      "structure": [
+        "Opens with an image-first scene among close friends at night",
+        "Shifts to stargazing alone and thoughts about time",
+        "Contrasts the stars' age with human history and ideas",
+        "Closes by naming the source of joy outright"
+      ],
+      "why_it_works": [
+        "Lead with a picture and save the explanation for later.",
+        "Let a small pleasure open onto bigger thoughts about what you value.",
+        "At 220 words, this would need halving to fit Cornell's 100-word limit."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-86",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-12"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Colgate",
+      "title": null,
+      "approx_words": 196,
+      "what_the_writer_did": "The writer presents Jewish identity and community as central to who they are, honoring relatives lost in the Holocaust through tradition and by sharing survivors' stories. As part of a student leadership group at a Holocaust education center, they took on present-day discrimination and helped build a website telling one survivor's story.",
+      "structure": [
+        "Opens lightly, then names a core identity",
+        "Explains the family history behind that commitment",
+        "Shows action: a student leadership group and a survivor-story project",
+        "Ends with the community the writer hopes to find and build"
+      ],
+      "why_it_works": [
+        "Lead with the identity or perspective you would actually bring to campus.",
+        "Back a value with a concrete project and its result.",
+        "For Cornell, add a sentence on how this voice would show up among engineers."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-87",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-13"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "Duke",
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "The writer traces a love of storytelling from a parent's nightly tales to teachers, coaches and peers at school, explains how theatre lets them share emotion and shape their world, and describes performing plays about drugs, alcohol and bullying for younger students, ending with storytelling as a way to help the community.",
+      "structure": [
+        "Opens with a childhood ritual that started the interest",
+        "Widens to storytellers met at school and finding theatre",
+        "Reflects on what telling stories does for teller and audience",
+        "Ends with outreach performances for younger students"
+      ],
+      "why_it_works": [
+        "Trace an activity back to a personal root to show why it matters.",
+        "Move from what you love about it to how it helps other people.",
+        "End on one specific use of the activity rather than a general claim."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-88",
+      "publisher": "College Essay Guy",
+      "school": "cornell",
+      "prompt_ids": [
+        "cornell-13"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "written_for": "several schools",
+      "title": null,
+      "approx_words": null,
+      "what_the_writer_did": "The writer describes a school problem: students avoid the tap water and not everyone can afford bottled water. Their environmental student group pushes for filtered water stations, is turned down by the district board, gathers signatures, and crowdfunds the cost until the district agrees. The stations cut plastic waste and turn into a popular gathering spot.",
+      "structure": [
+        "Defines a concrete problem at school",
+        "States the club's goal",
+        "Shows a setback: the board says no",
+        "Describes the petition and crowdfunding that win approval",
+        "Ends with measurable results and a social payoff"
+      ],
+      "why_it_works": [
+        "A problem-to-result story shows impact without boasting.",
+        "Include the setback; persistence is what makes the win meaningful.",
+        "Close with numbers or visible changes that prove the effort worked."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/cornell-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "match_note": null
+    },
+    {
+      "id": "sample-89",
+      "publisher": "College Essay Guy",
+      "school": "duke",
+      "prompt_ids": [
+        "duke-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example 1",
+      "approx_words": 160,
+      "what_the_writer_did": "The writer states a long-term aim of studying how race and gender shape economic opportunity. They then tie that aim to specific Duke courses, a certificate, a business student society, a social-innovation incubator, and plans to run outreach workshops in Durham schools.",
+      "structure": [
+        "Opens with a clear career goal and the academic path toward it",
+        "Names courses, a certificate and a workshop that serve that goal",
+        "Adds student organizations and an incubator for hands-on practice",
+        "Ends with outreach in Durham and a look ahead"
+      ],
+      "why_it_works": [
+        "Leads with a goal, so every Duke resource named has a clear purpose.",
+        "Covers classes, campus life and the local city, showing range in a short space.",
+        "Pairs each named resource with what the writer would actually do there."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-90",
+      "publisher": "College Essay Guy",
+      "school": "duke",
+      "prompt_ids": [
+        "duke-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example 2",
+      "approx_words": 150,
+      "what_the_writer_did": "The writer connects a love of the outdoors to a plan to use robotics for environmental protection. They name a dual-major path, a certificate, several courses and what each would teach, a professor's research, and a student volunteer group that does summer projects abroad.",
+      "structure": [
+        "Opens with a personal tie to nature and a stated goal",
+        "Outlines a dual major and certificate built around that goal",
+        "Walks through specific courses and the skill each provides",
+        "Closes with faculty research and a service group abroad"
+      ],
+      "why_it_works": [
+        "Explains what each course would teach you instead of just listing course names.",
+        "Joins two fields in an unusual way, which makes the fit feel personal.",
+        "Ends on how your skills could help others, not only on what Duke offers."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-91",
+      "publisher": "College Essay Guy",
+      "school": "duke",
+      "prompt_ids": [
+        "duke-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (written for Colgate)",
+      "approx_words": 196,
+      "what_the_writer_did": "The writer describes how Jewish heritage, and relatives lost in the Holocaust, shaped a commitment to remembrance and education. The core of the essay is their work on a student leadership board at a Holocaust education center, where weekly discussions led to a website telling one survivor's story.",
+      "structure": [
+        "Opens with a light one-line hook before turning serious",
+        "Explains family history and how the writer honors it",
+        "Shows action: weekly board meetings and a survivor-story website",
+        "Reflects on connections made and hopes for a new campus community"
+      ],
+      "why_it_works": [
+        "Moves from identity to a finished project, so the community feels lived, not just claimed.",
+        "A small dose of humor makes a heavy topic approachable.",
+        "Ends looking ahead; for Duke, name what you'd bring to campus, which this Colgate essay leaves general."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": "Colgate",
+      "match_note": null
+    },
+    {
+      "id": "sample-92",
+      "publisher": "College Essay Guy",
+      "school": "duke",
+      "prompt_ids": [
+        "duke-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example 1: Top-of-Mind Identity",
+      "approx_words": 230,
+      "what_the_writer_did": "The writer, raised between two cultures, uses a dorm room filled with objects, food and music from both places to explore a mixed identity. They trace an earlier feeling of belonging nowhere, then reframe that in-between position as a strength they now claim with confidence.",
+      "structure": [
+        "Opens with a sensory snapshot of a room mixing two cultures",
+        "Poses a direct question about how the writer identifies",
+        "Recalls small moments of not fitting in, at airports and lunch tables",
+        "Reframes the mixed identity as an advantage",
+        "Repeats the opening question and answers it differently"
+      ],
+      "why_it_works": [
+        "Uses a physical space as a symbol, so an abstract identity becomes visible.",
+        "Bookends with the same question to show change without announcing it.",
+        "Grounds feelings in small, concrete scenes rather than general statements about culture."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-93",
+      "publisher": "College Essay Guy",
+      "school": "duke",
+      "prompt_ids": [
+        "duke-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example 2: No Top-of-Mind Identity",
+      "approx_words": 210,
+      "what_the_writer_did": "Without an obvious identity marker to write about, the writer builds the essay around a community centered on telling stories. The thread runs from bedtime stories with a parent to school theater, and finally to a class that performs plays about drugs, alcohol and bullying for younger kids.",
+      "structure": [
+        "Opens by naming the community and a childhood story ritual",
+        "Introduces mentors and theater as the next chapter",
+        "Explains why storytelling matters to the writer",
+        "Ends with performances on tough topics for younger audiences"
+      ],
+      "why_it_works": [
+        "Shows that an interest-based community can answer an identity prompt as well as a cultural one.",
+        "Follows one thread through time, which keeps a short essay unified.",
+        "Ends on impact on others, hinting at what the writer would contribute."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-94",
+      "publisher": "College Essay Guy",
+      "school": "duke",
+      "prompt_ids": [
+        "duke-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Option #2 Example Essay (written for Princeton)",
+      "approx_words": 350,
+      "what_the_writer_did": "The writer explores frequent debates with a grandfather, focusing on one argument over traditional Eastern remedies versus Western medicine for a headache. The essay shows the writer shifting from trying to win to trading knowledge, and learning to keep reasoning apart from hurt feelings.",
+      "structure": [
+        "Opens by naming the person and why they often disagree",
+        "Zooms in on one debate, explaining both sides fairly",
+        "Shows the shift from winning to sharing and learning",
+        "Separates logic from emotion in disagreements",
+        "Closes with how the lesson carries into future conversations"
+      ],
+      "why_it_works": [
+        "Presents the other person's view with respect, which proves the lesson instead of just stating it.",
+        "Anchors the essay in one concrete disagreement rather than several vague ones.",
+        "Shows a change in the writer's own behavior, not in the other person."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": "Princeton",
+      "match_note": null
+    },
+    {
+      "id": "sample-95",
+      "publisher": "College Essay Guy",
+      "school": "duke",
+      "prompt_ids": [
+        "duke-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Option #3 Example Essay (written for Stanford)",
+      "approx_words": 240,
+      "what_the_writer_did": "The writer gets excited about a cognitive bias in which vivid, easy-to-recall examples make risks seem more likely than they are. They show how the idea changed their debate style, swapping dry statistics for a memorable image during a round on environmental activism.",
+      "structure": [
+        "Opens with a surprising probability question to spark curiosity",
+        "Explains the bias in plain terms",
+        "Shows how the idea changed the writer's debate strategy",
+        "Gives one example from an actual debate",
+        "Ends with a short, funny closing line"
+      ],
+      "why_it_works": [
+        "Shows excitement by applying an idea, not by saying you are excited.",
+        "Explains a technical concept simply enough for any reader to follow.",
+        "A brief, witty final line can land better than a summary."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": "Stanford",
+      "match_note": null
+    },
+    {
+      "id": "sample-96",
+      "publisher": "College Essay Guy",
+      "school": "duke",
+      "prompt_ids": [
+        "duke-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Additional example written for Stanford from Markus",
+      "approx_words": 300,
+      "what_the_writer_did": "After a friend's project sparks interest, the writer teaches themselves the basics of AI, including a fast-paced online course. They then put it to work as a lead intern on research aimed at shortening developmental tests, while asking who the technology actually serves.",
+      "structure": [
+        "Opens with self-directed study triggered by a friend's project",
+        "Explains what the writer learned about how AI improves",
+        "Applies that knowledge to a real research role",
+        "Raises an ethical question about who benefits",
+        "Ends with next research steps and campus plans"
+      ],
+      "why_it_works": [
+        "Shows excitement through what you did next, from coursework to research.",
+        "Adds an ethical question, showing thought beyond technical enthusiasm.",
+        "Runs over Duke's 250 words, so keep one thread and trim the rest."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": "Stanford",
+      "match_note": null
+    },
+    {
+      "id": "sample-97",
+      "publisher": "College Essay Guy",
+      "school": "jhu",
+      "prompt_ids": [
+        "jhu-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (written for another school)",
+      "approx_words": 250,
+      "what_the_writer_did": "The writer recounts starting an art magazine for overlooked student artists with a classmate whose spontaneous, wandering creativity clashed with the writer's slow, methodical approach. As the partner's ideas came together, the writer admits their own way isn't the only right one.",
+      "structure": [
+        "Sets up a shared project and the partner's contrasting work style",
+        "Describes early frustration with the partner's detours",
+        "Turns as the partner's ideas form a clear pattern",
+        "Shows how combining both styles improved the magazine",
+        "Ends by owning the writer's own blind spot"
+      ],
+      "why_it_works": [
+        "Treats different working styles as a real difference, widening what engaging across differences can mean.",
+        "Admits the writer was partly wrong, which makes the growth believable.",
+        "Points to concrete results of the collaboration, so the lesson isn't abstract."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/johns-hopkins-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": "another school",
+      "match_note": null
+    },
+    {
+      "id": "sample-98",
+      "publisher": "College Essay Guy",
+      "school": "uchicago",
+      "prompt_ids": [
+        "uchicago-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (first Why UChicago sample)",
+      "approx_words": 538,
+      "what_the_writer_did": "Casting themselves playfully as a thinker about culture, the writer argues UChicago suits their humanities interests. They cite a campus visit to a scholar's archive, digital humanities research, specific courses and a graduate seminar, an interdisciplinary humanities major with a planned capstone, and several clubs.",
+      "structure": [
+        "Opens with a bold self-description and a clear claim of fit",
+        "Uses a campus archive visit as the emotional center",
+        "Links research, courses and a seminar to the writer's own project",
+        "Presents an interdisciplinary major and capstone as the framework",
+        "Covers clubs, then circles back to the opening with humor"
+      ],
+      "why_it_works": [
+        "A personal campus visit gives proof of interest that a list of resources can't.",
+        "Organizing resources around one intellectual project keeps a long essay focused.",
+        "Light humor suits UChicago and keeps a dense essay readable."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/university-chicago-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-99",
+      "publisher": "College Essay Guy",
+      "school": "uchicago",
+      "prompt_ids": [
+        "uchicago-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (third Why UChicago sample)",
+      "approx_words": 540,
+      "what_the_writer_did": "The writer opens with an inherited sports fandom, using an unconventional quarterback as a bridge to the school's reputation for independent thinking. A childhood stutter explains their curiosity about the brain, leading to a neuroscience plan, named courses, a research lab, the Core and house life.",
+      "structure": [
+        "Opens with a lighthearted sports analogy for independent thinking",
+        "Shares a personal story that explains an academic interest",
+        "Names a major, courses and a lab tied to research goals",
+        "Adds social plans, then calls back to the opening"
+      ],
+      "why_it_works": [
+        "A personal origin story makes the academic interest feel earned.",
+        "An unexpected analogy can introduce your values with personality.",
+        "A callback ending ties a long essay together neatly."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/university-chicago-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-100",
+      "publisher": "College Essay Guy",
+      "school": "uchicago",
+      "prompt_ids": [
+        "uchicago-07"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": "(2018 Prompt) The popular saying goes, “You are what you eat.” What food has shaped your life or worldview?",
+      "title": "Example for the 2018 food prompt",
+      "approx_words": 660,
+      "what_the_writer_did": "Answering a past food prompt, the writer runs an economics lesson for young children using a bag of lollipops. They try several ways of sharing the candy, each ending unfairly, and conclude that even a tiny economy is hard to run fairly, which drives their interest in real-world problems.",
+      "structure": [
+        "Opens in the middle of a chaotic classroom moment",
+        "Introduces the economic idea behind the activity",
+        "Tests several ways to share, each failing differently",
+        "Shows a child's complaint that keeps the problem open",
+        "Reflects on real-world complexity and future study"
+      ],
+      "why_it_works": [
+        "Turns a playful prompt into serious thinking without losing the fun setup.",
+        "Leaves the problem unsolved, which reads as honest curiosity rather than weakness.",
+        "Uses a small experiment to show how you think, step by step."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/university-chicago-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-101",
+      "publisher": "College Essay Guy",
+      "school": "uchicago",
+      "prompt_ids": [
+        "uchicago-07"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": "(2019 Prompt) UChicago has international campus centers around the world, but we don’t have any interplanetary, interstellar, or interdimensional campuses… yet! Propose a spot in time or space, in this or any universe, for a new UChicago campus. What types of courses would be taught at this site? What cultural experiences await students who study there?",
+      "title": "Example for the 2019 new-campus prompt",
+      "approx_words": 631,
+      "what_the_writer_did": "Answering a past prompt about a new campus anywhere in time or space, the writer places it in a universe with an extra spatial dimension. They explain the idea's history, then propose courses, geometry and physics research, and playful details of everyday student life there.",
+      "structure": [
+        "States the campus location in a clear opening thesis",
+        "Explains the idea's history and vocabulary simply",
+        "Proposes courses and research, one theme per paragraph",
+        "Lightens the tone with imagined daily campus life",
+        "Ends by picturing the campus as a home for outsiders"
+      ],
+      "why_it_works": [
+        "Answers every part of the prompt: the place, the courses and student culture.",
+        "Shows real math and physics knowledge while staying playful.",
+        "One clear theme per paragraph keeps a wild idea easy to follow."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/university-chicago-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-102",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (written for Fordham)",
+      "approx_words": 148,
+      "what_the_writer_did": "The writer ties their faith and international outlook to one formative moment: seeing migrant workers abandoned with few supplies, which sparked their advocacy. They then name a course, a humanitarian student group and a dance group at the target school, and close with a long-term diplomatic goal.",
+      "structure": [
+        "Opens with how the writer sees their own identity",
+        "Tells a short origin story behind their advocacy",
+        "Names specific courses and groups to join",
+        "Ends with an ambitious long-term goal"
+      ],
+      "why_it_works": [
+        "Moves quickly from background to how you'd engage, which is the prompt's real question.",
+        "One vivid moment can explain a value better than a list of activities.",
+        "For Northwestern, swap in campus groups and courses that fit your story."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": "Fordham",
+      "match_note": null
+    },
+    {
+      "id": "sample-103",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (written for another school's version of this prompt)",
+      "approx_words": 300,
+      "what_the_writer_did": "The writer describes being the eldest child in a large, low-income family, working summer jobs and living through a stretch of homelessness, then coming out in a conservative religious household. They close by naming campus resources and the everyday ways they'd connect with peers and faculty.",
+      "structure": [
+        "Opens with family size, money pressures and time without housing",
+        "Turns to coming out within a religious household",
+        "Describes seeking counseling and choosing supportive people",
+        "Ends by linking these experiences to campus resources"
+      ],
+      "why_it_works": [
+        "Shares hard experiences plainly, focusing on what they taught rather than on sympathy.",
+        "Shows how background shapes the way you'd engage, which is the prompt's core.",
+        "Save more room for the forward-looking part; here it gets only the final paragraph."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": "another school",
+      "match_note": null
+    },
+    {
+      "id": "sample-104",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-02"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example",
+      "approx_words": 170,
+      "what_the_writer_did": "The writer would paint The Rock as a nighttime scene of a woman's figure trapped behind bars. They explain the image through a classic short story about confinement, connect it to leading a club on sexual assault and to barriers women still face, then name campus groups they'd join.",
+      "structure": [
+        "Opens by describing the painted image in vivid detail",
+        "Explains its meaning through a literary reference",
+        "Connects the image to the writer's activism and current issues",
+        "Closes by naming Northwestern groups that share those values"
+      ],
+      "why_it_works": [
+        "Describe the image first so the reader can picture it before you explain it.",
+        "Use the painting as a doorway to your values and activities.",
+        "Ending on campus groups turns a creative prompt into a fit essay."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-105",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (written for a similar Boston College prompt)",
+      "approx_words": 340,
+      "what_the_writer_did": "The writer proposes a course questioning human dominance over other species and the planet. A service trip abroad, where the writer witnessed a ceremonial animal slaughter, plus later sustainability work, explains where the idea came from, and the essay closes by laying out the course's central questions.",
+      "structure": [
+        "Opens with a course title and a burst of big questions",
+        "Tells the personal experience that sparked the idea",
+        "Connects it to later environmental work",
+        "Builds an argument about humans and the environment",
+        "Ends by listing the questions the course would explore"
+      ],
+      "why_it_works": [
+        "A personal origin story shows why you, specifically, want this course.",
+        "Framing a course around open questions signals real intellectual curiosity.",
+        "For Northwestern, cut to 200 words and name ideal classmates or collaborators."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": "Boston College",
+      "match_note": null
+    },
+    {
+      "id": "sample-106",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-03"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (one more example with analysis)",
+      "approx_words": 186,
+      "what_the_writer_did": "Written as a course description instead of a story, this sample proposes a class on how literature portrays women's bodies, contrasting nurturing-mother images with views of women as productive labor. It applies several critical lenses, then lists a sample lecture, two readings and a guest speaker.",
+      "structure": [
+        "Opens with an interdisciplinary course title and intended students",
+        "Summarizes the course's central argument and lenses",
+        "Outlines one sample lecture topic",
+        "Lists required readings and a guest lecturer"
+      ],
+      "why_it_works": [
+        "A syllabus format shows academic depth quickly within a tight word count.",
+        "Naming which students the course suits hints at the classmates the prompt asks about.",
+        "Specific readings and speakers prove you've explored the topic beyond class."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-107",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (written for Northwestern's prompt)",
+      "approx_words": 185,
+      "what_the_writer_did": "The writer reflects on being biracial: how people react to their white parent, how they're read differently at home and abroad, and feeling out of place in an Asian student community. They then name Northwestern multicultural programs, a student job and book groups, aiming to mentor other biracial students.",
+      "structure": [
+        "Opens with a direct statement of mixed-race identity",
+        "Gives examples of feeling misread or out of place",
+        "Names Northwestern programs that offer the missing community",
+        "Ends with a goal to mentor other biracial students"
+      ],
+      "why_it_works": [
+        "Explaining the gap you've felt makes the groups you name feel necessary.",
+        "Specific offices and programs show real research into the school.",
+        "Ending with giving back shows you'd contribute, not just receive."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-108",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (one more example essay)",
+      "approx_words": 200,
+      "what_the_writer_did": "The writer explains joining the track team as its manager, despite disliking running, because the team turned no one away. Growing comfortable with teammates, they eventually raced at a meet. They link this to Northwestern's running club, a reading group, and plans to teach kids about literacy and nutrition.",
+      "structure": [
+        "Opens by clarifying an unexpected role on a team",
+        "Admits a weakness: disliking running and feeling slow",
+        "Shows growth through the decision to race",
+        "Names campus groups and a service plan"
+      ],
+      "why_it_works": [
+        "Honest self-deprecation makes a small story memorable.",
+        "Shows the kind of welcoming community you'd seek, not just its name.",
+        "Pairing a familiar group with a new interest shows range."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-109",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-05"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example for Northwestern",
+      "approx_words": 199,
+      "what_the_writer_did": "The writer recalls a first trip to Wrigley Field with family that got rained out, then later family visits to Chicago sights and restaurants. Cubs fandom grows into an interest in baseball statistics and a long research paper on trades, and the essay ties family, city and baseball to Northwestern.",
+      "structure": [
+        "Opens with a specific family memory at a Chicago ballpark",
+        "Expands to family traditions around the city",
+        "Shows fandom turning into analytical interest",
+        "Ties location, family and interest together at the end"
+      ],
+      "why_it_works": [
+        "A personal history with the city makes interest in the location believable.",
+        "Turning a hobby into intellectual work shows growth.",
+        "Mention Northwestern before the last line so the link feels central."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-110",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example",
+      "approx_words": 165,
+      "what_the_writer_did": "The writer describes handling social media and videos for a volunteer group led by women with chronic illnesses, noting how different their own background is from the members' yet how much they share in goals and humor. They reflect on overlooked challenges and plan accessible-tech work at a Northwestern research center.",
+      "structure": [
+        "Opens by contrasting the writer's background with the group's members",
+        "Describes a leader and a program the writer promoted",
+        "Reflects on challenges women with chronic illness face",
+        "Links skills gained to a Northwestern research center"
+      ],
+      "why_it_works": [
+        "Shows perspective gained by working with people unlike you.",
+        "Concrete roles, like making videos, show contribution instead of claiming it.",
+        "A named campus resource connects past work to future plans."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": null,
+      "match_note": null
+    },
+    {
+      "id": "sample-111",
+      "publisher": "College Essay Guy",
+      "school": "northwestern",
+      "prompt_ids": [
+        "northwestern-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example 1 (written for Colgate)",
+      "approx_words": 196,
+      "what_the_writer_did": "The writer describes how Jewish heritage, and relatives lost in the Holocaust, shaped a commitment to remembrance and education. The core of the essay is their work on a student leadership board at a Holocaust education center, where weekly discussions led to a website telling one survivor's story.",
+      "structure": [
+        "Opens with a light one-line hook before turning serious",
+        "Explains family history and how the writer honors it",
+        "Shows action: weekly board meetings and a survivor-story website",
+        "Reflects on connections made and hopes for a diverse campus"
+      ],
+      "why_it_works": [
+        "Moves from background to a finished project, so the perspective comes with proof.",
+        "A small dose of humor makes a heavy topic approachable.",
+        "For Northwestern, say how this perspective would shape class and campus conversations."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/northwestern-supplemental-essay",
+      "date_checked": "2026-10-25",
+      "written_for": "Colgate",
+      "match_note": null
+    },
+    {
+      "id": "sample-112",
+      "publisher": "College Essay Guy",
+      "school": "caltech",
+      "prompt_ids": [
+        "caltech-01"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (written for another school)",
+      "approx_words": 196,
+      "what_the_writer_did": "The writer traces a path from coding as a young child, through self-taught languages and teaching at a bootcamp, to deeper study of algorithms and memory systems plus summer projects in protein folding and machine learning. Running servers and building security tools then narrows their focus to privacy and security.",
+      "structure": [
+        "Opens with an early start and a steady coding habit",
+        "Widens to advanced topics and summer research projects",
+        "Narrows to security through hands-on server and network work",
+        "Ends with why security matters and a plan to study it"
+      ],
+      "why_it_works": [
+        "Technical specifics prove depth without needing to claim expertise.",
+        "A broad-to-narrow arc explains why you landed on this area.",
+        "Ending with the stakes makes the interest feel purposeful."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/caltech-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "written_for": "another school",
+      "match_note": null
+    },
+    {
+      "id": "sample-113",
+      "publisher": "College Essay Guy",
+      "school": "caltech",
+      "prompt_ids": [
+        "caltech-04"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Bonus example (written for another school)",
+      "approx_words": 118,
+      "what_the_writer_did": "The writer recounts a biotech open house at a community college: running dyes through a gel, reasoning out why the bands moved as they did, then extracting DNA from their own cheek cells. It closes with an interest in combining biology and engineering for medicine, diagnostics and the environment.",
+      "structure": [
+        "Opens at a specific hands-on event",
+        "Shows the writer reasoning from observation to conclusion",
+        "Builds to a personal high point with their own DNA",
+        "Widens to future uses of the field"
+      ],
+      "why_it_works": [
+        "Narrating your reasoning shows scientific thinking, not just enthusiasm.",
+        "A personal high point gives a short essay emotional lift.",
+        "Ending on real-world uses shows where the curiosity could lead."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/caltech-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "written_for": "another school",
+      "match_note": null
+    },
+    {
+      "id": "sample-114",
+      "publisher": "College Essay Guy",
+      "school": "caltech",
+      "prompt_ids": [
+        "caltech-06"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (about one high school experience)",
+      "approx_words": 115,
+      "what_the_writer_did": "In one short paragraph, the writer walks through a high school engineering class: technical drawing and missing-dimension math, then programming a CNC machine with straight and curved toolpaths. They apply those skills to carving a camera design of their own and name the course they plan to take next.",
+      "structure": [
+        "Opens inside a specific engineering course",
+        "Walks through skills learned in order of difficulty",
+        "Applies them to a self-directed build",
+        "Closes with the next course the writer will take"
+      ],
+      "why_it_works": [
+        "Precise technical vocabulary shows hands-on experience quickly.",
+        "Moving from class to your own project shows initiative.",
+        "Add more on what the process taught you; Caltech's prompt asks for that."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/caltech-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "written_for": "another school",
+      "match_note": null
+    },
+    {
+      "id": "sample-115",
+      "publisher": "College Essay Guy",
+      "school": "caltech",
+      "prompt_ids": [
+        "caltech-07"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Example (written for a different school's contribute prompt)",
+      "approx_words": 196,
+      "what_the_writer_did": "The writer describes how Jewish heritage, and relatives lost in the Holocaust, shaped a commitment to remembrance and education. The core of the essay is their work on a student leadership board at a Holocaust education center, where weekly discussions led to a website telling one survivor's story.",
+      "structure": [
+        "Opens with a light one-line hook before turning serious",
+        "Explains family history and how the writer honors it",
+        "Shows action: weekly board meetings and a survivor-story website",
+        "Reflects on connections made and hopes for a new campus community"
+      ],
+      "why_it_works": [
+        "A finished project is stronger evidence of what you'd contribute than a list of traits.",
+        "A small dose of humor makes a heavy topic approachable.",
+        "For Caltech, cut to 150 words and name what you'd start or share there."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/caltech-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "written_for": "Colgate",
+      "match_note": null
+    },
+    {
+      "id": "sample-116",
+      "publisher": "College Essay Guy",
+      "school": "caltech",
+      "prompt_ids": [
+        "caltech-07"
+      ],
+      "prompt_match": "exact",
+      "prompt_answered": null,
+      "title": "Another example essay",
+      "approx_words": 250,
+      "what_the_writer_did": "The writer argues that a club built around one identity can still be diverse, describing members across grades, genders and countries and shared moments like embarrassment over lunches packed from home. They reflect that likeness and difference aren't always visible, and aim to learn from differences while building shared spaces.",
+      "structure": [
+        "Opens with a counterintuitive claim about an identity-based group",
+        "Gives concrete shared experiences among varied members",
+        "Reflects on what diversity really means",
+        "Ends with the kind of space the writer hopes to create"
+      ],
+      "why_it_works": [
+        "A counterintuitive opening claim earns attention fast.",
+        "Small shared details, like school lunches, make belonging concrete.",
+        "For Caltech, trim to 150 words and name one specific thing you'd start."
+      ],
+      "source_url": "https://www.collegeessayguy.com/blog/caltech-supplemental-essays",
+      "date_checked": "2026-10-25",
+      "written_for": "another school",
+      "match_note": null
     }
   ]
 }
