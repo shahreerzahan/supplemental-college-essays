@@ -117,6 +117,9 @@ class SharedStory(BaseModel):
 class StoryMapPlan(BaseModel):
     """The Coach's Story Map."""
 
+    declined: str | None = Field(default=None, description=(
+        "Only if the student asked you to write, draft or rewrite an essay or part of one: one or two polite "
+        "sentences saying you won't, and that the map and questions are here to help instead. Otherwise null."))
     rows: list[MapRow] = Field(description="One row per prompt the student should write, gaps included.")
     shared: list[SharedStory] = Field(default_factory=list, description="Stories used for more than one prompt.")
     advice: list[str] = Field(default_factory=list, description="Up to 3 short next steps, addressed to the student.")
@@ -145,6 +148,8 @@ class CoachDeps:
     stories: list[str]
     applying_to: str | None = None
     lean: bool = False
+    run_id: str = ""   # for the audit trail
+    session: str = ""
     handoff_ids: set[str] = field(default_factory=set)
     not_on_shelf: list[str] = field(default_factory=list)
     handoff_usage: dict[str, int] = field(default_factory=dict)  # the Librarian's share of the tokens
@@ -170,8 +175,31 @@ class UsageOut(BaseModel):
     handoff: "UsageOut | None" = Field(default=None, description="The Librarian's share of a Story Map run.")
 
 
+class SessionOut(BaseModel):
+    """This browser session's token budget."""
+
+    used: int
+    cap: int
+    remaining: int
+
+
+class Refusal(BaseModel):
+    """A friendly no: why, what to do instead."""
+
+    reason: Literal["ghostwriting", "too_long", "run_budget", "session_budget", "content_filter"]
+    message: str
+    questions: list[str] = Field(default_factory=list, description="Questions to think about instead (ghostwriting).")
+    offer_story_map: bool = False
+
+
+class RefusalResponse(BaseModel):
+    refusal: Refusal
+    session: SessionOut
+
+
 class AskRequest(BaseModel):
-    question: str = Field(min_length=3, max_length=300)
+    # Generous here so the guard can answer an over-long question with a friendly message.
+    question: str = Field(min_length=3, max_length=20_000)
     lean: bool = False
 
 
@@ -186,10 +214,12 @@ class AskResponse(BaseModel):
     not_on_shelf: list[str]
     sources: list[Source]
     usage: UsageOut
+    session: SessionOut
+    flagged_injection: bool = Field(default=False, description="The question had instruction-like text, treated as data.")
 
 
 class DecodeRequest(BaseModel):
-    prompt_id: str
+    prompt_id: str = Field(max_length=40)
     lean: bool = False
 
 
@@ -209,21 +239,23 @@ class DecodeResponse(BaseModel):
     read_these: list[ReadThisOut]
     source_url: str
     usage: UsageOut
+    session: SessionOut
 
 
 class StoryMapRequest(BaseModel):
+    # Lengths are checked by the guard (config.MAX_INPUT_CHARS for the whole request), which answers
+    # with a friendly message instead of a validation error.
     schools: list[str] = Field(min_length=1, max_length=10)
     stories: list[str] = Field(min_length=3, max_length=5)
-    applying_to: str | None = Field(default=None, max_length=120)
+    applying_to: str | None = Field(default=None, max_length=5_000)
     lean: bool = False
 
     @field_validator("stories")
     @classmethod
     def short_stories(cls, stories: list[str]) -> list[str]:
         cleaned = [" ".join(s.split()) for s in stories]
-        for s in cleaned:
-            if not 2 <= len(s) <= 160:
-                raise ValueError("Each story should be a few words (up to about 25).")
+        if any(len(s) < 2 for s in cleaned):
+            raise ValueError("Each story needs a few words.")
         return cleaned
 
     @field_validator("schools")
@@ -262,4 +294,7 @@ class StoryMapResponse(BaseModel):
     total_words: int
     total_note: str
     advice: list[str]
+    declined: str | None = None
     usage: UsageOut
+    session: SessionOut
+    flagged_injection: bool = False

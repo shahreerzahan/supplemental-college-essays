@@ -1203,6 +1203,33 @@ button { font: inherit; color: inherit; }
 .map-card .label { margin: 30px 0 10px; }
 .map-foot { margin: 26px 0 0; color: #6B7079; font-size: 12.5px; line-height: 1.5; }
 
+/* ---------- Refusals and safety notes ---------- */
+
+.refusal-msg {
+  margin: 4px 0 0;
+  padding: 12px 16px;
+  border-left: 4px solid var(--mustard);
+  border-radius: 4px 10px 10px 4px;
+  background: rgba(225, 185, 101, .16);
+  font-size: 16px;
+  line-height: 1.55;
+}
+.r-too_long .refusal-msg, .r-run_budget .refusal-msg, .r-session_budget .refusal-msg, .r-content_filter .refusal-msg { border-left-color: var(--challenge); background: rgba(178, 80, 69, .1); }
+.refusal .label { margin: 20px 0 8px; }
+.refusal-questions { margin: 0 0 18px; padding-left: 22px; }
+.refusal-questions li { margin: 6px 0; font-size: 15px; line-height: 1.5; }
+.refusal .btn { margin-top: 4px; }
+.answer-flag, .map-declined {
+  margin: 12px 0 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(27, 29, 32, .06);
+  color: #4A4F57;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.map-declined { margin-top: 18px; border-left: 4px solid var(--mustard); font-size: 15px; color: var(--ink); }
+
 /* ---------- Small screens ---------- */
 
 @media (max-width: 720px) {

@@ -45,6 +45,13 @@ PRICE_PER_MILLION_CACHE_WRITE: float | None = None
 MAX_RESULTS = 8
 LEAN_RESULTS = 3
 
+# Safety budgets.
+MAX_REQUESTS_PER_RUN = 6      # model requests per agent run (a Story Map's Librarian handoff counts too)
+MAX_INPUT_CHARS = 1_500       # characters a student can send in one request
+SESSION_TOKEN_CAP = 20_000    # billed tokens per browser session
+
+AUDIT_TRAIL = ROOT / "output" / "audit_trail.json"
+
 
 class MissingKey(RuntimeError):
     pass

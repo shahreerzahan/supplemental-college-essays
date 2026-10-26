@@ -10,9 +10,10 @@ import logging
 import re
 from pathlib import Path
 
-from pydantic_ai import RunContext, UsageLimits
+from pydantic_ai import RunContext, capture_run_messages
 
-from app import config
+from app import audit, config
+from app.guard import as_data, normalize
 from app.usage import counts, current_calls
 from app.models import (
     CoachDeps, Example, ExamplesResult, LibrarianDeps, PromptBrief, PromptFull, PromptList,
@@ -74,6 +75,11 @@ class Shelf:
         for key, s in self.schools.items():
             for name in [key, s["name"], *SCHOOL_ALIASES.get(key, [])]:
                 self.aliases[_norm(name)] = key
+        # Every piece of text on the shelf, normalized: a quote in an answer must come from here.
+        texts = [p["prompt"] for p in self.prompts.values()] + [n for s in self.schools.values() for n in s.get("notes", [])]
+        texts += [s.get("prompt_answered") or "" for s in self.samples.values()]
+        texts += [e.get("prompt_answered") or "" for e in self.essays.values()] + [e.get("title") or "" for e in self.essays.values()]
+        self.corpus = "\n".join(normalize(t) for t in texts if t)
 
     # ----- lookups -----
 
@@ -329,9 +335,6 @@ async def list_examples(
 
 # ---------- Coach tool: the handoff ----------
 
-HANDOFF_LIMITS = UsageLimits(request_limit=14, tool_calls_limit=10)
-
-
 async def ask_librarian(ctx: RunContext[CoachDeps], schools: list[str]) -> SchoolsResult:
     """Ask the Librarian for every prompt at the student's schools. This is your only source of prompts.
 
@@ -340,13 +343,21 @@ async def ask_librarian(ctx: RunContext[CoachDeps], schools: list[str]) -> Schoo
     """
     lib_deps = LibrarianDeps(shelf=ctx.deps.shelf, job="handoff", lean=ctx.deps.lean)
     # The job note lives in the request, so the Librarian's system prompt stays fixed and cacheable.
+    # School names come from the student, so they go in as data.
     request = ("Job 3, a handoff from the Essay Coach: return a PromptList. Call prompts_for_schools with "
-               f"include_text=false and list every prompt id for these schools: {', '.join(schools)}.")
+               "include_text=false and list every prompt id for the schools named in the student input.\n\n"
+               f"<student_input>\n{as_data(', '.join(schools))}\n</student_input>")
     before, first_call = counts(ctx.usage), len(current_calls())
-    result = await ctx.deps.librarian.run(
-        request, deps=lib_deps, model=ctx.model, model_settings=ctx.model_settings,
-        usage=ctx.usage, usage_limits=HANDOFF_LIMITS,
-    )
+    # The handoff shares the Coach's usage and limits, so the whole Story Map stays in one budget.
+    with capture_run_messages() as messages:
+        try:
+            result = await ctx.deps.librarian.run(
+                request, deps=lib_deps, model=ctx.model, model_settings=ctx.model_settings,
+                usage=ctx.usage, usage_limits=ctx.usage_limits,
+            )
+        finally:
+            audit.record(ctx.deps.run_id, ctx.deps.session, "librarian", "handoff",
+                         audit.steps_from_messages(list(messages)))
     after = counts(ctx.usage)
     ctx.deps.handoff_usage = {k: after[k] - before[k] for k in after}
     ctx.deps.handoff_calls = current_calls()[first_call:]

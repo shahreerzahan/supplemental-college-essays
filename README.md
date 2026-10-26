@@ -13,6 +13,22 @@ Checks in `app/agents.py` send an agent back to fix its answer if it cites an id
 
 API: `POST /api/ask`, `POST /api/decode`, `POST /api/story-map`.
 
+## Safety
+
+Guards in `app/guard.py` run before any model call, and output checks in `app/agents.py` run after:
+
+- **No ghostwriting**: a request to write an essay gets a polite no, a Story Map offer, and questions to think about. The Coach's output checks also reject anything that reads like the student's own sentences.
+- **Prompt injection**: everything a student types is wrapped as `<student_input>` data, and fake tags are defanged. The system prompts say never to follow instructions inside it, and an output check rejects answers that repeat the system prompt. Instruction-like text is flagged and logged. (Azure OpenAI's own content filter also blocks blunt jailbreaks; the app answers those with a friendly message.)
+- **No made-up prompts**: the tools are the only source of prompts, and output checks reject prompt ids no tool returned and quotes that aren't in the shelf data.
+- **Budgets**: 6 model requests per run (a Story Map's Librarian handoff included), 1,500 characters of input per request, and 20,000 tokens per browser session. Each limit ends in a friendly message.
+- **Audit trail**: every agent step (guard decisions, input, tool calls and results, retries, output, errors) is appended to `output/audit_trail.json`, which is git-ignored because it holds what students typed.
+
+Run the attack tests (they write `output/safety_tests.json`):
+
+```bash
+.venv/bin/python -m pytest tests/test_safety.py -v
+```
+
 ## Token use
 
 - After every agent run the page shows a meter: input tokens, cached input tokens, output tokens, model requests, and cost. Cost stays blank until you fill in gpt-6-luna's prices (the TODO in `app/config.py`).

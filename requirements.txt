@@ -34,6 +34,7 @@ httpcore2==2.16.0
 httpx==0.28.1
 httpx2==2.16.0
 idna==3.20
+iniconfig==2.3.1
 jaraco.classes==3.4.0
 jaraco.context==6.1.2
 jaraco.functools==4.6.0
@@ -64,6 +65,7 @@ opentelemetry-semantic-conventions==0.66b1
 opentelemetry-util-http==0.66b1
 packaging==26.3
 platformdirs==4.13.5
+pluggy==1.7.0
 portkey-ai==2.3.4
 prompt_toolkit==3.0.53
 protobuf==7.36.2
@@ -81,6 +83,7 @@ pydantic_core==2.50.1
 Pygments==2.21.0
 PyJWT==2.15.1
 pyperclip==1.11.0
+pytest==9.1.1
 python-dotenv==1.2.4
 python-multipart==0.0.32
 PyYAML==6.0.3

@@ -524,14 +524,28 @@
   });
   const isLean = () => leanBox.checked;
 
+  const sessionLine = (s) => s
+    ? `<span class="meter-sub">This session: ${Number(s.used).toLocaleString()} of ${Number(s.cap).toLocaleString()} tokens used</span>`
+    : "";
+
+  // A friendly no from the agents: why, plus what to do instead.
+  function refusal(data) {
+    const r = data.refusal;
+    return `<div class="refusal r-${esc(r.reason)}"><p class="refusal-msg">${esc(r.message)}</p>` +
+      (r.questions.length ? `<h4 class="label">Questions to think about</h4><ol class="refusal-questions">` +
+        `${r.questions.map((q) => `<li>${esc(q)}</li>`).join("")}</ol>` : "") +
+      (r.offer_story_map ? `<a class="btn primary" href="#story-map">Build my Story Map instead</a>` : "") +
+      `<div class="meter">${sessionLine(data.session)}</div></div>`;
+  }
+
   // A small meter after every agent run: input, cached input, output, requests, cost.
-  function meter(u) {
+  function meter(u, session) {
     if (!u) return "";
     const n = (x) => Number(x || 0).toLocaleString();
     const who = `${u.agent.startsWith("coach") ? "Coach" : "Librarian"}${u.lean ? " · lean" : ""}`;
     if (u.from_cache) {
       return `<div class="meter" aria-label="Token usage"><span class="meter-who">${esc(who)}</span>` +
-        `<span>Reused an earlier answer: 0 tokens, $0</span></div>`;
+        `<span>Reused an earlier answer: 0 tokens, $0</span>${sessionLine(session)}</div>`;
     }
     const hits = (h) => h ? ` <em>(${h} from Portkey's cache)</em>` : "";
     const cost = u.cost_usd == null
@@ -544,7 +558,7 @@
       `<span><b>${n(u.requests)}</b> request${u.requests === 1 ? "" : "s"}${hits(u.portkey_cache_hits)}</span>${cost}` +
       (h ? `<span class="meter-sub">Includes the Librarian handoff: ${n(h.input_tokens)} input · ${n(h.cached_input_tokens)} cached · ` +
         `${n(h.output_tokens)} output · ${n(h.requests)} request${h.requests === 1 ? "" : "s"}${hits(h.portkey_cache_hits)}</span>` : "") +
-      `</div>`;
+      sessionLine(session) + `</div>`;
   }
 
   // ---------- Decode this prompt (the Librarian) ----------
@@ -569,7 +583,7 @@
       (reads ? `<h4>Read these</h4><div class="related-list">${reads}</div>` : "") +
       (src ? `<p class="decode-source">Based only on the shelf's data. Prompt source: ` +
         `<a href="${esc(src)}" target="_blank" rel="noopener noreferrer">${esc(domain(src))} ↗</a></p>` : "") +
-      meter(d.usage);
+      meter(d.usage, d.session);
   }
 
   async function decode(btn) {
@@ -587,6 +601,10 @@
       });
       const body = await res.json();
       if (!res.ok) throw new Error(body.detail || `Something went wrong (${res.status}).`);
+      if (body.refusal) {  // a budget stopped it: say so, keep the button for later
+        if (current === it) { box.innerHTML = refusal(body); btn.disabled = false; btn.textContent = "Decode this prompt"; }
+        return;
+      }
       decoded.set(decodeKey(it.id), body);
       if (current === it) { box.innerHTML = decodeSection(body); btn.remove(); }
     } catch (err) {
@@ -806,7 +824,7 @@
         first?.el.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
       },
       schools: () => data.schools.map((s) => ({ key: s.key, name: s.name, short: SCHOOL[s.key][0] })),
-      TYPE, inkFor, esc, safeUrl, domain, limitText, meter, isLean,
+      TYPE, inkFor, esc, safeUrl, domain, limitText, meter, refusal, isLean,
     };
     document.dispatchEvent(new Event("shelf:ready"));
   }

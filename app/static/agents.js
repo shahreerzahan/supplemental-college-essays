@@ -47,13 +47,22 @@
       `<div class="answer-head"><span class="answer-who">The Librarian</span>` +
       `<button class="inline-link" type="button" data-act="clear-answer">Clear</button></div>` +
       `<p class="answer-text">${S.esc(a.answer)}</p>` + missing(a.not_on_shelf) +
+      (a.flagged_injection ? `<p class="answer-flag">Part of your question read like instructions to the AI, so it was treated as plain text.</p>` : "") +
       (books.length
         ? `<div class="answer-books">${books.map((it) =>
             `<button class="book-chip" type="button" data-open="${S.esc(it.id)}"><i class="mini-spine" style="--c:${it.t.color}"></i>` +
             `${S.esc(it.short)} · ${S.esc(it.t.label)} · ${S.esc(S.limitText(it.p))}</button>`).join("")}</div>` +
           `<button class="inline-link see-lit" type="button" data-act="show-lit">See ${books.length === 1 ? "it" : `all ${books.length}`} on the shelf ↓</button>`
         : "") +
-      sources(a.sources) + S.meter(a.usage);
+      sources(a.sources) + S.meter(a.usage, a.session);
+    panel.hidden = false;
+  }
+
+  function renderAskRefusal(data) {
+    const panel = $("answer");
+    panel.innerHTML =
+      `<div class="answer-head"><span class="answer-who">The Librarian</span>` +
+      `<button class="inline-link" type="button" data-act="clear-answer">Clear</button></div>` + S.refusal(data);
     panel.hidden = false;
   }
 
@@ -69,8 +78,13 @@
       panel.innerHTML = `<p class="agent-wait">The Librarian is searching the shelf…</p>`;
       try {
         const a = await post("/api/ask", { question, lean: S.isLean() });
-        S.light(a.prompt_ids);
-        renderAnswer(a);
+        if (a.refusal) {
+          S.light(null);
+          renderAskRefusal(a);
+        } else {
+          S.light(a.prompt_ids);
+          renderAnswer(a);
+        }
       } catch (err) {
         panel.innerHTML = `<p class="agent-wait">${S.esc(err.message)}</p>`;
       } finally {
@@ -142,6 +156,11 @@
 
   function renderMap(m) {
     const out = $("map-result");
+    if (m.refusal) {
+      out.innerHTML = `<div class="map-card"><h3 class="map-title">The coach says</h3>${S.refusal(m)}</div>`;
+      out.dataset.ids = "[]";
+      return;
+    }
     if (!m.rows.length) {
       out.innerHTML = `<div class="map-card">${missing(m.not_on_shelf)}<p>None of these schools are on the shelf yet, so there's nothing to map.</p></div>`;
       return;
@@ -161,7 +180,8 @@
       `<div class="map-head"><h3 class="map-title">Your Story Map</h3>` +
       `<button class="btn primary" type="button" data-act="light-map">Light these up on the shelf</button></div>` +
       `<div class="map-stats">${stats.map(([n, l]) => `<div><b>${S.esc(String(n))}</b><span>${S.esc(l)}</span></div>`).join("")}</div>` +
-      `<p class="map-note">${S.esc(m.total_note)}</p>` + S.meter(m.usage) + missing(m.not_on_shelf) +
+      (m.declined ? `<p class="map-declined">${S.esc(m.declined)}</p>` : "") +
+      `<p class="map-note">${S.esc(m.total_note)}</p>` + S.meter(m.usage, m.session) + missing(m.not_on_shelf) +
       `<h4 class="label">Your stories</h4><ol class="map-legend">${m.stories.map((s, i) =>
         `<li>${storyChip(i + 1)}<span>${S.esc(s)}</span><small>${uses(i + 1) ? `${uses(i + 1)} prompt${uses(i + 1) > 1 ? "s" : ""}` : "not used yet"}</small></li>`).join("")}</ol>` +
       [...bySchool].map(([school, rows]) => `<h4 class="map-school">${S.esc(school)}</h4>${rows.map(mapRow).join("")}`).join("") +
