@@ -1,0 +1,2793 @@
+{
+  "meta": {
+    "title": "The Unwritten Shelf",
+    "cycle": "2026-27",
+    "built": "2026-10-25",
+    "prompt_types": [
+      "why us",
+      "intellectual curiosity",
+      "community",
+      "activity",
+      "challenge",
+      "short take",
+      "UCAS"
+    ],
+    "status": {
+      "verified": "Exact wording confirmed for 2026-27 on the school's official page (source_type 'official') or on College Essay Guy's 2026-27 list (source_type 'backup').",
+      "unverified": "Prompt found but its 2026-27 wording could not be confirmed; see notes."
+    },
+    "essays_note": "Essay text is not stored here: the essays are their authors' copyrighted work. Each entry links to where the essay is published."
+  },
+  "schools": [
+    {
+      "key": "yale",
+      "name": "Yale University",
+      "country": "US",
+      "admissions_url": "https://admissions.yale.edu/",
+      "notes": [
+        "Official essay topics page is labeled for the 2026-2027 cycle (\"Review the 2026-2027 essay topics for all applications\").",
+        "Short answer questions (academic areas and topic/idea) are for all first-year applicants; QuestBridge applicants answer them via the Yale QuestBridge Questionnaire.",
+        "Short takes (200 characters, approximately 35 words) and the 400-word essay (choose one of three) are for Common Application and Coalition Application applicants only.",
+        "Wording taken from https://admissions.yale.edu/essay-topics; https://admissions.yale.edu/essays lists the same 2026-27 questions but shortens the academic-areas question."
+      ],
+      "prompt_count": 8
+    },
+    {
+      "key": "harvard",
+      "name": "Harvard University (Harvard College)",
+      "country": "US",
+      "admissions_url": "https://college.harvard.edu/admissions",
+      "notes": [
+        "Harvard Questions are completed with the Common Application: five required short-answer questions, each with a 150 word limit.",
+        "Official page does not name a cycle year; treated as current per brief (page copyright 2026).",
+        "Optional supplementary materials (e.g. music recordings, artwork, academic work samples) may be submitted; these are not essay prompts."
+      ],
+      "prompt_count": 5
+    },
+    {
+      "key": "princeton",
+      "name": "Princeton University",
+      "country": "US",
+      "admissions_url": "https://admission.princeton.edu/",
+      "notes": [
+        "Official page lists the questions for the 2026-27 application cycle.",
+        "Applicants answer one of two academic prompts depending on degree: A.B. (or undecided) vs. B.S.E.",
+        "Princeton also requires a graded written paper as part of the application.",
+        "Not included: transfer essay questions (first-year prompts only)."
+      ],
+      "prompt_count": 7
+    },
+    {
+      "key": "stanford",
+      "name": "Stanford University",
+      "country": "US",
+      "admissions_url": "https://admission.stanford.edu/",
+      "notes": [
+        "Stanford Questions are submitted through the Common Application; the page says they become available in early August each year.",
+        "Official page shows \"Updated on July 21, 2026\"; no older cycle named, treated as 2026-27.",
+        "Applicants apply to the university as a whole, not to a particular major, department or school."
+      ],
+      "prompt_count": 8
+    },
+    {
+      "key": "mit",
+      "name": "Massachusetts Institute of Technology",
+      "country": "US",
+      "admissions_url": "https://mitadmissions.org/",
+      "notes": [
+        "Official page lists the essay questions \"For the 2026–2027 application\".",
+        "Main essays: approximately 100–200 words each depending on the question; short responses: 40 to 50 words each.",
+        "Not included: the final open-ended additional-information text box (no prompt wording given).",
+        "Activities are listed on MIT's form (space for four activities), not a resume."
+      ],
+      "prompt_count": 8
+    },
+    {
+      "key": "columbia",
+      "name": "Columbia University",
+      "country": "US",
+      "admissions_url": "https://undergrad.admissions.columbia.edu/",
+      "notes": [
+        "Official page is headed \"2026-2027 Columbia-Specific Questions\" and was updated July 28, 2026.",
+        "One list question (100 words or fewer) plus short answer questions (150 words or fewer each). The page's instructions mention \"six short answer questions\" but only five 150-word questions are listed.",
+        "The areas-of-study question covers both Columbia College and Columbia Engineering; there are no other college-specific prompts on the official page."
+      ],
+      "prompt_count": 6
+    },
+    {
+      "key": "upenn",
+      "name": "University of Pennsylvania",
+      "country": "US",
+      "admissions_url": "https://admissions.upenn.edu/",
+      "notes": [
+        "Official page is headed \"2026-27 Short Answer and Essay Prompts\".",
+        "Every applicant answers two prompts for all applicants plus one prompt for the undergraduate school they apply to (single-degree choice).",
+        "Not included: coordinated dual-degree and specialized program essays (Huntsman, LSM, M&T, NHCM, VIPER, VIC).",
+        "Not included: transfer essay (transfer applicants only)."
+      ],
+      "prompt_count": 6
+    },
+    {
+      "key": "brown",
+      "name": "Brown University",
+      "country": "US",
+      "admissions_url": "https://admission.brown.edu/",
+      "notes": [
+        "Official How to Apply page names these as the essays for the 2026-2027 application cycle; four essays are required for all first-year and transfer applicants.",
+        "The PLME and Brown|RISD sections of the same page still say \"in addition to the three essays required of all first-year applicants\", which conflicts with the four listed.",
+        "Not included: PLME (Program in Liberal Medical Education) essays and the Brown|RISD Dual Degree Program essay."
+      ],
+      "prompt_count": 4
+    },
+    {
+      "key": "dartmouth",
+      "name": "Dartmouth College",
+      "country": "US",
+      "admissions_url": "https://admissions.dartmouth.edu/",
+      "notes": [
+        "Official writing supplement page lists the prompts for the Class of 2031, updated July 22, 2026.",
+        "Three responses required: the 100-word \"why Dartmouth\" prompt, one of two 250-word prompts, and one of six 250-word prompts."
+      ],
+      "prompt_count": 9
+    },
+    {
+      "key": "cornell",
+      "name": "Cornell University",
+      "country": "US",
+      "admissions_url": "https://admissions.cornell.edu/",
+      "notes": [
+        "No university-wide essay for Fall 2027: Cornell's essay FAQ says applicants complete only the essay(s) for the college or school they apply to. College Essay Guy's 2026/2027 guide mentions a \"universal community essay\" but gives no wording, and no official page lists one.",
+        "Prompts taken from each college's first-year applicant page on admissions.cornell.edu and cross-checked against Cornell's Fall 2027 essay FAQ (https://faq.enrollment.cornell.edu/kb/article/479-what-are-the-essay-questions-for-the-fall-2027-application/).",
+        "Not included: Brooks School DC Start essay (DC Start applicants only, 350 words)."
+      ],
+      "prompt_count": 16
+    },
+    {
+      "key": "duke",
+      "name": "Duke University",
+      "country": "US",
+      "admissions_url": "https://admissions.duke.edu/",
+      "notes": [
+        "Duke's Apply page lists two short-essay prompts required for all first-year applicants in the 2026-27 cycle, plus three optional prompts of which applicants may answer one (250 word limit each).",
+        "The same prompts apply to Trinity College of Arts and Sciences and Pratt School of Engineering applicants.",
+        "Not included: Duke Embark (150-word response for applicants who indicate interest; the prompt is not shown on the Apply page).",
+        "Not included: Duke Gap Year Program interest question.",
+        "Not included: transfer application essays."
+      ],
+      "prompt_count": 5
+    },
+    {
+      "key": "jhu",
+      "name": "Johns Hopkins University",
+      "country": "US",
+      "admissions_url": "https://apply.jhu.edu/",
+      "notes": [
+        "One supplemental essay (350-word limit) for 2026–2027, part of the Hopkins supplement on the Common Application or Coalition on Scoir.",
+        "Biomedical Engineering has no separate application or essay.",
+        "Not included: Direct Matriculation Program (DMP) essays (Master's in International Health, Master's in International Relations, MBA).",
+        "Not included: Peabody Conservatory application essays (separate Peabody application; peabody.jhu.edu returned HTTP 403 to automated requests, so the wording could not be checked).",
+        "Not included: transfer application essays."
+      ],
+      "prompt_count": 1
+    },
+    {
+      "key": "uchicago",
+      "name": "University of Chicago",
+      "country": "US",
+      "admissions_url": "https://collegeadmissions.uchicago.edu/",
+      "notes": [
+        "The UChicago Supplement requires one extended essay chosen from the list of prompts and one short essay on why the applicant would like to attend UChicago.",
+        "The essay page is captioned \"Introducing the 2026-2027 essay prompts.\" and lists six extended essay options: five new prompts and the choose-your-own option.",
+        "No strict word limits; the FAQ gives 500-700 words for the extended essay and 300-600 words for the \"Why UChicago?\" essay as rough benchmarks.",
+        "Not included: transfer version of the second essay."
+      ],
+      "prompt_count": 7
+    },
+    {
+      "key": "northwestern",
+      "name": "Northwestern University",
+      "country": "US",
+      "admissions_url": "https://admissions.northwestern.edu/",
+      "notes": [
+        "For 2026–27, one required short answer (300 words or fewer) for Common Application and Coalition with Scoir applicants (optional for QuestBridge applicants), plus optional short answers: answer 0-2, at least one encouraged, fewer than 200 words each.",
+        "Northwestern no longer requires the Common/Coalition personal essay.",
+        "Not included: separate applications or supplements for the Integrated Science Program (ISP), Mathematical Methods in the Social Sciences (MMSS), the School of Communication Music Theatre Certificate portfolio, and the Bienen School of Music supplement (music materials; no essay prompts listed).",
+        "Not included: transfer writing supplements."
+      ],
+      "prompt_count": 6
+    },
+    {
+      "key": "caltech",
+      "name": "California Institute of Technology",
+      "country": "US",
+      "admissions_url": "https://www.admissions.caltech.edu/",
+      "notes": [
+        "Page is titled \"Fall 2027 Supplemental Application Essays\"; Caltech says its questions change annually.",
+        "All Fall 2027 applicants will be asked to review Caltech's guidelines on the ethical use of AI before submitting their supplemental essays.",
+        "QuestBridge applicants get the Caltech questions if they become Match Finalists and ranked Caltech.",
+        "Not included: 3/2 Program supplemental essays.",
+        "Not included: transfer supplemental essays."
+      ],
+      "prompt_count": 8
+    },
+    {
+      "key": "oxford",
+      "name": "University of Oxford",
+      "country": "UK",
+      "admissions_url": "https://www.ox.ac.uk/admissions/undergraduate/applying",
+      "notes": [
+        "The UCAS deadline for 2027 entry (or deferred entry in 2028) is 6pm on 15 October 2026; applications submitted after this are not considered. [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/current-applicants/]",
+        "Some courses require an admissions test before interview. You register and book a test slot with the test provider UAT UK, separately from your UCAS application. [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/how-to-apply/]",
+        "The Maths department says all applicants for Maths, Computer Science, or joint honours courses take the TMUA (it replaces the MAT); test dates are 12-16 October 2026 and the slot-booking deadline is 28 September 2026 (6pm UK time). [https://www.maths.ox.ac.uk/study-here/undergraduate-study/tmua]",
+        "Some courses require written work, due at the college by 10 November 2026, sent as a PDF with the University Written Work Cover Sheet. Check the course page to see whether your subject needs it. [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/current-applicants/]",
+        "Written work should come from your normal school studies, not be written specially for the Oxford application, and must be marked by a teacher. [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/how-to-apply/]",
+        "For courses starting in October 2027, interviews will be held online and are expected in December 2026. Shortlisting decisions are emailed from mid-November to early December. [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/current-applicants/]",
+        "Interviews are academic discussions about your subject, like a mini tutorial, held on Microsoft Teams with at least two tutors; most candidates have at least two interviews. [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/how-to-apply/]",
+        "Shortlisted candidates for 2027 entry are told the outcome on 12 January 2027 via UCAS. [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/current-applicants/]",
+        "Magdalen College says it selects only on academic criteria, so extra-curricular activities and work experience matter only where directly relevant to the course; it recommends about 80% academic and 20% extra-curricular focus in the personal statement. [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/how-to-apply/]",
+        "Tutors assess applications holistically: a strong admissions test score may offset a weaker personal statement or academic record, and vice versa. [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/current-applicants/]",
+        "Source caveat: www.ox.ac.uk showed a bot check on 2026-10-25, so its admissions_url was not opened and the notes above come from Oxford college (Magdalen) and department (Maths) pages on ox.ac.uk."
+      ],
+      "prompt_count": 3
+    },
+    {
+      "key": "cambridge",
+      "name": "University of Cambridge",
+      "country": "UK",
+      "admissions_url": "https://www.undergraduate.study.cam.ac.uk/apply",
+      "notes": [
+        "For most applicants, the UCAS deadline for 2027 entry (or deferred entry in 2028) is 15 October 2026 (6pm UK time). [https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-application]",
+        "The Foundation Year deadline, and the deadline for some courses for mature students, is 13 January 2027 (6pm UK time). [https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines]",
+        "You cannot apply to Cambridge and Oxford in the same year, and you can submit only one application to Cambridge a year. [https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-application]",
+        "My Cambridge Application is an additional form you complete after submitting UCAS (not needed for the Graduate Course in Medicine). The deadline for most applicants is 22 October 2026 (6pm UK time). [https://www.undergraduate.study.cam.ac.uk/apply/how/cambridge-application]",
+        "My Cambridge Application includes an optional Cambridge-specific personal statement of 1200 characters. Cambridge recommends it if your course is significantly different from your other UCAS choices; don't repeat your UCAS statement or explain your College choice. [https://www.undergraduate.study.cam.ac.uk/apply/how/cambridge-application]",
+        "Many applicants need to take an admissions test. Tests you register for in advance: ESAT (Chemical Engineering and Biotechnology, Engineering, Natural Sciences, Veterinary Medicine), TMUA (Computer Science, Economics, Mathematics), LNAT (Law), UCAT (Medicine). Other courses have a College admission assessment after an interview invitation, with no advance registration, or no assessment. [https://www.undergraduate.study.cam.ac.uk/apply/how/admission-tests]",
+        "ESAT and TMUA are taken 12 to 16 October 2026 (registration deadline 28 September 2026); take the LNAT by 15 October 2026 and the UCAT by 24 September 2026. [https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines]",
+        "Applicants, usually for arts or social sciences courses, may be asked for one or two pieces of written work (such as an essay or portfolio). The course page's 'Entry requirements' tab says if it's needed; the College sets the deadline and how to send it. [https://www.undergraduate.study.cam.ac.uk/apply/after/written-work-portfolio]",
+        "Interviews are academic conversations about your subject; everyone made an offer will have been interviewed. The main interview period is 7 to 18 December 2026, online or in person depending on College and course. Most applicants have 1 or 2 interviews lasting 35 minutes to an hour in total. [https://www.undergraduate.study.cam.ac.uk/apply/after/cambridge-interviews]",
+        "Applicants interviewed in the main December 2026 period get their outcome on 27 January 2027. [https://www.undergraduate.study.cam.ac.uk/apply/application-dates-deadlines]",
+        "Cambridge uses the personal statement to identify academic potential: it reads it in full, doesn't score it formally, and doesn't expect it to be aimed at Cambridge alone. It has no preference for how you split the 3 sections, but the statement should focus mostly on academic detail. [https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-personal-statement]",
+        "Cambridge advises against including lots of information about non-academic activities unrelated to your course; such information should not take up more than 20% of the section you mention it in. [https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-personal-statement]",
+        "For 2027 entry, Cambridge will not download or review additional documents uploaded to UCAS; send any required documents through My Cambridge Application or the College. [https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-application]",
+        "You may use AI tools for ideas or research when preparing your personal statement, but Cambridge warns of risks such as false claims; using AI during an interview is prohibited. [https://www.undergraduate.study.cam.ac.uk/apply/ai-and-undergraduate-applications]"
+      ],
+      "prompt_count": 3
+    }
+  ],
+  "prompts": [
+    {
+      "id": "yale-01",
+      "school": "yale",
+      "prompt": "Students at Yale have time to explore their academic interests before committing to one or more major fields of study. Many students either modify their original academic direction or change their minds entirely. As of this moment, what academic areas seem to fit your interests or goals most comfortably? Please indicate up to three from the list provided.",
+      "limit": null,
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.yale.edu/essay-topics",
+      "date_checked": "2026-10-25",
+      "notes": "Selection of up to three academic areas from a list provided in the application; no written response. All first-year applicants."
+    },
+    {
+      "id": "yale-02",
+      "school": "yale",
+      "prompt": "Tell us about a topic or idea that excites you and is related to one or more academic areas you selected above. Why are you drawn to it?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.yale.edu/essay-topics",
+      "date_checked": "2026-10-25",
+      "notes": "All first-year applicants, including QuestBridge (via the Yale QuestBridge Questionnaire)."
+    },
+    {
+      "id": "yale-03",
+      "school": "yale",
+      "prompt": "If you could teach any college course, write a book, or create an original piece of art of any kind, what would it be?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "characters"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.yale.edu/essay-topics",
+      "date_checked": "2026-10-25",
+      "notes": "Common Application and Coalition Application applicants only (QuestBridge applicants do not answer this). Page gives the limit as 200 characters (approximately 35 words)."
+    },
+    {
+      "id": "yale-04",
+      "school": "yale",
+      "prompt": "What is one aspect of yourself that you hope to grow or develop during college?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "characters"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.yale.edu/essay-topics",
+      "date_checked": "2026-10-25",
+      "notes": "Common Application and Coalition Application applicants only (QuestBridge applicants do not answer this). Page gives the limit as 200 characters (approximately 35 words)."
+    },
+    {
+      "id": "yale-05",
+      "school": "yale",
+      "prompt": "What is something about you that is not included anywhere else in your application?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "characters"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.yale.edu/essay-topics",
+      "date_checked": "2026-10-25",
+      "notes": "Common Application and Coalition Application applicants only (QuestBridge applicants do not answer this). Page gives the limit as 200 characters (approximately 35 words)."
+    },
+    {
+      "id": "yale-06",
+      "school": "yale",
+      "prompt": "Reflect on a time you discussed an issue important to you with someone holding an opposing view. Why did you find the experience meaningful?",
+      "limit": {
+        "max": 400,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "yale-essay",
+        "pick": 1,
+        "of": 3
+      },
+      "type": "challenge",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.yale.edu/essay-topics",
+      "date_checked": "2026-10-25",
+      "notes": "Common Application and Coalition Application applicants only (QuestBridge applicants do not answer this)."
+    },
+    {
+      "id": "yale-07",
+      "school": "yale",
+      "prompt": "Reflect on your membership in a community to which you feel connected. Why is this community meaningful to you? You may define community however you like.",
+      "limit": {
+        "max": 400,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "yale-essay",
+        "pick": 1,
+        "of": 3
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.yale.edu/essay-topics",
+      "date_checked": "2026-10-25",
+      "notes": "Common Application and Coalition Application applicants only (QuestBridge applicants do not answer this)."
+    },
+    {
+      "id": "yale-08",
+      "school": "yale",
+      "prompt": "Reflect on an element of your personal experience that you feel will enrich your college. How has it shaped you?",
+      "limit": {
+        "max": 400,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "yale-essay",
+        "pick": 1,
+        "of": 3
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.yale.edu/essay-topics",
+      "date_checked": "2026-10-25",
+      "notes": "Common Application and Coalition Application applicants only (QuestBridge applicants do not answer this)."
+    },
+    {
+      "id": "harvard-01",
+      "school": "harvard",
+      "prompt": "Harvard has long recognized the importance of enrolling a student body with a diversity of perspectives and experiences. How will the life experiences that shaped who you are today enable you to contribute to Harvard?",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://college.harvard.edu/admissions/apply/application-requirements",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "harvard-02",
+      "school": "harvard",
+      "prompt": "Describe a time when you strongly disagreed with someone about an idea or issue. How did you communicate or engage with this person? What did you learn from this experience?",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "challenge",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://college.harvard.edu/admissions/apply/application-requirements",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "harvard-03",
+      "school": "harvard",
+      "prompt": "Briefly describe any of your extracurricular activities, employment experience, travel, or family responsibilities that have shaped who you are.",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "activity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://college.harvard.edu/admissions/apply/application-requirements",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "harvard-04",
+      "school": "harvard",
+      "prompt": "How do you hope to use your Harvard education in the future?",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://college.harvard.edu/admissions/apply/application-requirements",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "harvard-05",
+      "school": "harvard",
+      "prompt": "Top 3 things your roommates might like to know about you.",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://college.harvard.edu/admissions/apply/application-requirements",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "princeton-01",
+      "school": "princeton",
+      "prompt": "As a research institution that also prides itself on its liberal arts curriculum, Princeton allows students to explore areas across the humanities and the arts, the natural sciences, and the social sciences. What academic areas most pique your curiosity, and how do the programs offered at Princeton suit your particular interests?",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.princeton.edu/apply/princeton-specific-questions",
+      "date_checked": "2026-10-25",
+      "notes": "Only for A.B. degree applicants or those who are undecided."
+    },
+    {
+      "id": "princeton-02",
+      "school": "princeton",
+      "prompt": "Please describe why you are interested in studying engineering at Princeton. Include any of your experiences in or exposure to engineering, and how you think the programs offered at the University suit your particular interests.",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.princeton.edu/apply/princeton-specific-questions",
+      "date_checked": "2026-10-25",
+      "notes": "Only for B.S.E. degree applicants."
+    },
+    {
+      "id": "princeton-03",
+      "school": "princeton",
+      "prompt": "Princeton values community and encourages students, faculty, staff and leadership to engage in respectful conversations that can expand their perspectives and challenge their ideas and beliefs. As a prospective member of this community, reflect on how your lived experiences will impact the conversations you will have in the classroom, the dining hall or other campus spaces. What lessons have you learned in life thus far? What will your classmates learn from you? In short, how has your lived experience shaped you?",
+      "limit": {
+        "max": 500,
+        "min": 400,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.princeton.edu/apply/princeton-specific-questions",
+      "date_checked": "2026-10-25",
+      "notes": "\"Your Voice\" section. Page asks for 400-500 words."
+    },
+    {
+      "id": "princeton-04",
+      "school": "princeton",
+      "prompt": "Princeton has a longstanding commitment to understanding our responsibility to society through service and civic engagement. How does your own story intersect with these ideals?",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.princeton.edu/apply/princeton-specific-questions",
+      "date_checked": "2026-10-25",
+      "notes": "\"Your Voice\" section."
+    },
+    {
+      "id": "princeton-05",
+      "school": "princeton",
+      "prompt": "What is a new skill you would like to learn in college?",
+      "limit": {
+        "max": 50,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.princeton.edu/apply/princeton-specific-questions",
+      "date_checked": "2026-10-25",
+      "notes": "\"More About You\" section."
+    },
+    {
+      "id": "princeton-06",
+      "school": "princeton",
+      "prompt": "What brings you joy?",
+      "limit": {
+        "max": 50,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.princeton.edu/apply/princeton-specific-questions",
+      "date_checked": "2026-10-25",
+      "notes": "\"More About You\" section."
+    },
+    {
+      "id": "princeton-07",
+      "school": "princeton",
+      "prompt": "What song represents the soundtrack of your life at this moment?",
+      "limit": {
+        "max": 50,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.princeton.edu/apply/princeton-specific-questions",
+      "date_checked": "2026-10-25",
+      "notes": "\"More About You\" section."
+    },
+    {
+      "id": "stanford-01",
+      "school": "stanford",
+      "prompt": "What is the most significant challenge that society faces today?",
+      "limit": {
+        "max": 50,
+        "min": 3,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.stanford.edu/apply/first-year/apply.html",
+      "date_checked": "2026-10-25",
+      "notes": "Short Questions: 3-word minimum, 50-word maximum."
+    },
+    {
+      "id": "stanford-02",
+      "school": "stanford",
+      "prompt": "How did you spend your last two summers?",
+      "limit": {
+        "max": 50,
+        "min": 3,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.stanford.edu/apply/first-year/apply.html",
+      "date_checked": "2026-10-25",
+      "notes": "Short Questions: 3-word minimum, 50-word maximum."
+    },
+    {
+      "id": "stanford-03",
+      "school": "stanford",
+      "prompt": "What historical moment or event do you wish you could have witnessed?",
+      "limit": {
+        "max": 50,
+        "min": 3,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.stanford.edu/apply/first-year/apply.html",
+      "date_checked": "2026-10-25",
+      "notes": "Short Questions: 3-word minimum, 50-word maximum."
+    },
+    {
+      "id": "stanford-04",
+      "school": "stanford",
+      "prompt": "Briefly elaborate on one of your extracurricular activities, a job you hold, or responsibilities you have for your family.",
+      "limit": {
+        "max": 50,
+        "min": 3,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.stanford.edu/apply/first-year/apply.html",
+      "date_checked": "2026-10-25",
+      "notes": "Short Questions: 3-word minimum, 50-word maximum."
+    },
+    {
+      "id": "stanford-05",
+      "school": "stanford",
+      "prompt": "List five things that are important to you.",
+      "limit": {
+        "max": 50,
+        "min": 3,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.stanford.edu/apply/first-year/apply.html",
+      "date_checked": "2026-10-25",
+      "notes": "Short Questions: 3-word minimum, 50-word maximum."
+    },
+    {
+      "id": "stanford-06",
+      "school": "stanford",
+      "prompt": "The Stanford community is deeply curious and driven to learn in and out of the classroom. Reflect on an idea or experience that makes you genuinely excited about learning.",
+      "limit": {
+        "max": 250,
+        "min": 100,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.stanford.edu/apply/first-year/apply.html",
+      "date_checked": "2026-10-25",
+      "notes": "Short Essays: 100-word minimum, 250-word maximum."
+    },
+    {
+      "id": "stanford-07",
+      "school": "stanford",
+      "prompt": "Virtually all of Stanford's undergraduates live on campus. Write a note to your future roommate that reveals something about you or that will help your roommate—and us—get to know you better.",
+      "limit": {
+        "max": 250,
+        "min": 100,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.stanford.edu/apply/first-year/apply.html",
+      "date_checked": "2026-10-25",
+      "notes": "Short Essays: 100-word minimum, 250-word maximum."
+    },
+    {
+      "id": "stanford-08",
+      "school": "stanford",
+      "prompt": "Please describe what aspects of your life experiences, interests, and character would help you make a distinctive contribution as an undergraduate to Stanford University.",
+      "limit": {
+        "max": 250,
+        "min": 100,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.stanford.edu/apply/first-year/apply.html",
+      "date_checked": "2026-10-25",
+      "notes": "Short Essays: 100-word minimum, 250-word maximum."
+    },
+    {
+      "id": "mit-01",
+      "school": "mit",
+      "prompt": "What field of study appeals to you the most right now? (Note: Applicants select from a drop-down list.) Reflect on what has led you to this interest.",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+      "date_checked": "2026-10-25",
+      "notes": "Page says responses should be approximately 100-200 words each, depending on the question; per-question limits are not listed separately."
+    },
+    {
+      "id": "mit-02",
+      "school": "mit",
+      "prompt": "While some reach their goals following well-trodden paths, others blaze their own trails achieving the unexpected. In what ways have you done something different than what was expected in your educational journey?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+      "date_checked": "2026-10-25",
+      "notes": "Page says responses should be approximately 100-200 words each, depending on the question; per-question limits are not listed separately."
+    },
+    {
+      "id": "mit-03",
+      "school": "mit",
+      "prompt": "How have your personal and academic experiences influenced the types of problems you would want to tackle with an MIT education and the impact you aim to make on your community?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+      "date_checked": "2026-10-25",
+      "notes": "Page says responses should be approximately 100-200 words each, depending on the question; per-question limits are not listed separately."
+    },
+    {
+      "id": "mit-04",
+      "school": "mit",
+      "prompt": "How did you manage a situation or challenge that you didn’t expect? What did you learn from it?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "challenge",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+      "date_checked": "2026-10-25",
+      "notes": "Page says responses should be approximately 100-200 words each, depending on the question; per-question limits are not listed separately."
+    },
+    {
+      "id": "mit-05",
+      "school": "mit",
+      "prompt": "What do you do just for fun?",
+      "limit": {
+        "max": 50,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+      "date_checked": "2026-10-25",
+      "notes": "Page says there is only space for 40 to 50 words each."
+    },
+    {
+      "id": "mit-06",
+      "school": "mit",
+      "prompt": "Who is someone you admire, whether you know them personally or look up to them from afar? Tell us why.",
+      "limit": {
+        "max": 50,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+      "date_checked": "2026-10-25",
+      "notes": "Page says there is only space for 40 to 50 words each."
+    },
+    {
+      "id": "mit-07",
+      "school": "mit",
+      "prompt": "What’s a topic, academic or non-academic, that you could talk about for hours?",
+      "limit": {
+        "max": 50,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+      "date_checked": "2026-10-25",
+      "notes": "Page says there is only space for 40 to 50 words each."
+    },
+    {
+      "id": "mit-08",
+      "school": "mit",
+      "prompt": "MIT values both “generalists” with varied interests and “specialists” who focus deeply on one or a few passions. Which do you think best describes you, and why?",
+      "limit": {
+        "max": 50,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "short take",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://mitadmissions.org/apply/firstyear/essays-activities-academics/",
+      "date_checked": "2026-10-25",
+      "notes": "Page says there is only space for 40 to 50 words each."
+    },
+    {
+      "id": "columbia-01",
+      "school": "columbia",
+      "prompt": "List the titles of texts, resources and outlets that have contributed to your intellectual development outside of academic courses, including but not limited to books, journals, websites, podcasts, essays, plays, presentations, videos, museums and other content that you enjoy.",
+      "limit": {
+        "max": 100,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://undergrad.admissions.columbia.edu/apply/process/columbia-questions",
+      "date_checked": "2026-10-25",
+      "notes": "List question: items separated by commas or semicolons; no numbering, author names, subtitles or explanatory remarks needed (per page instructions)."
+    },
+    {
+      "id": "columbia-02",
+      "school": "columbia",
+      "prompt": "Tell us about an aspect of your life so far or your lived experience that is important to you, and describe how it has shaped the way you would learn from and contribute to Columbia's multidimensional and collaborative environment.",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://undergrad.admissions.columbia.edu/apply/process/columbia-questions",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "columbia-03",
+      "school": "columbia",
+      "prompt": "At Columbia, students representing a wide range of perspectives are invited to live and learn together. In such a community, questions and debates naturally arise. Please describe a time when you did not agree with someone and discuss how you engaged with them and what you took away from the interaction.",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "challenge",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://undergrad.admissions.columbia.edu/apply/process/columbia-questions",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "columbia-04",
+      "school": "columbia",
+      "prompt": "In college/university, students are often challenged in ways that they could not anticipate. Please describe a situation in which you have navigated through adversity and discuss how you changed as a result.",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "challenge",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://undergrad.admissions.columbia.edu/apply/process/columbia-questions",
+      "date_checked": "2026-10-25",
+      "notes": "College Essay Guy's 2026/2027 guide quotes a different, longer version of this adversity prompt; the official page wording is used here."
+    },
+    {
+      "id": "columbia-05",
+      "school": "columbia",
+      "prompt": "Why are you interested in attending Columbia University? We encourage you to consider the aspect(s) that you find unique and compelling about Columbia.",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://undergrad.admissions.columbia.edu/apply/process/columbia-questions",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "columbia-06",
+      "school": "columbia",
+      "prompt": "What attracts you to your preferred areas of study at Columbia College or Columbia Engineering?",
+      "limit": {
+        "max": 150,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://undergrad.admissions.columbia.edu/apply/process/columbia-questions",
+      "date_checked": "2026-10-25",
+      "notes": "Official page lists this as one question covering Columbia College or Columbia Engineering. College Essay Guy shows separate College and Engineering versions; the official wording is used here."
+    },
+    {
+      "id": "upenn-01",
+      "school": "upenn",
+      "prompt": "Write a short thank-you note to someone you have not yet thanked and would like to acknowledge. (We encourage you to share this note with that person, if possible, and reflect on the experience!)",
+      "limit": {
+        "max": 200,
+        "min": 50,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/writing",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "upenn-02",
+      "school": "upenn",
+      "prompt": "How will you explore community at Penn? Consider how Penn will help shape your perspective, and how your experiences and perspective will help shape Penn.",
+      "limit": {
+        "max": 200,
+        "min": 50,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/writing",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "upenn-03",
+      "school": "upenn",
+      "prompt": "Penn Nursing intends to meet the health needs of society in a global and multicultural world by preparing its students to impact healthcare by advancing science. Why are you applying to Nursing, where do you see yourself professionally in the future, and how will you contribute to our mission of promoting equity in healthcare?",
+      "limit": {
+        "max": 200,
+        "min": 50,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/writing",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to the School of Nursing (single-degree)."
+    },
+    {
+      "id": "upenn-04",
+      "school": "upenn",
+      "prompt": "The College of Arts and Sciences is designed to foster discovery and connection. Describe something you are curious about—something you'd like to learn more about or find a new approach to—and how you might pursue that curiosity in the College.",
+      "limit": {
+        "max": 200,
+        "min": 50,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/writing",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to the College of Arts and Sciences (single-degree)."
+    },
+    {
+      "id": "upenn-05",
+      "school": "upenn",
+      "prompt": "Wharton prepares its students to make an impact by applying business methods and economic theory to real-world problems, including economic, political, and social issues. Discuss a current issue of importance to you and how you hope a Wharton education would help you explore it.",
+      "limit": {
+        "max": 200,
+        "min": 50,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/writing",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to The Wharton School (single-degree)."
+    },
+    {
+      "id": "upenn-06",
+      "school": "upenn",
+      "prompt": "Penn Engineering prepares its students to become leaders in technology by combining a strong foundation in the natural sciences and mathematics with depth of study in focused disciplinary majors. Describe how you plan to pursue your engineering interests at Penn, particularly within the intended major you selected.",
+      "limit": {
+        "max": 200,
+        "min": 50,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/writing",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to Penn Engineering (single-degree)."
+    },
+    {
+      "id": "brown-01",
+      "school": "brown",
+      "prompt": "\"There is something distinctive about Brown students. It is a blend of intellectual curiosity, creativity, and humility. A commitment to collaboration. An openness to new ideas and perspectives. A desire to make the world better. And it is resilience: the ability to recover and thrive after experiencing difficulties.\" From President Christina Paxson's 2025 Convocation Address. How will you use these characteristics or others to shape your approach to the Open Curriculum?",
+      "limit": {
+        "max": 250,
+        "min": 150,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.brown.edu/apply/how-apply",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "brown-02",
+      "school": "brown",
+      "prompt": "Students entering Brown often find that making their home on College Hill naturally invites reflection on where they came from. Share how an aspect of your growing up has inspired or challenged you, and what unique contributions this might allow you to make to the Brown community.",
+      "limit": {
+        "max": 250,
+        "min": 150,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.brown.edu/apply/how-apply",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "brown-03",
+      "school": "brown",
+      "prompt": "If you could teach a class on any one thing, whether academic or otherwise, what would it be?",
+      "limit": {
+        "max": 150,
+        "min": 100,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.brown.edu/apply/how-apply",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "brown-04",
+      "school": "brown",
+      "prompt": "Brown students care deeply about their work and the world around them. Students find contentment, satisfaction, and meaning in daily interactions and major discoveries. Whether big or small, mundane or spectacular, tell us about something that brings you joy.",
+      "limit": {
+        "max": 150,
+        "min": 100,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admission.brown.edu/apply/how-apply",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "dartmouth-01",
+      "school": "dartmouth",
+      "prompt": "As you seek admission to Dartmouth's Class of 2031, what aspects of the college's academic program, community, and/or campus environment attract your interest? How is Dartmouth a good fit for you?",
+      "limit": {
+        "max": 100,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.dartmouth.edu/glossary-term/writing-supplement",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "dartmouth-02",
+      "school": "dartmouth",
+      "prompt": "There is a Quaker saying: Let your life speak. Describe the environment in which you were raised and the impact it has had on the person you are today.",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "dartmouth-essay2",
+        "pick": 1,
+        "of": 2
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.dartmouth.edu/glossary-term/writing-supplement",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "dartmouth-03",
+      "school": "dartmouth",
+      "prompt": "\"Be yourself,\" Oscar Wilde advised. \"Everyone else is taken.\" Introduce yourself.",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "dartmouth-essay2",
+        "pick": 1,
+        "of": 2
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.dartmouth.edu/glossary-term/writing-supplement",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "dartmouth-04",
+      "school": "dartmouth",
+      "prompt": "What excites you?",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "dartmouth-essay3",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.dartmouth.edu/glossary-term/writing-supplement",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "dartmouth-05",
+      "school": "dartmouth",
+      "prompt": "Labor leader and civil rights activist Dolores Huerta recommended a life of purpose. \"We must use our lives to make the world a better place to live, not just to acquire things,\" she said. \"That is what we are put on the earth for.\" In what ways do you hope to make—or are you already making—an impact? Why? How?",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "dartmouth-essay3",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.dartmouth.edu/glossary-term/writing-supplement",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "dartmouth-06",
+      "school": "dartmouth",
+      "prompt": "In an Instagram post, best-selling British author Matt Haig cheered the impact of reading. \"A good novel is the best invention humans have ever created for imagining other lives,\" he wrote. How have you experienced such insight from reading? What did you read and how did it alter the way you understand yourself and others?",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "dartmouth-essay3",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.dartmouth.edu/glossary-term/writing-supplement",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "dartmouth-07",
+      "school": "dartmouth",
+      "prompt": "The social and family interactions of wild chimpanzees have been the focus of Dame Jane Goodall's research for decades. Her understanding of animal behavior prompted the English primatologist to see a lesson for human communities as well: \"Change happens by listening and then starting a dialogue with the people who are doing something you don't believe is right.\" Channel Dame Goodall: Tell us about a moment when you engaged in a difficult conversation or encountered someone with an opinion or perspective that was different from your own. How did you find common ground?",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "dartmouth-essay3",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "challenge",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.dartmouth.edu/glossary-term/writing-supplement",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "dartmouth-08",
+      "school": "dartmouth",
+      "prompt": "Celebrate your nerdy side.",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "dartmouth-essay3",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.dartmouth.edu/glossary-term/writing-supplement",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "dartmouth-09",
+      "school": "dartmouth",
+      "prompt": "\"It's not easy being green…\" was the frequent refrain of Kermit the Frog. How has difference been a part of your life, and how have you embraced it as part of your identity, outlook, or sense of purpose?",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "dartmouth-essay3",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.dartmouth.edu/glossary-term/writing-supplement",
+      "date_checked": "2026-10-25",
+      "notes": ""
+    },
+    {
+      "id": "cornell-01",
+      "school": "cornell",
+      "prompt": "What interests you about the major you selected? Tell us about experiences (both in and outside of the classroom), questions, and goals that influenced your choice.",
+      "limit": {
+        "max": 350,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-cals-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to the College of Agriculture and Life Sciences (CALS); Question 1 of 2."
+    },
+    {
+      "id": "cornell-02",
+      "school": "cornell",
+      "prompt": "What draws you to Cornell’s College of Agriculture and Life Sciences (CALS)? Reflect on the learning, community, or impact opportunities that matter most to you, and share how they align with Cornell CALS (as you understand it currently).",
+      "limit": {
+        "max": 350,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-cals-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to the College of Agriculture and Life Sciences (CALS); Question 2 of 2."
+    },
+    {
+      "id": "cornell-03",
+      "school": "cornell",
+      "prompt": "Describe how your interests connect to architecture. Include an example of a creative project, design experience, or personal passion that sparked your interest in pursuing a 5-year professional degree in architecture. Reflect on how this experience shaped your understanding of the field and your motivation to study architecture.",
+      "limit": {
+        "max": 650,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-cornell-aap-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for B.Arch applicants to the College of Architecture, Art, and Planning (AAP)."
+    },
+    {
+      "id": "cornell-04",
+      "school": "cornell",
+      "prompt": "Submit an artist statement describing your creative interests and practice. Address how your work reflects your artistic voice, influences, and process, and how studying art at Cornell AAP would support and expand your practice. (You will also be prompted to upload a copy to your Slideroom portal.)",
+      "limit": {
+        "max": 650,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-cornell-aap-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for BFA (Fine Arts) applicants to the College of Architecture, Art, and Planning (AAP)."
+    },
+    {
+      "id": "cornell-05",
+      "school": "cornell",
+      "prompt": "Describe your interest in urban and regional studies. Discuss experiences, ideas, or issues that have shaped your interest in cities, communities, and regional systems, and explain how URS at Cornell aligns with your academic and career goals.",
+      "limit": {
+        "max": 650,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-cornell-aap-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for Urban and Regional Studies (URS) applicants to the College of Architecture, Art, and Planning (AAP)."
+    },
+    {
+      "id": "cornell-06",
+      "school": "cornell",
+      "prompt": "At the College of Arts and Sciences, your education is yours to shape. Describe an intellectual passion, question, or idea that has captured your attention—whether it emerges from your studies or extends beyond your coursework. What specific aspects of our liberal arts curriculum would you draw on to explore and connect your varied interests?",
+      "limit": {
+        "max": 650,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-arts-sciences-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to the College of Arts and Sciences."
+    },
+    {
+      "id": "cornell-07",
+      "school": "cornell",
+      "prompt": "Discuss your interest in pursuing a major in policy at the Cornell Jeb E. Brooks School of Public Policy and what draws you to this field of study. You are encouraged to consider including details related to your personal experiences, values, academic influences, or extracurricular activities that have shaped your perspective and future goals.",
+      "limit": {
+        "max": 650,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-brooks-school-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to the Cornell Jeb E. Brooks School of Public Policy."
+    },
+    {
+      "id": "cornell-08",
+      "school": "cornell",
+      "prompt": "What kind of business student are you? Using your personal, academic, or volunteer/work experiences, describe the topics or issues that you care about and why they are important to you.\n\nYour response should convey how your interests align with the school to which you are applying within the Cornell SC Johnson College of Business (the Dyson School or the Nolan School).",
+      "limit": {
+        "max": 650,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-sc-johnson-college-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to the Cornell SC Johnson College of Business (Dyson School of Applied Economics and Management or Nolan School of Hotel Administration). Cornell's Fall 2027 essay FAQ (faq.enrollment.cornell.edu) words this slightly differently (\"What kind of a business student are you?\" and full school names); the admissions page wording is used here."
+    },
+    {
+      "id": "cornell-09",
+      "school": "cornell",
+      "prompt": "Fundamentally, engineering is the application of math, science, and technology to solve complex problems. Why do you want to study engineering?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-duffield-engineering-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to Cornell Duffield College of Engineering; long essay 1 of 2."
+    },
+    {
+      "id": "cornell-10",
+      "school": "cornell",
+      "prompt": "Why do you think you would love to study at Duffield Engineering?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-duffield-engineering-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to Cornell Duffield College of Engineering; long essay 2 of 2."
+    },
+    {
+      "id": "cornell-11",
+      "school": "cornell",
+      "prompt": "What brings you joy?",
+      "limit": {
+        "max": 100,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-duffield-engineering-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to Cornell Duffield College of Engineering; short answer 1 of 4."
+    },
+    {
+      "id": "cornell-12",
+      "school": "cornell",
+      "prompt": "What do you believe you will contribute to the Duffield Engineering community beyond what you've already detailed in your application? What unique voice will you bring?",
+      "limit": {
+        "max": 100,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-duffield-engineering-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to Cornell Duffield College of Engineering; short answer 2 of 4."
+    },
+    {
+      "id": "cornell-13",
+      "school": "cornell",
+      "prompt": "What is one activity, club, team, organization, work/volunteer experience or family responsibility that is especially meaningful to you? Please briefly tell us about its significance for you.",
+      "limit": {
+        "max": 100,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "activity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-duffield-engineering-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to Cornell Duffield College of Engineering; short answer 3 of 4."
+    },
+    {
+      "id": "cornell-14",
+      "school": "cornell",
+      "prompt": "What is one award you have received or achievement you have attained that has meant the most to you? Please briefly describe its importance to you.",
+      "limit": {
+        "max": 100,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "activity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-duffield-engineering-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to Cornell Duffield College of Engineering; short answer 4 of 4. Cornell's Fall 2027 essay FAQ punctuates this with extra commas (\"received, or achievement you have attained, that\"); the admissions page wording is used here."
+    },
+    {
+      "id": "cornell-15",
+      "school": "cornell",
+      "prompt": "The College of Human Ecology prepares students to respond to human needs through an education organized around the interconnected issues that profoundly affect individuals, communities, and the institutions that shape our lives.\n\nThink about an extracurricular/community engagement/work experience that most closely connects you to the CHE mission and your intended choice of major. Tell us what that experience taught you about your broader community and its needs, and the impact you can make. How will your intended CHE major help you make that impact? (Refer to our essay application tips as you write your essay.)",
+      "limit": {
+        "max": 550,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "activity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-human-ecology-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to the College of Human Ecology."
+    },
+    {
+      "id": "cornell-16",
+      "school": "cornell",
+      "prompt": "Using your personal, academic, or volunteer/work experiences, describe the topics or issues that you care about and why they are important to you. Your response should show us that your interests align with the ILR School.",
+      "limit": {
+        "max": 650,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.cornell.edu/first-year-ilr-applicants",
+      "date_checked": "2026-10-25",
+      "notes": "Only for applicants to the School of Industrial and Labor Relations (ILR)."
+    },
+    {
+      "id": "duke-01",
+      "school": "duke",
+      "prompt": "What is your impression of Duke as a university and community, and why do you believe it is a good match for your goals, values, and interests? If there is something specific that attracts you to our academic offerings in Trinity College of Arts and Sciences or the Pratt School of Engineering, or to our co-curricular opportunities, feel free to include that, too.",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.duke.edu/apply/",
+      "date_checked": "2026-10-25",
+      "notes": "Titled \"Why Duke\". Required for all first-year applicants in the 2026-27 cycle."
+    },
+    {
+      "id": "duke-02",
+      "school": "duke",
+      "prompt": "We all belong to communities defined by place, faith, family, culture, interests or shared experience. Tell us about a community that has shaped who you are, any way it has set you apart, and what you’ve learned from being part of it that you hope to bring to Duke.",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.duke.edu/apply/",
+      "date_checked": "2026-10-25",
+      "notes": "Titled \"Communities\". Required for all first-year applicants in the 2026-27 cycle."
+    },
+    {
+      "id": "duke-03",
+      "school": "duke",
+      "prompt": "We believe a wide range of viewpoints and experiences is essential to maintaining Duke’s vibrant living and learning community. Please share anything in this context that might help us better understand you and your potential contributions to Duke.",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "optional",
+      "choice_group": {
+        "id": "duke-optional",
+        "pick": 1,
+        "of": 3
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.duke.edu/apply/",
+      "date_checked": "2026-10-25",
+      "notes": "Titled \"Viewpoints and experiences\". Optional: applicants may answer one of the three optional prompts."
+    },
+    {
+      "id": "duke-04",
+      "school": "duke",
+      "prompt": "Meaningful dialogue often involves respectful disagreement. Provide an example of a difference of opinion you’ve had with someone you care about. What did you learn from it?",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "optional",
+      "choice_group": {
+        "id": "duke-optional",
+        "pick": 1,
+        "of": 3
+      },
+      "type": "challenge",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.duke.edu/apply/",
+      "date_checked": "2026-10-25",
+      "notes": "Titled \"Difference of opinion\". Optional: applicants may answer one of the three optional prompts."
+    },
+    {
+      "id": "duke-05",
+      "school": "duke",
+      "prompt": "What’s the last thing that you’ve been really excited about?",
+      "limit": {
+        "max": 250,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "optional",
+      "choice_group": {
+        "id": "duke-optional",
+        "pick": 1,
+        "of": 3
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.duke.edu/apply/",
+      "date_checked": "2026-10-25",
+      "notes": "Titled \"Something you are excited about\". Optional: applicants may answer one of the three optional prompts."
+    },
+    {
+      "id": "jhu-01",
+      "school": "jhu",
+      "prompt": "At Johns Hopkins, community is built through dialogue, collaboration, and a willingness to engage across differences.\nWhether on campus or in the broader world, community depends on bridge builders who can listen to differing perspectives, challenge their own assumptions, or work together toward shared goals.\nDrawing on your own experiences, what have you learned about engaging across differences and how has it shaped the way you think about building bridges, enhancing community, and working with others?",
+      "limit": {
+        "max": 350,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/",
+      "date_checked": "2026-10-25",
+      "notes": "Listed under \"2026–2027 Supplemental Essay Prompt\" (the Hopkins supplement)."
+    },
+    {
+      "id": "uchicago-01",
+      "school": "uchicago",
+      "prompt": "How does the University of Chicago, as you know it now, satisfy your desire for a particular kind of learning, community, and future? Please address with some specificity your own wishes and how they relate to UChicago.",
+      "limit": null,
+      "required": "required",
+      "choice_group": null,
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://collegeadmissions.uchicago.edu/apply/essay/",
+      "date_checked": "2026-10-25",
+      "notes": "Question 1 (Required), the \"Why UChicago?\" essay. No strict word limit; the UChicago FAQ gives 300-600 words as a rough benchmark. Text read from the page's own content file (https://collegeadmissions.uchicago.edu/page-data/apply/essay/page-data.json), which the JavaScript page renders."
+    },
+    {
+      "id": "uchicago-02",
+      "school": "uchicago",
+      "prompt": "Food for thought: How do thoughts eat?\nInspired by Ernest Leong, Class of 2026",
+      "limit": null,
+      "required": "required",
+      "choice_group": {
+        "id": "uchicago-extended",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://collegeadmissions.uchicago.edu/apply/essay/",
+      "date_checked": "2026-10-25",
+      "notes": "Question 2: Extended Essay (Required; Choose one). Essay Option 1 on the page. No strict word limit; the UChicago FAQ gives 500-700 words as a rough benchmark. Attribution line kept as written (shown as a blockquote on the page). Text read from the page's own content file (https://collegeadmissions.uchicago.edu/page-data/apply/essay/page-data.json), which the JavaScript page renders."
+    },
+    {
+      "id": "uchicago-03",
+      "school": "uchicago",
+      "prompt": "The James Webb Space Telescope, launched in 2021, utilized origami-inspired techniques to compactly store and deploy its sunshield in space. Choose an artistic practice and use its principles to propose an elegant solution to a problem.\nInspired by Akhil Korra, Class of 2028",
+      "limit": null,
+      "required": "required",
+      "choice_group": {
+        "id": "uchicago-extended",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://collegeadmissions.uchicago.edu/apply/essay/",
+      "date_checked": "2026-10-25",
+      "notes": "Question 2: Extended Essay (Required; Choose one). Essay Option 2 on the page. No strict word limit; the UChicago FAQ gives 500-700 words as a rough benchmark. Attribution line kept as written (shown as a blockquote on the page). Text read from the page's own content file (https://collegeadmissions.uchicago.edu/page-data/apply/essay/page-data.json), which the JavaScript page renders."
+    },
+    {
+      "id": "uchicago-04",
+      "school": "uchicago",
+      "prompt": "Sometimes metaphors get mixed up. For one reason or another, one could say, “we'll burn that bridge when we get there” or “the world is your china shop”. Make up your own mixed metaphor. Explain how it could make sense, be understood, or even applied.\nInspired by Julia Nieberg, Class of 2029",
+      "limit": null,
+      "required": "required",
+      "choice_group": {
+        "id": "uchicago-extended",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://collegeadmissions.uchicago.edu/apply/essay/",
+      "date_checked": "2026-10-25",
+      "notes": "Question 2: Extended Essay (Required; Choose one). Essay Option 3 on the page. No strict word limit; the UChicago FAQ gives 500-700 words as a rough benchmark. Attribution line kept as written (shown as a blockquote on the page). Text read from the page's own content file (https://collegeadmissions.uchicago.edu/page-data/apply/essay/page-data.json), which the JavaScript page renders."
+    },
+    {
+      "id": "uchicago-05",
+      "school": "uchicago",
+      "prompt": "The Olympics have long celebrated the pinnacle of human athletic achievement. But what if they expanded to honor the mundane? Imagine a new Olympic event built around an everyday activity like speed dishwashing or competitive grocery bagging. How is it scored, officiated, and judged? Why is it a worthy addition?\nInspired by Ewan Smith, Class of 2028",
+      "limit": null,
+      "required": "required",
+      "choice_group": {
+        "id": "uchicago-extended",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://collegeadmissions.uchicago.edu/apply/essay/",
+      "date_checked": "2026-10-25",
+      "notes": "Question 2: Extended Essay (Required; Choose one). Essay Option 4 on the page. No strict word limit; the UChicago FAQ gives 500-700 words as a rough benchmark. Attribution line kept as written (shown as a blockquote on the page). Text read from the page's own content file (https://collegeadmissions.uchicago.edu/page-data/apply/essay/page-data.json), which the JavaScript page renders."
+    },
+    {
+      "id": "uchicago-06",
+      "school": "uchicago",
+      "prompt": "AI: Allen Iverson. NASA, or the North American Saxophone Alliance. Share a potentially confounding, comedic, or captivating example of MIA (Mistaken Identity of Acronym) and tell us its backstory.\nInspired by Jeeho Byun, Class of 2030",
+      "limit": null,
+      "required": "required",
+      "choice_group": {
+        "id": "uchicago-extended",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://collegeadmissions.uchicago.edu/apply/essay/",
+      "date_checked": "2026-10-25",
+      "notes": "Question 2: Extended Essay (Required; Choose one). Essay Option 5 on the page. No strict word limit; the UChicago FAQ gives 500-700 words as a rough benchmark. Attribution line kept as written (shown as a blockquote on the page). Text read from the page's own content file (https://collegeadmissions.uchicago.edu/page-data/apply/essay/page-data.json), which the JavaScript page renders."
+    },
+    {
+      "id": "uchicago-07",
+      "school": "uchicago",
+      "prompt": "And, as always… the classic choose your own adventure option! In the spirit of adventurous inquiry, choose one of our past prompts (or create a question of your own). Be original, creative, thought provoking. Draw on your best qualities as a writer, thinker, visionary, social critic, sage, citizen of the world, or future citizen of the University of Chicago; take a little risk, and have fun!",
+      "limit": null,
+      "required": "required",
+      "choice_group": {
+        "id": "uchicago-extended",
+        "pick": 1,
+        "of": 6
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://collegeadmissions.uchicago.edu/apply/essay/",
+      "date_checked": "2026-10-25",
+      "notes": "Question 2: Extended Essay (Required; Choose one). Essay Option 7 on the page. No strict word limit; the UChicago FAQ gives 500-700 words as a rough benchmark. No attribution line. The page labels this card \"Essay Option 7\" although it is the sixth of six options; College Essay Guy's 2026/2027 guide also lists six options. Text read from the page's own content file (https://collegeadmissions.uchicago.edu/page-data/apply/essay/page-data.json), which the JavaScript page renders."
+    },
+    {
+      "id": "northwestern-01",
+      "school": "northwestern",
+      "prompt": "We want to be sure we’re considering your application in the context of your personal experiences: What aspects of your background (your identity, your school setting, your community, your household, etc.) have most shaped how you see yourself engaging in Northwestern’s community, be it academically, extracurricularly, culturally, politically, socially, or otherwise?",
+      "limit": {
+        "max": 300,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.northwestern.edu/apply/requirements.html",
+      "date_checked": "2026-10-25",
+      "notes": "Required for all Common Application and Coalition with Scoir applicants (optional for QuestBridge applicants). Listed under \"Northwestern 2026–27 First-Year Writing Supplements\"."
+    },
+    {
+      "id": "northwestern-02",
+      "school": "northwestern",
+      "prompt": "Painting “The Rock” is a tradition at Northwestern that invites all forms of expression—students promote campus events or extracurricular groups, support social or activist causes, show their Wildcat spirit (what we call “Purple Pride”), celebrate their culture, and more. What would you paint on The Rock, and why?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "optional",
+      "choice_group": {
+        "id": "northwestern-optional",
+        "pick": 2,
+        "of": 5
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.northwestern.edu/apply/requirements.html",
+      "date_checked": "2026-10-25",
+      "notes": "Optional. Northwestern encourages answering at least one and no more than two of the five optional questions (0-2 allowed). The page says to respond in \"fewer than 200 words per question\"."
+    },
+    {
+      "id": "northwestern-03",
+      "school": "northwestern",
+      "prompt": "Northwestern fosters a distinctively interdisciplinary culture. We believe discovery and innovation thrive at the intersection of diverse ideas, perspectives, and academic interests. Within this setting, if you could dream up an undergraduate class, research project, or creative effort (a start-up, a design prototype, a performance, etc.), what would it be? Who might be some ideal classmates or collaborators?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "optional",
+      "choice_group": {
+        "id": "northwestern-optional",
+        "pick": 2,
+        "of": 5
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.northwestern.edu/apply/requirements.html",
+      "date_checked": "2026-10-25",
+      "notes": "Optional. Northwestern encourages answering at least one and no more than two of the five optional questions (0-2 allowed). The page says to respond in \"fewer than 200 words per question\"."
+    },
+    {
+      "id": "northwestern-04",
+      "school": "northwestern",
+      "prompt": "Community and belonging matter at Northwestern. Tell us about one or more communities, networks, or student groups you see yourself connecting with on campus.",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "optional",
+      "choice_group": {
+        "id": "northwestern-optional",
+        "pick": 2,
+        "of": 5
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.northwestern.edu/apply/requirements.html",
+      "date_checked": "2026-10-25",
+      "notes": "Optional. Northwestern encourages answering at least one and no more than two of the five optional questions (0-2 allowed). The page says to respond in \"fewer than 200 words per question\"."
+    },
+    {
+      "id": "northwestern-05",
+      "school": "northwestern",
+      "prompt": "Northwestern’s location is special: on the shore of Lake Michigan, steps from downtown Evanston, just a few miles from Chicago. What aspects of our location are most compelling to you, and why?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "optional",
+      "choice_group": {
+        "id": "northwestern-optional",
+        "pick": 2,
+        "of": 5
+      },
+      "type": "why us",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.northwestern.edu/apply/requirements.html",
+      "date_checked": "2026-10-25",
+      "notes": "Optional. Northwestern encourages answering at least one and no more than two of the five optional questions (0-2 allowed). The page says to respond in \"fewer than 200 words per question\"."
+    },
+    {
+      "id": "northwestern-06",
+      "school": "northwestern",
+      "prompt": "Northwestern is a place where people with diverse backgrounds from all over the world can study, live, and talk with one another. This range of experiences and viewpoints immeasurably enriches learning. How might your individual background contribute to this diversity of perspectives in Northwestern’s classrooms and around our campus?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "optional",
+      "choice_group": {
+        "id": "northwestern-optional",
+        "pick": 2,
+        "of": 5
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://admissions.northwestern.edu/apply/requirements.html",
+      "date_checked": "2026-10-25",
+      "notes": "Optional. Northwestern encourages answering at least one and no more than two of the five optional questions (0-2 allowed). The page says to respond in \"fewer than 200 words per question\"."
+    },
+    {
+      "id": "caltech-01",
+      "school": "caltech",
+      "prompt": "Caltech has a rigorous core curriculum and students don't declare a major until the end of their first year. However, some students arrive knowing which academic fields and areas already most excite them, or which novel fields and areas they most want to explore.\nIf you had to choose an area of interest or two today, what would you choose?\n*Note that you are under no obligation to follow this choice if admitted.\nWhy did you choose your proposed area of interest? If you selected 'other', what topics are you interested in pursuing?",
+      "limit": {
+        "max": 200,
+        "min": 150,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.admissions.caltech.edu/apply/first-year-applicants/supplemental-application-essays",
+      "date_checked": "2026-10-25",
+      "notes": "Required STEM Academic Interest Question. Applicants also select one or two areas of interest; the word limit applies to the written answer."
+    },
+    {
+      "id": "caltech-02",
+      "school": "caltech",
+      "prompt": "Tell us about a time your learning in STEM was shaped by another person or group — either because you needed help, offered help, changed your thinking through collaboration, or contributed to someone else's understanding. What did that experience teach you about learning and working with others?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "caltech-scholarly-character",
+        "pick": 1,
+        "of": 2
+      },
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.admissions.caltech.edu/apply/first-year-applicants/supplemental-application-essays",
+      "date_checked": "2026-10-25",
+      "notes": "Scholarly Character section, Option 1 -- COLLABORATION: STEM as shared learning. Choose one of two. Section intro on the page: \"How do you learn when there is no easy answer? Caltech's learning environment asks students to work through difficulty, collaborate around hard ideas, and contribute to one another's understanding. Use these responses to show us how you learn and grow.\""
+    },
+    {
+      "id": "caltech-03",
+      "school": "caltech",
+      "prompt": "Tell us about a time your approach to a STEM problem, concept, or project mattered as much as the outcome. How did you work through uncertainty or persist creatively in tackling the problem? What would you still defend about your process, regardless of the outcome?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "caltech-scholarly-character",
+        "pick": 1,
+        "of": 2
+      },
+      "type": "challenge",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.admissions.caltech.edu/apply/first-year-applicants/supplemental-application-essays",
+      "date_checked": "2026-10-25",
+      "notes": "Scholarly Character section, Option 2 -- PROCESS: The thought behind the outcome. Choose one of two. Section intro on the page: \"How do you learn when there is no easy answer? Caltech's learning environment asks students to work through difficulty, collaborate around hard ideas, and contribute to one another's understanding. Use these responses to show us how you learn and grow.\""
+    },
+    {
+      "id": "caltech-04",
+      "school": "caltech",
+      "prompt": "Regardless of your STEM interest listed above, take this opportunity to nerd out and talk to us about whatever STEM rabbit hole you have found yourself falling into. Be as specific or broad as you would like.",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "caltech-scientific-drive",
+        "pick": 2,
+        "of": 3
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.admissions.caltech.edu/apply/first-year-applicants/supplemental-application-essays",
+      "date_checked": "2026-10-25",
+      "notes": "Scientific Drive section, Option 1 -- LEARNING: STEM as a never-ending rabbit hole. Choose two of three. Section intro on the page: \"How does STEM come alive in your life through learning, pursuing, or making? Caltech faculty review applications, so feel free to get technical in your response!\""
+    },
+    {
+      "id": "caltech-05",
+      "school": "caltech",
+      "prompt": "Tell us about a STEM question, problem, idea, or project that has held your attention over time. What drew you to it, how have you pursued it, and what do you still want to understand?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "caltech-scientific-drive",
+        "pick": 2,
+        "of": 3
+      },
+      "type": "intellectual curiosity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.admissions.caltech.edu/apply/first-year-applicants/supplemental-application-essays",
+      "date_checked": "2026-10-25",
+      "notes": "Scientific Drive section, Option 2 -- PURSUING: STEM as sustained intellectual engagement. Choose two of three. Section intro on the page: \"How does STEM come alive in your life through learning, pursuing, or making? Caltech faculty review applications, so feel free to get technical in your response!\""
+    },
+    {
+      "id": "caltech-06",
+      "school": "caltech",
+      "prompt": "Tell us about something you created, tested, repaired, modeled, coded, built, or redesigned. What problem were you trying to solve and what did the process reveal to you?",
+      "limit": {
+        "max": 200,
+        "min": null,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": {
+        "id": "caltech-scientific-drive",
+        "pick": 2,
+        "of": 3
+      },
+      "type": "activity",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.admissions.caltech.edu/apply/first-year-applicants/supplemental-application-essays",
+      "date_checked": "2026-10-25",
+      "notes": "Scientific Drive section, Option 3 -- MAKING: STEM as creation. Choose two of three. Section intro on the page: \"How does STEM come alive in your life through learning, pursuing, or making? Caltech faculty review applications, so feel free to get technical in your response!\""
+    },
+    {
+      "id": "caltech-07",
+      "school": "caltech",
+      "prompt": "Caltech students bring more than academic ability to the communities they join. What is something you would be excited to do, share, teach, make, start, or contribute as part of the Caltech community?",
+      "limit": {
+        "max": 150,
+        "min": 100,
+        "unit": "words"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.admissions.caltech.edu/apply/first-year-applicants/supplemental-application-essays",
+      "date_checked": "2026-10-25",
+      "notes": "Titled \"Fun Question\"."
+    },
+    {
+      "id": "caltech-08",
+      "school": "caltech",
+      "prompt": "Caltech cares about context. Is there anything about your academic preparation, coursework, school context, or learning experiences that would help us better understand your readiness for Caltech?",
+      "limit": null,
+      "required": "optional",
+      "choice_group": null,
+      "type": "community",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.admissions.caltech.edu/apply/first-year-applicants/supplemental-application-essays",
+      "date_checked": "2026-10-25",
+      "notes": "Titled \"Optional Academic Short Answer Question\". No word limit is stated on the page."
+    },
+    {
+      "id": "oxford-01",
+      "school": "oxford",
+      "prompt": "Why do you want to study this course or subject?",
+      "limit": {
+        "max": 4000,
+        "min": null,
+        "unit": "characters"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "UCAS",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-your-personal-statement",
+      "date_checked": "2026-10-25",
+      "notes": "UCAS personal statement question 1 of 3. The 4,000-character limit (including spaces) is shared across all three answers, and UCAS says you can split it across the answers in any way you choose; each answer has a minimum of 350 characters. UCAS says admissions staff review the personal statement as a whole, and that you write one personal statement that all of your choices see (also for Extra and Clearing) [https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-a-personal-statement-that-works-for-multiple-courses-0]. Magdalen College (Oxford) lists the same three questions on its how-to-apply page [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/how-to-apply/]."
+    },
+    {
+      "id": "oxford-02",
+      "school": "oxford",
+      "prompt": "How have your qualifications and studies helped you to prepare for this course or subject?",
+      "limit": {
+        "max": 4000,
+        "min": null,
+        "unit": "characters"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "UCAS",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-your-personal-statement",
+      "date_checked": "2026-10-25",
+      "notes": "UCAS personal statement question 2 of 3. The 4,000-character limit (including spaces) is shared across all three answers, and UCAS says you can split it across the answers in any way you choose; each answer has a minimum of 350 characters. UCAS says admissions staff review the personal statement as a whole, and that you write one personal statement that all of your choices see (also for Extra and Clearing) [https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-a-personal-statement-that-works-for-multiple-courses-0]. Magdalen College (Oxford) lists the same three questions on its how-to-apply page [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/how-to-apply/]."
+    },
+    {
+      "id": "oxford-03",
+      "school": "oxford",
+      "prompt": "What else have you done to prepare outside of education, and why are these experiences useful?",
+      "limit": {
+        "max": 4000,
+        "min": null,
+        "unit": "characters"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "UCAS",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-your-personal-statement",
+      "date_checked": "2026-10-25",
+      "notes": "UCAS personal statement question 3 of 3. The 4,000-character limit (including spaces) is shared across all three answers, and UCAS says you can split it across the answers in any way you choose; each answer has a minimum of 350 characters. UCAS says admissions staff review the personal statement as a whole, and that you write one personal statement that all of your choices see (also for Extra and Clearing) [https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-a-personal-statement-that-works-for-multiple-courses-0]. Magdalen College (Oxford) lists the same three questions on its how-to-apply page [https://www.magd.ox.ac.uk/considering-magdalen/undergraduate-study/how-to-apply/]."
+    },
+    {
+      "id": "cambridge-01",
+      "school": "cambridge",
+      "prompt": "Why do you want to study this course or subject?",
+      "limit": {
+        "max": 4000,
+        "min": null,
+        "unit": "characters"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "UCAS",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-your-personal-statement",
+      "date_checked": "2026-10-25",
+      "notes": "UCAS personal statement question 1 of 3. The 4,000-character limit (including spaces) is shared across all three answers, and UCAS says you can split it across the answers in any way you choose; each answer has a minimum of 350 characters. UCAS says admissions staff review the personal statement as a whole, and that you write one personal statement that all of your choices see (also for Extra and Clearing) [https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-a-personal-statement-that-works-for-multiple-courses-0]. Cambridge says your UCAS personal statement is divided into 3 sections and it has no preference for how you split them [https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-personal-statement]."
+    },
+    {
+      "id": "cambridge-02",
+      "school": "cambridge",
+      "prompt": "How have your qualifications and studies helped you to prepare for this course or subject?",
+      "limit": {
+        "max": 4000,
+        "min": null,
+        "unit": "characters"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "UCAS",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-your-personal-statement",
+      "date_checked": "2026-10-25",
+      "notes": "UCAS personal statement question 2 of 3. The 4,000-character limit (including spaces) is shared across all three answers, and UCAS says you can split it across the answers in any way you choose; each answer has a minimum of 350 characters. UCAS says admissions staff review the personal statement as a whole, and that you write one personal statement that all of your choices see (also for Extra and Clearing) [https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-a-personal-statement-that-works-for-multiple-courses-0]. Cambridge says your UCAS personal statement is divided into 3 sections and it has no preference for how you split them [https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-personal-statement]."
+    },
+    {
+      "id": "cambridge-03",
+      "school": "cambridge",
+      "prompt": "What else have you done to prepare outside of education, and why are these experiences useful?",
+      "limit": {
+        "max": 4000,
+        "min": null,
+        "unit": "characters"
+      },
+      "required": "required",
+      "choice_group": null,
+      "type": "UCAS",
+      "status": "verified",
+      "source_type": "official",
+      "source_url": "https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-your-personal-statement",
+      "date_checked": "2026-10-25",
+      "notes": "UCAS personal statement question 3 of 3. The 4,000-character limit (including spaces) is shared across all three answers, and UCAS says you can split it across the answers in any way you choose; each answer has a minimum of 350 characters. UCAS says admissions staff review the personal statement as a whole, and that you write one personal statement that all of your choices see (also for Extra and Clearing) [https://www.ucas.com/applying/applying-to-university/writing-your-personal-statement/how-to-write-a-personal-statement-that-works-for-multiple-courses-0]. Cambridge says your UCAS personal statement is divided into 3 sections and it has no preference for how you split them [https://www.undergraduate.study.cam.ac.uk/apply/how/ucas-personal-statement]."
+    }
+  ],
+  "essays_that_worked": [
+    {
+      "id": "essay-01",
+      "publisher": "Johns Hopkins University",
+      "school": "Johns Hopkins University",
+      "year": "Class of 2030",
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": "David M.",
+      "title": "The Secret Ingredient is Connection",
+      "about": "Baking for his team, and ditching recipes to invent his own desserts, shows how the writer experiments, builds community, and brings people from different backgrounds together.",
+      "source_url": "https://apply.jhu.edu/hopkins-insider/the-secret-ingredient-is-connection/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-02",
+      "publisher": "Johns Hopkins University",
+      "school": "Johns Hopkins University",
+      "year": "Class of 2030",
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": "Etina R.",
+      "title": "Developing Roots",
+      "about": "The writer's passion for trees becomes a metaphor for weathering hardship, finding where she belongs, and weighing self-reliance against mutual support.",
+      "source_url": "https://apply.jhu.edu/hopkins-insider/developing-roots/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-03",
+      "publisher": "Johns Hopkins University",
+      "school": "Johns Hopkins University",
+      "year": "Class of 2030",
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": "Gillian H.",
+      "title": "The Two Sides of America",
+      "about": "Contrasts city life in Chicago with summers doing farm work alongside family in rural Mississippi, and what living in both worlds taught her about people and hard work.",
+      "source_url": "https://apply.jhu.edu/hopkins-insider/the-two-sides-of-america/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-04",
+      "publisher": "Johns Hopkins University",
+      "school": "Johns Hopkins University",
+      "year": "Class of 2030",
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": "Ruoni T.",
+      "title": "Clean Closet",
+      "about": "Finally emptying a closet crammed with childhood keepsakes leads the writer to think about nostalgia, letting go, and opening up to new people and experiences.",
+      "source_url": "https://apply.jhu.edu/hopkins-insider/clean-closet/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-05",
+      "publisher": "Johns Hopkins University",
+      "school": "Johns Hopkins University",
+      "year": "Class of 2030",
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": "Ruoyu X.",
+      "title": "In the Belly of the Ship",
+      "about": "Recalls a tough internship at sea on a cargo vessel, where hard physical routines and a tight-knit crew taught her to keep going after failures.",
+      "source_url": "https://apply.jhu.edu/hopkins-insider/in-the-belly-of-the-ship/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-06",
+      "publisher": "Hamilton College",
+      "school": "Hamilton College",
+      "year": "Class of 2030",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Tymofii “Tima” Kolisnyk",
+      "title": null,
+      "about": "Framed as old digital files resurfacing on a far-future birthday, it traces leaving wartime Ukraine, schooling abroad, and the people and pastimes that rebuilt his sense of home.",
+      "source_url": "https://www.hamilton.edu/admission/apply/college-essays-that-worked",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-07",
+      "publisher": "Hamilton College",
+      "school": "Hamilton College",
+      "year": "Class of 2030",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Taylor Barnes",
+      "title": null,
+      "about": "Describes her Girl Scout troop's years-long grassroots campaign to change the wording of the Girl Scout Promise, its defeat in a national vote, and what advocacy taught her.",
+      "source_url": "https://www.hamilton.edu/admission/apply/college-essays-that-worked",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-08",
+      "publisher": "Hamilton College",
+      "school": "Hamilton College",
+      "year": "Class of 2030",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Benjamin Frenkel",
+      "title": null,
+      "about": "Imagines the forces running his life as a panel of powerful advisers, and describes realizing that leaning on rigid structure had limits and he needed to take charge himself.",
+      "source_url": "https://www.hamilton.edu/admission/apply/college-essays-that-worked",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-09",
+      "publisher": "Hamilton College",
+      "school": "Hamilton College",
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Shiwani Paudel",
+      "title": null,
+      "about": "A summer-camp moment of not matching a famous book character leads into reflections on frequent family moves, fitting in, and finding community through service.",
+      "source_url": "https://www.hamilton.edu/admission/apply/college-essays-that-worked",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-10",
+      "publisher": "Hamilton College",
+      "school": "Hamilton College",
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Nina De Jesus Santiago",
+      "title": null,
+      "about": "Uses a puppet-and-strings metaphor for breaking free of family expectations after her parents' divorce and finding purpose through history and volunteering, including translating for immigrants.",
+      "source_url": "https://www.hamilton.edu/admission/apply/college-essays-that-worked",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-11",
+      "publisher": "Hamilton College",
+      "school": "Hamilton College",
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Rowan Johnson",
+      "title": null,
+      "about": "A tense moment with a difficult horse at a show reshapes the writer's approach to training and care, and that new patience carries over into relationships at home.",
+      "source_url": "https://www.hamilton.edu/admission/apply/college-essays-that-worked",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-12",
+      "publisher": "Hamilton College",
+      "school": "Hamilton College",
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Emily Huryk",
+      "title": null,
+      "about": "A hospital worker who is not religious describes praying with a patient, reflecting on offering comfort and meeting people where they are across differences in belief.",
+      "source_url": "https://www.hamilton.edu/admission/apply/college-essays-that-worked",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-13",
+      "publisher": "Hamilton College",
+      "school": "Hamilton College",
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Martin Amuso",
+      "title": null,
+      "about": "Describes a Crohn's disease diagnosis, turning to Wiffle Ball as an escape while ill, and regaining strength and gratitude once treatment finally began.",
+      "source_url": "https://www.hamilton.edu/admission/apply/college-essays-that-worked",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-14",
+      "publisher": "Connecticut College",
+      "school": "Connecticut College",
+      "year": "Class of 2028",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Phoebe Hughes",
+      "title": "Telling us about yourself through your relationships with others",
+      "about": "Explores how her older sister, and the different women the sister brought into the family's life, shaped the writer's identity, empathy, and feminism.",
+      "source_url": "https://www.conncoll.edu/admission/apply/essays-that-worked/phoebe-hughes-28/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-15",
+      "publisher": "Connecticut College",
+      "school": "Connecticut College",
+      "year": "Class of 2028",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Elizabeth Madden",
+      "title": "Using what you’ve learned to make a change in your life",
+      "about": "Links family hikes in Acadia National Park to a news story about youth climate activists that pushed her toward environmental clubs, coursework, and sustainable habits.",
+      "source_url": "https://www.conncoll.edu/admission/apply/essays-that-worked/elizabeth-madden-28/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-16",
+      "publisher": "Connecticut College",
+      "school": "Connecticut College",
+      "year": "Class of 2028",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Nancy Owusu",
+      "title": "Learning to appreciate your family responsibilities",
+      "about": "Reflects on the constant household duties asked of her and how she came to see them as her parents' way of teaching balance and hard work.",
+      "source_url": "https://www.conncoll.edu/admission/apply/essays-that-worked/nancy-owusu-28/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-17",
+      "publisher": "Connecticut College",
+      "school": "Connecticut College",
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Anonymous",
+      "title": "Standing up for your beliefs",
+      "about": "Draws on the careers of the women in the writer's family and a charged classroom debate to show a drive toward law, advocacy, and women's rights.",
+      "source_url": "https://www.conncoll.edu/admission/apply/essays-that-worked/anonymous/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-18",
+      "publisher": "Connecticut College",
+      "school": "Connecticut College",
+      "year": "Class of 2028",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Jackson Spallone",
+      "title": "Finding a life lesson in a hobby",
+      "about": "After a shoulder injury halts lacrosse, he takes up gardening and hydroponics, and describes how tending plants built patience that carried into school and his return to sport.",
+      "source_url": "https://www.conncoll.edu/admission/apply/essays-that-worked/jackson-spallone-28/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-19",
+      "publisher": "Connecticut College",
+      "school": "Connecticut College",
+      "year": "Class of 2028",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Nikeya Tankard",
+      "title": "Considering a physical feature and its role in your identity",
+      "about": "Examines the recurring choice between wearing her hair curly or straight and what that duality means for her heritage and sense of self.",
+      "source_url": "https://www.conncoll.edu/admission/apply/essays-that-worked/nikeya-tankard-28/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-20",
+      "publisher": "Connecticut College",
+      "school": "Connecticut College",
+      "year": "Class of 2028",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Elle Yarborough",
+      "title": "Cooking conjures up a worldview",
+      "about": "Making an oversized pancake with a friend opens a reflection on cooking as the main way she shows care for the people closest to her.",
+      "source_url": "https://www.conncoll.edu/admission/apply/essays-that-worked/elle-yarborough-28/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-21",
+      "publisher": "Connecticut College",
+      "school": "Connecticut College",
+      "year": "Class of 2025",
+      "prompt_answered": null,
+      "essay_kind": "unknown",
+      "author": "Riley Anderson",
+      "title": "Being an outsider doesn’t mean not belonging",
+      "about": "Describes playing golf as the lone girl among teenage boys and without country-club access, and finding belonging in the sport anyway.",
+      "source_url": "https://www.conncoll.edu/admission/apply/essays-that-worked/riley-anderson-25/",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-22",
+      "publisher": "Tufts University",
+      "school": "Tufts University",
+      "year": "Class of 2019",
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": "Shaan Merchant",
+      "title": null,
+      "about": "Rowdy family word games and relatives speaking different languages anchor a reflection on the writer's love of words, communication, food, and comedy.",
+      "source_url": "https://admissions.tufts.edu/blogs/inside-admissions/post/essays-that-worked/#CommApp",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-23",
+      "publisher": "Tufts University",
+      "school": "Tufts University",
+      "year": "Class of 2019",
+      "prompt_answered": "Let Your Life Speak",
+      "essay_kind": "supplemental",
+      "author": "Ray Parker",
+      "title": null,
+      "about": "Describes growing up in a home packed with scientific equipment, raised by parents who blend science and art, and how that shaped the writer's curiosity.",
+      "source_url": "https://admissions.tufts.edu/blogs/inside-admissions/post/essays-that-worked/#LYLS1",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-24",
+      "publisher": "Tufts University",
+      "school": "Tufts University",
+      "year": "Class of 2019",
+      "prompt_answered": "Let Your Life Speak",
+      "essay_kind": "supplemental",
+      "author": "Evana Wilson",
+      "title": null,
+      "about": "Describes hunting for a quiet place to do homework in a small, crowded, noisy family home and finding an unlikely hideaway.",
+      "source_url": "https://admissions.tufts.edu/blogs/inside-admissions/post/essays-that-worked/#LYLS2",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-25",
+      "publisher": "Tufts University",
+      "school": "Tufts University",
+      "year": "Class of 2019",
+      "prompt_answered": "Why Tufts?",
+      "essay_kind": "supplemental",
+      "author": "Celeste Teng",
+      "title": null,
+      "about": "Explains why Tufts' interdisciplinary literary and visual studies major appeals to a student from Singapore who wants to study film and literature across cultures.",
+      "source_url": "https://admissions.tufts.edu/blogs/inside-admissions/post/essays-that-worked/#WhyT",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-26",
+      "publisher": "Tufts University",
+      "school": "Tufts University",
+      "year": "Class of 2019",
+      "prompt_answered": "Celebrate the Role of Sports in Your Life",
+      "essay_kind": "supplemental",
+      "author": "Tessa Garces",
+      "title": null,
+      "about": "Traces a path from reluctant young swimmer to committed competitor, and how habits from the pool shape the way the writer approaches life.",
+      "source_url": "https://admissions.tufts.edu/blogs/inside-admissions/post/essays-that-worked/#Supp3",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-27",
+      "publisher": "College Essay Guy",
+      "school": null,
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": null,
+      "title": "My Pillows & Me",
+      "about": "Uses a collection of bed pillows, each tied to a different interest or trait, to sketch the many sides of the writer's personality.",
+      "source_url": "https://www.collegeessayguy.com/blog/college-essay-examples",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-28",
+      "publisher": "College Essay Guy",
+      "school": null,
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": null,
+      "title": "Laptop Stickers",
+      "about": "Walks through the stickers on the writer's laptop as symbols of their passions, communities, and experiences.",
+      "source_url": "https://www.collegeessayguy.com/blog/college-essay-examples",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-29",
+      "publisher": "College Essay Guy",
+      "school": null,
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": null,
+      "title": "Deli Connections",
+      "about": "Describes how a job at a neighborhood deli fed the writer's language learning, global interests, and sense of community.",
+      "source_url": "https://www.collegeessayguy.com/blog/college-essay-examples",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-30",
+      "publisher": "College Essay Guy",
+      "school": null,
+      "year": null,
+      "prompt_answered": "Tell us your story",
+      "essay_kind": "personal statement",
+      "author": null,
+      "title": "Travel and Language",
+      "about": "Traces a love of travel to learning several languages and the personal connections those languages make possible.",
+      "source_url": "https://www.collegeessayguy.com/blog/college-essay-examples",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-31",
+      "publisher": "College Essay Guy",
+      "school": null,
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": null,
+      "title": "What Rocks Tell Us",
+      "about": "Uses a rock collection as a through-line to reflect on creativity, resilience, and personal growth.",
+      "source_url": "https://www.collegeessayguy.com/blog/college-essay-examples",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-32",
+      "publisher": "College Essay Guy",
+      "school": null,
+      "year": null,
+      "prompt_answered": null,
+      "essay_kind": "personal statement",
+      "author": null,
+      "title": "Five Families",
+      "about": "Recounts living with five different host families during an exchange program and what adapting to each household taught the writer.",
+      "source_url": "https://www.collegeessayguy.com/blog/college-essay-examples",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-33",
+      "publisher": "College Essay Guy",
+      "school": "Duke University",
+      "year": null,
+      "prompt_answered": "What is your impression of Duke as a university and community, and why do you believe it is a good match for your goals, values, and interests? If there is something specific that attracts you to our academic offerings in Trinity College of Arts and Sciences or the Pratt School of Engineering, or to our co-curricular opportunities, feel free to include that too.",
+      "essay_kind": "supplemental",
+      "author": null,
+      "title": null,
+      "about": "A why-Duke answer connecting a goal of using robotics on environmental problems to a mechanical engineering major, an energy and environment certificate, specific courses, and faculty research.",
+      "source_url": "https://www.collegeessayguy.com/blog/duke-supplemental-essay",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-34",
+      "publisher": "College Essay Guy",
+      "school": "University of Pennsylvania",
+      "year": null,
+      "prompt_answered": "Write a short thank-you note to someone you have not yet thanked and would like to acknowledge. (We encourage you to share this note with that person, if possible, and reflect on the experience!)",
+      "essay_kind": "supplemental",
+      "author": "Juju",
+      "title": null,
+      "about": "A thank-you letter to a teacher who made a male-dominated programming class feel welcoming, giving the writer confidence to take on an ambitious creative coding project.",
+      "source_url": "https://www.collegeessayguy.com/blog/upenn-university-pennsylvania-supplemental-essay",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-35",
+      "publisher": "College Essay Guy",
+      "school": "Massachusetts Institute of Technology",
+      "year": null,
+      "prompt_answered": "What field of study appeals to you the most right now? (Note: Applicants select from a drop-down list.) Reflect on what has led you to this interest.",
+      "essay_kind": "supplemental",
+      "author": null,
+      "title": null,
+      "about": "Explains how break-ins at a family business and a relative's influence sparked the writer's interest in using technology to improve security.",
+      "source_url": "https://www.collegeessayguy.com/blog/mit-supplemental-essay",
+      "date_checked": "2026-10-25"
+    },
+    {
+      "id": "essay-36",
+      "publisher": "College Essay Guy",
+      "school": "Massachusetts Institute of Technology",
+      "year": null,
+      "prompt_answered": "How did you manage a situation or challenge that you didn’t expect? What did you learn from it?",
+      "essay_kind": "supplemental",
+      "author": null,
+      "title": null,
+      "about": "An injured baseball player describes moving from playing to helping run the team through data analysis and strategy advice during a playoff run.",
+      "source_url": "https://www.collegeessayguy.com/blog/mit-supplemental-essay",
+      "date_checked": "2026-10-25"
+    }
+  ]
+}
