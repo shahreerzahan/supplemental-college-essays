@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&display=swap">
+  <!-- Only the letters of the handwritten "this one!" note on Surprise me picks. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap&text=this%20one!">
   <link rel="stylesheet" href="/static/shelf.css">
 </head>
 <body>
@@ -16,6 +18,10 @@
       <div>
         <h1 class="title">The Unwritten Shelf</h1>
         <p class="tagline">every essay you haven't written yet</p>
+        <p class="welcome">
+          <button class="welcome-link" type="button" data-go="shelf">Pick a book</button>, or
+          <button class="welcome-link" type="button" data-go="surprise">let the shelf pick one for you</button>
+        </p>
       </div>
       <div class="masthead-actions">
         <a class="outline-btn" href="#story-map">Build my Story Map</a>
@@ -64,7 +70,7 @@
       <p>Try another word, or <button class="inline-link" type="button" id="clear">clear the filters</button>.</p>
     </div>
 
-    <p class="hint">Hover a book to see it · click to open</p>
+    <p class="hint"><span class="on-hover">Hover a book to see it · click to open</span><span class="on-touch">Tap a book to open it</span></p>
   </main>
 
   <!-- Build my Story Map: the Essay Coach agent maps the student's stories to their prompts. -->
@@ -106,6 +112,8 @@
 
   <div class="backdrop" id="backdrop" hidden>
     <article class="card" id="card" role="dialog" aria-modal="true" aria-labelledby="card-title"></article>
+    <!-- On a phone the card is a scrolling sheet; this close button stays put above it. -->
+    <button class="sheet-close" id="sheet-close" type="button" aria-label="Close">×</button>
   </div>
 
   <script src="/static/shelf.js"></script>

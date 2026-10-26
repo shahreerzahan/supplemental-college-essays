@@ -270,6 +270,7 @@
       books.className = "shelf-books";
       const tallest = Math.max(160, ...row.filter((t) => t.it).map((t) => t.it.h));
       books.style.height = `${((tallest + HEADROOM) * scale).toFixed(1)}px`;
+      row.forEach((t, i) => t.el.style.setProperty("--i", i));  // staggers the "thinking" shimmer along the shelf
       books.append(...row.map((t) => t.el));
       const plank = document.createElement("div");
       plank.className = "plank";
@@ -513,6 +514,21 @@
       `${nav}</div>`;
   }
 
+  // ---------- While an agent thinks ----------
+
+  // The shelf shimmers while any agent call is running (calls can overlap, so count them).
+  let thinkingCalls = 0;
+  function thinking(on) {
+    thinkingCalls = Math.max(0, thinkingCalls + (on ? 1 : -1));
+    bookcase.classList.toggle("thinking", thinkingCalls > 0);
+    bookcase.setAttribute("aria-busy", String(thinkingCalls > 0));
+  }
+
+  // A loading message with a tiny shelf of bobbing books.
+  const waiting = (text, id = "") =>
+    `<p class="agent-wait"${id ? ` id="${id}"` : ""}><span class="loading-books" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>` +
+    `<span class="wait-text">${esc(text)}</span></p>`;
+
   // ---------- Lean mode and the token meter ----------
 
   // Lean mode asks the agents for the top 3 results with shorter tool results. Remembered per browser.
@@ -593,7 +609,8 @@
     btn.disabled = true;
     btn.textContent = "Decoding…";
     box.hidden = false;
-    box.innerHTML = `<p class="agent-wait">The Librarian is reading this prompt and its examples…</p>`;
+    box.innerHTML = waiting("The Librarian is reading this prompt and its examples…");
+    thinking(true);
     try {
       const res = await fetch("/api/decode", {
         method: "POST", headers: { "Content-Type": "application/json" },
@@ -609,10 +626,12 @@
       if (current === it) { box.innerHTML = decodeSection(body); btn.remove(); }
     } catch (err) {
       if (current === it) {
-        box.innerHTML = `<p class="agent-wait">${esc(err.message)}</p>`;
+        box.innerHTML = `<p class="agent-error">${esc(err.message)}</p>`;
         btn.disabled = false;
         btn.textContent = "Try decoding again";
       }
+    } finally {
+      thinking(false);
     }
   }
 
@@ -636,7 +655,7 @@
     requestAnimationFrame(() => backdrop.classList.add("open"));
     document.body.classList.add("modal-open");
     history.replaceState(null, "", `#${it.id}`);
-    card.querySelector(".close").focus({ preventScroll: true });
+    closeButton().focus({ preventScroll: true });
   }
 
   function closeCard() {
@@ -673,8 +692,30 @@
   function releasePulled() {
     if (!pulled) return;
     pulled.classList.remove("pulled");
-    pulled.closest(".shelf")?.querySelector(".beam")?.remove();
+    const shelf = pulled.closest(".shelf");
+    shelf?.querySelector(".beam")?.remove();
+    shelf?.querySelector(".pick-note")?.remove();
     pulled = null;
+  }
+
+  // A handwritten "this one!" beside the pulled book, with an arrow curving down to it.
+  function pickNote(el) {
+    const shelf = el.closest(".shelf");
+    const note = document.createElement("div");
+    note.className = "pick-note";
+    note.setAttribute("aria-hidden", "true");
+    note.innerHTML = `<span>this one!</span>` +
+      `<svg viewBox="0 0 46 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">` +
+      `<path d="M30 3c-9 3-17 12-21 27"/><path d="M3 24l6 7 6-6"/></svg>`;
+    shelf.append(note);
+    // Beside the book's top, on the side with more room; the arrow points back at it.
+    const roomRight = shelf.clientWidth - (el.offsetLeft + el.offsetWidth);
+    const right = roomRight > 130;
+    note.classList.toggle("flip", !right);
+    // Arrow tip lands beside the top of the lifted book.
+    note.style.top = `${Math.max(-40, el.offsetTop - note.offsetHeight + 8)}px`;
+    note.style.left = right ? `${el.offsetLeft + el.offsetWidth + 2}px` : `${el.offsetLeft - note.offsetWidth - 2}px`;
+    requestAnimationFrame(() => note.classList.add("on"));
   }
 
   function surprise() {
@@ -706,14 +747,20 @@
         `<polygon points="43,5 57,5 100,100 0,100" fill="url(#beam-g)"/><rect x="38" y="0" width="24" height="5" fill="#E1B965"/></svg>`;
       shelf.append(beam);
       requestAnimationFrame(() => beam.classList.add("on"));
-      setTimeout(() => openCard(it), reduced ? 100 : 750);
+      pickNote(el);
+      // Leave a moment to see the pick and its note before the card opens.
+      setTimeout(() => { if (pulled === el) openCard(it); }, reduced ? 600 : 1400);
     }, reduced ? 0 : 450);
   }
 
   // ---------- Events ----------
 
   function bind() {
-    bookcase.addEventListener("pointerover", (e) => { const b = e.target.closest(".book"); if (b) showTip(b); });
+    // Tooltips need a mouse; on a touch screen a tap just opens the book.
+    bookcase.addEventListener("pointerover", (e) => {
+      const b = e.target.closest(".book");
+      if (b && e.pointerType !== "touch") showTip(b);
+    });
     bookcase.addEventListener("pointerout", (e) => { const b = e.target.closest(".book"); if (b && !b.contains(e.relatedTarget)) hideTip(); });
     bookcase.addEventListener("focusin", (e) => { if (e.target.matches(".book")) showTip(e.target); });
     bookcase.addEventListener("focusout", hideTip);
@@ -741,8 +788,16 @@
     });
     $("clear").addEventListener("click", () => setFilter({ reset: true }));
     $("surprise").addEventListener("click", surprise);
+    // The welcome line: "Pick a book" goes to the shelf; the rest lets the shelf pick.
+    document.querySelector(".welcome").addEventListener("click", (e) => {
+      const go = e.target.closest("[data-go]")?.dataset.go;
+      if (go === "surprise") surprise();
+      else if (go === "shelf") bookcase.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+    });
 
-    backdrop.addEventListener("click", (e) => { if (e.target === backdrop) closeCard(); });
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop || e.target.closest("#sheet-close")) closeCard();
+    });
     card.addEventListener("click", (e) => {
       const open = e.target.closest("[data-open]");
       if (open && open.dataset.open === current?.id && showSample(open.dataset.ref)) return;
@@ -777,8 +832,13 @@
     new ResizeObserver(() => { if (bookcase.clientWidth !== lastWidth) layout(); }).observe(bookcase);
   }
 
+  // The card's own close button on a desktop; the one pinned above the sheet on a phone.
+  const sheetClose = $("sheet-close");
+  const closeButton = () => (sheetClose.offsetParent ? sheetClose : card.querySelector(".close"));
+
   function trapFocus(e) {
-    const f = [...card.querySelectorAll("button, a[href]")];
+    const f = [...(sheetClose.offsetParent ? [sheetClose] : []),
+               ...[...card.querySelectorAll("button, a[href]")].filter((el) => el.offsetParent)];
     if (!f.length) return;
     const first = f[0], last = f[f.length - 1];
     if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -824,7 +884,7 @@
         first?.el.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
       },
       schools: () => data.schools.map((s) => ({ key: s.key, name: s.name, short: SCHOOL[s.key][0] })),
-      TYPE, inkFor, esc, safeUrl, domain, limitText, meter, refusal, isLean,
+      TYPE, inkFor, esc, safeUrl, domain, limitText, meter, refusal, isLean, thinking, waiting,
     };
     document.dispatchEvent(new Event("shelf:ready"));
   }

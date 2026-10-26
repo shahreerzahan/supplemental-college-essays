@@ -68,14 +68,17 @@
 
   function bindAsk() {
     const input = $("ask-input"), btn = $("ask-btn"), panel = $("answer");
+    if (matchMedia("(max-width: 480px)").matches) input.placeholder = "e.g. why-us prompts under 250 words";
     $("ask-form").addEventListener("submit", async (e) => {
       e.preventDefault();
       const question = input.value.trim();
       if (question.length < 3) return;
       btn.disabled = true;
       btn.textContent = "Asking…";
+      input.readOnly = true;
       panel.hidden = false;
-      panel.innerHTML = `<p class="agent-wait">The Librarian is searching the shelf…</p>`;
+      panel.innerHTML = S.waiting("The Librarian is searching the shelf…");
+      S.thinking(true);
       try {
         const a = await post("/api/ask", { question, lean: S.isLean() });
         if (a.refusal) {
@@ -86,8 +89,10 @@
           renderAnswer(a);
         }
       } catch (err) {
-        panel.innerHTML = `<p class="agent-wait">${S.esc(err.message)}</p>`;
+        panel.innerHTML = `<p class="agent-error">${S.esc(err.message)}</p>`;
       } finally {
+        S.thinking(false);
+        input.readOnly = false;
         btn.disabled = false;
         btn.textContent = "Ask";
       }
@@ -221,11 +226,13 @@
       btn.disabled = true;
       btn.textContent = "Mapping…";
       let line = 0;
-      out.innerHTML = `<div class="map-card"><p class="agent-wait" id="map-wait">${WAIT_LINES[0]}</p></div>`;
+      out.innerHTML = `<div class="map-card">${S.waiting(WAIT_LINES[0], "map-wait")}</div>`;
+      out.scrollIntoView({ behavior: "smooth", block: "nearest" });
       const timer = setInterval(() => {
-        const w = $("map-wait");
+        const w = document.querySelector("#map-wait .wait-text");
         if (w) w.textContent = WAIT_LINES[++line % WAIT_LINES.length];
       }, 3500);
+      S.thinking(true);
       try {
         const m = await post("/api/story-map", {
           schools, stories, applying_to: $("map-applying").value.trim() || null, lean: S.isLean(),
@@ -233,8 +240,9 @@
         renderMap(m);
         out.scrollIntoView({ behavior: "smooth", block: "start" });
       } catch (error) {
-        out.innerHTML = `<div class="map-card"><p class="agent-wait">${S.esc(error.message)}</p></div>`;
+        out.innerHTML = `<div class="map-card"><p class="agent-error">${S.esc(error.message)}</p></div>`;
       } finally {
+        S.thinking(false);
         clearInterval(timer);
         btn.disabled = false;
         btn.textContent = "Build my Story Map";
