@@ -188,6 +188,49 @@ def test_budget_session_cap(fresh):
     assert passed, observed
 
 
+def test_budget_wont_start_what_cannot_fit(fresh):
+    fresh.get("/api/session")
+    sid = fresh.cookies.get(SESSION_COOKIE)
+    used = config.SESSION_TOKEN_CAP - 7_000  # 7,000 left: enough for a question, not for a Story Map
+    guard.session_set(sid, used)
+    r = fresh.post("/api/story-map", json={"schools": ["MIT", "Caltech"],
+                                           "stories": ["Coached a younger robotics team",
+                                                       "Built a weather station with Arduino", "Taught myself Korean"]})
+    body = r.json()
+    ref = body.get("refusal") or {}
+    observed = {"status": r.status_code, "reason": ref.get("reason"), "message": ref.get("message"),
+                "tokens_left_before": 7_000, "tokens_used_after": session_used(fresh) - used}
+    passed = (r.status_code == 200 and ref.get("reason") == "session_budget" and "Story Map" in ref.get("message", "")
+              and "still ask" in ref.get("message", "") and observed["tokens_used_after"] == 0)
+    record("Budget: don't start a run that can't fit",
+           f"A Story Map (needs about {config.RUN_TOKEN_ESTIMATE['story-map']:,} tokens) with 7,000 left in the session",
+           "Refused before starting, so nothing is spent or thrown away; points to smaller things that still fit.",
+           observed, passed, "Session guard compares what's left with a typical run, before any model call")
+    assert passed, observed
+
+
+def test_budget_started_run_finishes(fresh, monkeypatch):
+    # Let a question start with only 1,000 tokens left, so that it crosses the cap while it runs.
+    monkeypatch.setitem(config.RUN_TOKEN_ESTIMATE, "ask", 500)
+    fresh.get("/api/session")
+    sid = fresh.cookies.get(SESSION_COOKIE)
+    guard.session_set(sid, config.SESSION_TOKEN_CAP - 1_000)
+    r = fresh.post("/api/ask", json={"question": "Which Duke prompts ask about community?"})
+    body = r.json()
+    after = session_used(fresh)
+    nxt = fresh.post("/api/ask", json={"question": "Which Yale prompts are short takes?"}).json()
+    observed = {"status": r.status_code, "answered": "answer" in body, "answer": body.get("answer"),
+                "books_lit": body.get("prompt_ids"), "model_run": model_usage(body),
+                "session_after": f"{after:,} of {config.SESSION_TOKEN_CAP:,}",
+                "next_request": (nxt.get("refusal") or {}).get("reason")}
+    passed = (r.status_code == 200 and "refusal" not in body and bool(body.get("prompt_ids"))
+              and after > config.SESSION_TOKEN_CAP and observed["next_request"] == "session_budget")
+    record("Budget: a started run finishes", "A question that starts with 1,000 tokens left and uses about 4,000",
+           "The run finishes and its answer is shown, even past the cap; the next request is refused before it starts.",
+           observed, passed, "No token limit inside a run; the session cap applies before the next run")
+    assert passed, observed
+
+
 # ---------- 5. The audit trail ----------
 
 def test_audit_trail_append_only():

@@ -62,7 +62,7 @@ You need Python 3 (built and tested with 3.14), a Portkey API key that can use `
   python -m pytest tests/test_safety.py -v
   ```
 
-Every agent answer uses tokens. Each browser session gets 20,000, which is about two Story Maps or four or five questions.
+Every agent answer uses tokens, and each browser session gets 20,000. A question or a decode typically needs about 5,000 and a Story Map about 12,000. The app won't start one that doesn't fit in what's left (it tells you what still fits), and once one has started it always finishes.
 
 ## The agents
 
@@ -82,7 +82,7 @@ Guards in `app/guard.py` run before any model call, and output checks in `app/ag
 - **No ghostwriting**: a request to write an essay gets a polite no, a Story Map offer, and questions to think about.
 - **Prompt injection**: everything a student types is wrapped as `<student_input>` data with fake tags defanged; the system prompts say never to follow instructions inside it; an output check rejects answers that repeat the system prompt. Azure OpenAI's own content filter also blocks blunt jailbreaks, and the app answers those with a friendly message.
 - **No made-up prompts**: the tools are the only source of prompts, and output checks reject prompt ids no tool returned and quotes that aren't in the shelf data.
-- **Budgets**: 6 model requests per run (a Story Map's Librarian handoff included), 1,500 characters of input per request, and 20,000 tokens per browser session, each with a friendly message.
+- **Budgets**: 6 model requests per run (a Story Map's Librarian handoff included), 1,500 characters of input per request, and 20,000 tokens per browser session, each with a friendly message. The session budget is checked before a run starts, against that kind of run's typical size (`RUN_TOKEN_ESTIMATE` in `app/config.py`), so a run is never cut off partway and its answer is never thrown away.
 - **Audit trail**: every agent step is appended to `output/audit_trail.json` (git-ignored, because it holds what students typed).
 
 ## Token use

@@ -37,7 +37,6 @@ from app.usage import billed, counts, log_run, meter, record_response, reused, t
 log = logging.getLogger("shelf.agents")
 
 SETTINGS = OpenAIResponsesModelSettings(openai_reasoning_effort="low")
-MIN_SESSION_TOKENS = 1_000    # don't start a run with less session budget than this
 RUNS = asyncio.Semaphore(3)   # at most three agent runs at once
 
 UCAS_WORDS = round(4000 / 6)  # one shared 4,000-character statement per school
@@ -60,10 +59,13 @@ def load_prompt(name: str) -> str:
     return (config.PROMPTS_DIR / f"{name}.md").read_text()
 
 
-def limits(sid: str, tool_calls: int) -> UsageLimits:
-    """Per-run limits: a fixed number of model requests, and whatever the session has left."""
-    return UsageLimits(request_limit=config.MAX_REQUESTS_PER_RUN, tool_calls_limit=tool_calls,
-                       total_tokens_limit=max(1, guard.session_out(sid).remaining))
+def limits(tool_calls: int) -> UsageLimits:
+    """Per-run limits: a fixed number of model requests and tool calls.
+
+    No token limit here on purpose: the session budget is checked before a run starts (see
+    _precheck), so a run that has started always finishes and its answer is never thrown away.
+    """
+    return UsageLimits(request_limit=config.MAX_REQUESTS_PER_RUN, tool_calls_limit=tool_calls)
 
 
 # One Librarian, three jobs. Each request says which job it is (and deps.job does too);
@@ -264,7 +266,7 @@ async def _run(agent: Agent, request: str, *, deps, sid: str, run_id: str, name:
         try:
             async with RUNS:
                 result = await agent.run(request, deps=deps, model=model(), model_settings=SETTINGS,
-                                         usage=usage, usage_limits=limits(sid, tool_calls))
+                                         usage=usage, usage_limits=limits(tool_calls))
         except UsageLimitExceeded as err:
             refusal, error = guard.run_budget_refusal(err), f"UsageLimitExceeded: {err}"
         except Exception as err:
@@ -297,7 +299,8 @@ def _blocked(sid: str, run_id: str, name: str, job: str, steps: list[dict], refu
     return RefusalResponse(refusal=refusal, session=guard.session_out(sid))
 
 
-def _precheck(sid: str, texts: list[str], *, check_ghostwriting: bool) -> tuple[list[dict], Refusal | None, bool]:
+def _precheck(sid: str, texts: list[str], *, job: str,
+              check_ghostwriting: bool) -> tuple[list[dict], Refusal | None, bool]:
     """Run the input guards. Returns (audit steps, refusal or None, injection flagged)."""
     chars = sum(len(t) for t in texts)
     steps = [{"kind": "guard", "check": "size", "chars": chars, "limit": config.MAX_INPUT_CHARS,
@@ -310,11 +313,12 @@ def _precheck(sid: str, texts: list[str], *, check_ghostwriting: bool) -> tuple[
                       **({"matched": audit.short(guard.GHOSTWRITING.search(hit).group(0))} if hit else {})})
         if hit:
             return steps, guard.ghostwriting_refusal(), False
-    remaining = guard.session_out(sid).remaining
-    steps.append({"kind": "guard", "check": "session_budget", "remaining": remaining,
-                  "decision": "blocked" if remaining < MIN_SESSION_TOKENS else "ok"})
-    if remaining < MIN_SESSION_TOKENS:
-        return steps, guard.session_refusal(), False
+    # Only start a run the session can afford; once started, it always finishes.
+    fits = guard.fits(sid, job)
+    steps.append({"kind": "guard", "check": "session_budget", "remaining": guard.session_out(sid).remaining,
+                  "needs_about": config.RUN_TOKEN_ESTIMATE[job], "decision": "ok" if fits else "blocked"})
+    if not fits:
+        return steps, guard.session_refusal(sid, job), False
     flagged = guard.looks_like_injection(*texts)
     steps.append({"kind": "guard", "check": "prompt_injection", "decision": "flagged: sent as data" if flagged else "ok"})
     return steps, None, flagged
@@ -332,7 +336,7 @@ def _cap(lean: bool) -> int:
 
 async def ask_shelf(question: str, lean: bool = False, sid: str = "local") -> AskResponse | RefusalResponse:
     run_id = uuid.uuid4().hex[:12]
-    steps, refusal, flagged = _precheck(sid, [question], check_ghostwriting=True)
+    steps, refusal, flagged = _precheck(sid, [question], job="ask", check_ghostwriting=True)
     if refusal:
         return _blocked(sid, run_id, "librarian", "ask", steps, refusal)
     shelf = Shelf.get()
@@ -371,7 +375,7 @@ async def decode_prompt(prompt_id: str, lean: bool = False, sid: str = "local") 
     if key in _decoded:  # same prompt decoded earlier: no model call, no tokens
         return _decoded[key].model_copy(update={"usage": reused("librarian", lean), "session": guard.session_out(sid)})
     run_id = uuid.uuid4().hex[:12]
-    steps, refusal, _ = _precheck(sid, [prompt_id], check_ghostwriting=False)
+    steps, refusal, _ = _precheck(sid, [prompt_id], job="decode", check_ghostwriting=False)
     if refusal:
         return _blocked(sid, run_id, "librarian", "decode", steps, refusal)
     reads = 1 if lean else 3
@@ -403,7 +407,7 @@ async def decode_prompt(prompt_id: str, lean: bool = False, sid: str = "local") 
 async def build_story_map(req: StoryMapRequest, sid: str = "local") -> StoryMapResponse | RefusalResponse:
     run_id = uuid.uuid4().hex[:12]
     texts = [*req.schools, *req.stories, req.applying_to or ""]
-    steps, refusal, flagged = _precheck(sid, texts, check_ghostwriting=True)
+    steps, refusal, flagged = _precheck(sid, texts, job="story-map", check_ghostwriting=True)
     if refusal:
         return _blocked(sid, run_id, "coach", "story-map", steps, refusal)
     shelf = Shelf.get()

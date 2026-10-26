@@ -49,6 +49,9 @@ LEAN_RESULTS = 3
 MAX_REQUESTS_PER_RUN = 6      # model requests per agent run (a Story Map's Librarian handoff counts too)
 MAX_INPUT_CHARS = 1_500       # characters a student can send in one request
 SESSION_TOKEN_CAP = 20_000    # billed tokens per browser session
+# Typical tokens one run uses (from measured runs). A run only starts if the session has this much
+# left; once started it always finishes, even if it ends up a little past the cap.
+RUN_TOKEN_ESTIMATE = {"ask": 5_000, "decode": 5_000, "story-map": 12_000}
 
 AUDIT_TRAIL = ROOT / "output" / "audit_trail.json"
 

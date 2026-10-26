@@ -94,12 +94,10 @@ def too_long(chars: int) -> Refusal | None:
 # ---------- Run budget ----------
 
 def run_budget_refusal(err: Exception) -> Refusal:
-    """A friendly message for a run stopped by its usage limits."""
-    if "request_limit" in str(err):
-        return Refusal(reason="run_budget",
-                       message=(f"That needed more steps than one request may take ({config.MAX_REQUESTS_PER_RUN} model "
-                                "calls), so I stopped it. Try a simpler question, or fewer schools at once."))
-    return session_refusal()
+    """A friendly message for a run stopped by its step limits (the session cap never stops a run midway)."""
+    return Refusal(reason="run_budget",
+                   message=(f"That needed more steps than one request may take ({config.MAX_REQUESTS_PER_RUN} model "
+                            "calls), so I stopped it. Try a simpler question, or fewer schools at once."))
 
 
 # ---------- The model provider's own filter ----------
@@ -143,11 +141,28 @@ def session_out(sid: str) -> SessionOut:
     return SessionOut(used=used, cap=config.SESSION_TOKEN_CAP, remaining=max(0, config.SESSION_TOKEN_CAP - used))
 
 
-def session_refusal() -> Refusal:
+JOB_NAMES = {"ask": "a question", "decode": "a prompt decode", "story-map": "a Story Map"}
+
+
+def fits(sid: str, job: str) -> bool:
+    """Does the session have enough left for a typical run of this kind?"""
+    return session_out(sid).remaining >= config.RUN_TOKEN_ESTIMATE[job]
+
+
+def session_refusal(sid: str, job: str) -> Refusal:
+    """Said before a run starts, never after: nothing is spent and nothing is thrown away."""
+    remaining = session_out(sid).remaining
+    smaller = [j for j in ("ask", "decode") if j != job and remaining >= config.RUN_TOKEN_ESTIMATE[j]]
+    if remaining <= 0 or not smaller:
+        return Refusal(reason="session_budget",
+                       message=(f"This browser session has used its {config.SESSION_TOKEN_CAP:,} tokens, so the agents "
+                                "are resting. You can still browse every book on the shelf; please come back later "
+                                "to ask more."))
+    need = config.RUN_TOKEN_ESTIMATE[job]
     return Refusal(reason="session_budget",
-                   message=(f"This browser session has used its {config.SESSION_TOKEN_CAP:,} tokens, so the agents "
-                            "are resting. You can still browse every book on the shelf; please come back later "
-                            "to ask more."))
+                   message=(f"This session has {remaining:,} tokens left, and {JOB_NAMES[job]} needs about {need:,}, "
+                            f"so I didn't start one. You can still ask the shelf or decode a prompt (about "
+                            f"{config.RUN_TOKEN_ESTIMATE['ask']:,} each), or browse every book for free."))
 
 
 # ---------- Output checks ----------
