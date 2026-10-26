@@ -20,7 +20,7 @@ About 10 times faster, roughly 4½ minutes saved.
 >
 > Farhan
 
-**Where they got stuck:** the usage limit 🙂. At 09:18 the tester ran a Story Map with prompt-injection "stories" (screenshot 7) while the session had 7,572 tokens left. The session cap, which back then was enforced inside a run, stopped it partway, after 8,194 tokens and before the coach answered, so the screen showed the usage-limit message. At 09:35 the tester's own Story Map for MIT and Caltech (screenshot 4) was refused because the session had no tokens left. Both came from the same flaw, fixed after this test: a run now starts only if the session has room for it, and a run that has started always finishes.
+**Where they got stuck:** the usage limit 🙂. At 09:18 the tester ran a Story Map with prompt-injection "stories" (screenshot 7) while the session had 7,572 tokens left. The session cap, which back then was enforced inside a run, stopped it partway, after 8,194 tokens and before the coach answered, so the screen showed the usage-limit message. At 09:35 the tester's own Story Map for MIT and Caltech was refused because the session had no tokens left. Both came from the same flaw, fixed after this test: a run now starts only if the session has room for it, and a run that has started always finishes. Run again after the fix, the same Story Map completed (screenshot 4).
 
 ## Screenshots
 
@@ -42,11 +42,11 @@ MIT's "What field of study appeals to you the most right now?" (200 words). The 
 
 "why us prompts under 150 words" lights up Dartmouth's 100-word prompt. The answer notes that one more matching prompt has no stated limit and was left out, and links the source. Meter: 3,797 input (3,324 cached), 95 output, 2 requests. Session: 8,304 of 20,000.
 
-### 4. Story Map form
+### 4. Story Map
 
-![The Story Map form filled in](screenshots/04_storymap.png)
+![The Story Map for MIT and Caltech](screenshots/04_storymap.png)
 
-MIT and Caltech selected, three stories (helping prepare Nepal's team for the International Olympiad in Informatics, curating the resources that helped with prep, and how being under-resourced without mentors was motivating), applying to "MIT Computer Science". Only the filled-in form was captured: when it was submitted at 09:35, the session had no tokens left, so the coach didn't run.
+The tester's Story Map: MIT and Caltech, applying to MIT Computer Science, with three stories (helping prepare Nepal's team for the International Olympiad in Informatics, curating the resources that helped with prep, and how being under-resourced without mentors was motivating). During the test, at 09:35, this request was refused because the session had no tokens left. The screenshot is the same request run again later that day in a fresh session, after the budget fix: 13 prompts to write, about 1,950 words, 3 stories doing double duty and 1 gap, using 9,633 input tokens (4,382 cached), 1,317 output and 4 requests.
 
 ### 5. Token meter
 
