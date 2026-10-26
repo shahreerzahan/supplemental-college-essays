@@ -57,7 +57,7 @@
   const search = $("search");
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const state = { type: null, school: null, q: "" };
+  const state = { type: null, school: null, q: "", lit: null };  // lit: Set of ids the agents lit up
   let data, items = [], byId = new Map(), visible = [];
   let current = null, returnFocus = null, pulled = null, lastWidth = 0;
 
@@ -188,7 +188,8 @@
     b.innerHTML =
       `<span class="spine-title">${lines.map((l) => `<span>${esc(l)}</span>`).join("")}</span>` +
       `<span class="spine-mark m-${mark}" aria-hidden="true"></span>` +
-      `<span class="spine-badge" aria-hidden="true">${esc(it.initials)}</span>`;
+      `<span class="spine-badge" aria-hidden="true">${esc(it.initials)}</span>` +
+      `<span class="ribbon" aria-hidden="true"></span>`;
     b.setAttribute("aria-label", it.kind === "prompt"
       ? `${it.schoolName}, ${it.t.label}: ${it.p.prompt}`
       : `Essay that worked: ${it.title}, ${it.schoolName}`);
@@ -284,14 +285,23 @@
     $("empty").hidden = visible.length > 0;
     document.querySelector(".hint").hidden = visible.length === 0;
 
+    // Books the agents picked stay lit; the rest fade.
+    for (const it of items) {
+      it.el.classList.toggle("lit", !!state.lit?.has(it.id));
+      it.el.classList.toggle("dim", !!state.lit && !state.lit.has(it.id));
+    }
+
     const n = visible.length;
     const parts = [`${n} ${n === 1 ? "book" : "books"}`];
     if (state.type) parts.push(TYPE[state.type].label);
     if (state.school) parts.push(SCHOOL[state.school][0]);
     if (state.q) parts.push(`matching “${search.value.trim()}”`);
-    $("status").textContent = parts.length === 1 ? `${parts[0]} on the shelf` : parts.join(" · ");
+    const text = parts.length === 1 ? `${parts[0]} on the shelf` : parts.join(" · ");
+    const lit = state.lit ? visible.filter((it) => state.lit.has(it.id)).length : 0;
+    $("status").innerHTML = esc(text) + (state.lit
+      ? ` · ${lit} lit up <button class="inline-link" type="button" data-act="unlight">clear</button>` : "");
 
-    for (const c of document.querySelectorAll(".chip")) {
+    for (const c of document.querySelectorAll(".masthead .chip")) {
       const on = c.dataset.all !== undefined ? !state.type && !state.school
         : c.dataset.type ? state.type === c.dataset.type
         : state.school === c.dataset.school;
@@ -460,7 +470,10 @@
       (p.notes ? `<p class="notes">${fmtNotes(p.notes)}</p>` : "") +
       `<div class="actions">` +
       (src ? `<a class="btn primary" href="${esc(src)}" target="_blank" rel="noopener noreferrer">Source · ${esc(domain(src))} ↗</a>` : "") +
-      `<button class="btn" type="button" data-act="copy">Copy link</button></div>` +
+      `<button class="btn" type="button" data-act="copy">Copy link</button>` +
+      (decoded.has(it.id) ? "" : `<button class="btn decode-btn" type="button" data-act="decode">Decode this prompt</button>`) +
+      `</div>` +
+      `<section class="decode"${decoded.has(it.id) ? "" : " hidden"}>${decoded.has(it.id) ? decodeSection(decoded.get(it.id)) : ""}</section>` +
       sampleSection(it) +
       `<section class="related"><h3 class="label">Essays that worked</h3>` +
       (essays.length
@@ -497,6 +510,63 @@
         ? `<section class="related"><h3 class="label">Prompts from ${esc(it.short)}</h3><div class="related-list">${prompts.map(relatedItem).join("")}</div></section>`
         : "") +
       `${nav}</div>`;
+  }
+
+  // ---------- Decode this prompt (the Librarian) ----------
+
+  const decoded = new Map();  // prompt id -> the Librarian's decode, kept for this visit
+
+  function decodeSection(d) {
+    const src = safeUrl(d.source_url);
+    const reads = d.read_these.map((r) => {
+      const target = byId.get(r.open_id);
+      const color = r.kind === "essay" ? TYPE.essay.color : target?.t.color || TYPE.essay.color;
+      const link = safeUrl(r.source_url);
+      return `<div class="read-item"><button class="related-item" type="button" data-open="${esc(r.open_id)}" data-ref="${esc(r.id)}">` +
+        `<i class="mini-spine" style="--c:${color}"></i><span><strong>${esc(r.kind === "sample" ? `Sample essay · ${target?.short || ""}` : r.title)}</strong>` +
+        `<small>${esc(r.why)}</small></span></button>` +
+        (link ? `<a class="read-src" href="${esc(link)}" target="_blank" rel="noopener noreferrer">${esc(domain(link))} ↗</a>` : "") + `</div>`;
+    }).join("");
+    return `<h3 class="label">Decoded by the Librarian</h3>` +
+      `<h4>What it's really asking</h4><p>${esc(d.really_asking)}</p>` +
+      `<h4>Common mistakes</h4><ul class="mistakes">${d.common_mistakes.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` +
+      (reads ? `<h4>Read these</h4><div class="related-list">${reads}</div>` : "") +
+      (src ? `<p class="decode-source">Based only on the shelf's data. Prompt source: ` +
+        `<a href="${esc(src)}" target="_blank" rel="noopener noreferrer">${esc(domain(src))} ↗</a></p>` : "");
+  }
+
+  async function decode(btn) {
+    const it = current;
+    if (!it || it.kind !== "prompt") return;
+    const box = card.querySelector(".decode");
+    btn.disabled = true;
+    btn.textContent = "Decoding…";
+    box.hidden = false;
+    box.innerHTML = `<p class="agent-wait">The Librarian is reading this prompt and its examples…</p>`;
+    try {
+      const res = await fetch("/api/decode", {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ prompt_id: it.id }),
+      });
+      const body = await res.json();
+      if (!res.ok) throw new Error(body.detail || `Something went wrong (${res.status}).`);
+      decoded.set(it.id, body);
+      if (current === it) { box.innerHTML = decodeSection(body); btn.remove(); }
+    } catch (err) {
+      if (current === it) {
+        box.innerHTML = `<p class="agent-wait">${esc(err.message)}</p>`;
+        btn.disabled = false;
+        btn.textContent = "Try decoding again";
+      }
+    }
+  }
+
+  // A "Read these" sample for the prompt that's already open: show its tab instead of reopening.
+  function showSample(ref) {
+    const i = current?.samples?.findIndex((s) => s.id === ref) ?? -1;
+    if (i < 0) return false;
+    card.querySelector(`[data-sample="${i}"]`)?.click();
+    card.querySelector(".samples")?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+    return true;
   }
 
   function openCard(it) {
@@ -600,6 +670,7 @@
     addEventListener("scroll", hideTip, { passive: true });
 
     document.querySelector(".masthead").addEventListener("click", (e) => {
+      if (e.target.closest('[data-act="unlight"]')) return window.Shelf.light(null);
       const c = e.target.closest(".chip");
       if (!c) return;
       if (c.dataset.all !== undefined) setFilter({ reset: true });
@@ -618,6 +689,7 @@
     backdrop.addEventListener("click", (e) => { if (e.target === backdrop) closeCard(); });
     card.addEventListener("click", (e) => {
       const open = e.target.closest("[data-open]");
+      if (open && open.dataset.open === current?.id && showSample(open.dataset.ref)) return;
       if (open) { releasePulled(); return openCard(byId.get(open.dataset.open)); }
       const tab = e.target.closest("[data-sample]");
       if (tab) {
@@ -630,6 +702,7 @@
       else if (act === "prev") step(-1);
       else if (act === "next") step(1);
       else if (act === "copy") copyLink(e.target.closest("[data-act]"));
+      else if (act === "decode") decode(e.target.closest("[data-act]"));
       else if (act === "essays") { closeCard(); setFilter({ reset: true }); setFilter({ type: "essay" }); bookcase.scrollIntoView({ behavior: reduced ? "auto" : "smooth" }); }
     });
 
@@ -675,6 +748,29 @@
     apply();
     const id = decodeURIComponent(location.hash.slice(1));
     if (byId.has(id)) openCard(byId.get(id));
+    exposeShelf();
+  }
+
+  // What agents.js (Ask the shelf, Story Map) can use.
+  function exposeShelf() {
+    window.Shelf = {
+      item: (id) => byId.get(id),
+      open: (id) => openCard(byId.get(id)),
+      // Light up these books and fade the rest; null clears it.
+      light(ids) {
+        state.lit = ids?.length ? new Set(ids) : null;
+        if (state.lit) { state.type = null; state.school = null; state.q = ""; search.value = ""; }
+        apply();
+        document.dispatchEvent(new CustomEvent("shelf:lit", { detail: { lit: !!state.lit } }));
+      },
+      showLit() {
+        const first = items.find((it) => state.lit?.has(it.id));
+        first?.el.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+      },
+      schools: () => data.schools.map((s) => ({ key: s.key, name: s.name, short: SCHOOL[s.key][0] })),
+      TYPE, inkFor, esc, safeUrl, domain, limitText,
+    };
+    document.dispatchEvent(new Event("shelf:ready"));
   }
 
   start();

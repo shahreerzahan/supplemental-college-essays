@@ -17,10 +17,24 @@
         <h1 class="title">The Unwritten Shelf</h1>
         <p class="tagline">every essay you haven't written yet</p>
       </div>
-      <button class="surprise" id="surprise" type="button">Surprise me</button>
+      <div class="masthead-actions">
+        <a class="outline-btn" href="#story-map">Build my Story Map</a>
+        <button class="surprise" id="surprise" type="button">Surprise me</button>
+      </div>
     </div>
 
     <p class="count" id="count">&nbsp;</p>
+
+    <!-- Ask the shelf: the Librarian agent answers from the shelf data and lights up books. -->
+    <form class="ask" id="ask-form" autocomplete="off">
+      <label class="ask-label" for="ask-input">Ask the shelf</label>
+      <div class="ask-row">
+        <input id="ask-input" type="text" maxlength="300" required
+               placeholder="e.g. show me why-us prompts under 250 words">
+        <button class="ask-btn" id="ask-btn" type="submit">Ask</button>
+      </div>
+    </form>
+    <section class="answer" id="answer" aria-live="polite" hidden></section>
 
     <label class="search">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -46,6 +60,36 @@
     <p class="hint">Hover a book to see it · click to open</p>
   </main>
 
+  <!-- Build my Story Map: the Essay Coach agent maps the student's stories to their prompts. -->
+  <section class="mapper wrap" id="story-map" aria-labelledby="map-title">
+    <h2 class="section-title" id="map-title">Build my Story Map</h2>
+    <p class="section-sub">Pick your schools and jot down 3 to 5 of your stories, a few words each. The coach shows which story fits which prompt, which prompts can share one, and where you still need a story. It coaches; it won't write your essays.</p>
+
+    <form class="map-form" id="map-form" autocomplete="off">
+      <fieldset>
+        <legend class="field-label">Your schools</legend>
+        <div class="chips map-schools" id="map-schools"></div>
+        <input class="field" id="map-other" type="text" maxlength="200" placeholder="Other schools, separated by commas (e.g. Rice, Georgetown)">
+      </fieldset>
+
+      <fieldset>
+        <legend class="field-label">Your stories</legend>
+        <ol class="story-list" id="story-list"></ol>
+        <button class="inline-link add-story" id="add-story" type="button">+ Add a story</button>
+      </fieldset>
+
+      <label class="field-label" for="map-applying">Applying to <span>(optional)</span></label>
+      <input class="field" id="map-applying" type="text" maxlength="120" placeholder="e.g. Cornell Engineering, Wharton, undecided">
+
+      <div class="map-submit">
+        <button class="surprise" id="map-btn" type="submit">Build my Story Map</button>
+        <p class="map-error" id="map-error" role="alert"></p>
+      </div>
+    </form>
+
+    <div class="map-result" id="map-result" aria-live="polite"></div>
+  </section>
+
   <footer class="wrap footer">
     Prompts copied from each school's official admissions page (and ucas.com), checked 25 October 2026.
   </footer>
@@ -57,5 +101,6 @@
   </div>
 
   <script src="/static/shelf.js"></script>
+  <script src="/static/agents.js"></script>
 </body>
 </html>

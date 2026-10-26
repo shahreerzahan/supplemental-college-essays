@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Keep PydanticAI's startup banner out of the server log.
+os.environ.setdefault("PYDANTIC_AI_NO_BANNER", "1")
+
 # Look for .env in this repo first, then one folder above it. load_dotenv never
 # overwrites a variable that is already set, so the repo's .env wins.
 ENV_FILES = (ROOT / ".env", ROOT.parent / ".env")
@@ -26,8 +29,12 @@ if os.getenv("MODEL_NAME", MODEL_NAME) != MODEL_NAME:
     raise RuntimeError(f"MODEL_NAME must be {MODEL_NAME!r}; this project only uses gpt-6-luna.")
 
 
+class MissingKey(RuntimeError):
+    pass
+
+
 def portkey_api_key() -> str:
     key = os.getenv("PORTKEY_API_KEY")
     if not key:
-        raise RuntimeError("PORTKEY_API_KEY is not set; add it to .env in this folder or the one above it.")
+        raise MissingKey("PORTKEY_API_KEY is not set; add it to .env in this folder or the one above it.")
     return key
